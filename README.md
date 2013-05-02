@@ -4,7 +4,7 @@ SHSPhoneComponent
 UITextField and NSFormatter subclasses for formatting phone numbers. Allow different formats for different countries(patterns).
 
 ## How To Install
-pod 'SHSPhoneComponent' or copy /SHSPhoneComponent directory to the project.
+Temporary not available
 
 ##Example Usage
 If you need complete example please see /example folder.
