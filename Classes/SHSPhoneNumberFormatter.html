@@ -1,0 +1,787 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SHSPhoneNumberFormatter Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 840)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SHSPhoneComponent </a></h1>
+				<a id="developerHome" href="../index.html">SHS</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SHSPhoneNumberFormatter Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/formattedRemove:AtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;+ formattedRemove:AtIndex:</option>
+	
+	<option value="//api/name/isValuableChar:">&nbsp;&nbsp;&nbsp;&nbsp;+ isValuableChar:</option>
+	
+	<option value="//api/name/valuableCharCountIn:">&nbsp;&nbsp;&nbsp;&nbsp;+ valuableCharCountIn:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addOutputPattern:forRegExp:imagePath:">&nbsp;&nbsp;&nbsp;&nbsp;- addOutputPattern:forRegExp:imagePath:</option>
+	
+	<option value="//api/name/resetFormats">&nbsp;&nbsp;&nbsp;&nbsp;- resetFormats</option>
+	
+	<option value="//api/name/setDefaultFormat">&nbsp;&nbsp;&nbsp;&nbsp;- setDefaultFormat</option>
+	
+	<option value="//api/name/setDefaultOutputPattern:imagePath:">&nbsp;&nbsp;&nbsp;&nbsp;- setDefaultOutputPattern:imagePath:</option>
+	
+	<option value="//api/name/setPredefinedFormats">&nbsp;&nbsp;&nbsp;&nbsp;- setPredefinedFormats</option>
+	
+	<option value="//api/name/valuesForString:">&nbsp;&nbsp;&nbsp;&nbsp;- valuesForString:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_UserConfig Methods">UserConfig Methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/formattedRemove:AtIndex:">formattedRemove:AtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isValuableChar:">isValuableChar:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/valuableCharCountIn:">valuableCharCountIn:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addOutputPattern:forRegExp:imagePath:">addOutputPattern:forRegExp:imagePath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetFormats">resetFormats</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultFormat">setDefaultFormat</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultOutputPattern:imagePath:">setDefaultOutputPattern:imagePath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setPredefinedFormats">setPredefinedFormats</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/valuesForString:">valuesForString:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SHSPhoneNumberFormatter Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SHSPhoneNumberFormatter Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSFormatter</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SHSPhoneNumberFormatter.h<br />SHSPhoneNumberFormatter.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Formatter class that converts input string to phone format.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/valuesForString:">&ndash;&nbsp;valuesForString:</a></code>
+		<span class="tooltip"><p>Converts input string to dictionary.
+Return value format {text: &ldquo;FORMATTED_PHONE_NUMBER&rdquo;, image: &ldquo;PATH_TO_IMAGE&rdquo;}
+Image path can be nil</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/formattedRemove:AtIndex:">+&nbsp;formattedRemove:AtIndex:</a></code>
+		<span class="tooltip"><p>Remove required number of digits in phone text.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isValuableChar:">+&nbsp;isValuableChar:</a></code>
+		<span class="tooltip"><p>Check if a chas is valuable symbol(part of number).
+Valuable chars are all digits and &lsquo;+&rsquo;</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/valuableCharCountIn:">+&nbsp;valuableCharCountIn:</a></code>
+		<span class="tooltip"><p>Returns a count of valuable symbols in string.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="UserConfig Methods" name="task_UserConfig Methods"></a>
+						<h3 class="subsubtitle task-title">UserConfig Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resetFormats">&ndash;&nbsp;resetFormats</a></code>
+		<span class="tooltip"><p>Remove all patterns and apply clear format style.
+Default format is @&ldquo;#############&rdquo;, imagePath is nil.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultFormat">&ndash;&nbsp;setDefaultFormat</a></code>
+		<span class="tooltip"><p>Remove all patterns and apply default format style.
+Default format is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setPredefinedFormats">&ndash;&nbsp;setPredefinedFormats</a></code>
+		<span class="tooltip"><p>Remove all patterns and set predefined values.
+Method contains values for next countries:
+Russia, Kazakhstan, Belorussia, Ukraine, Armenia, Tajikistan, Kirgistan,
+Uzbekistan, Moldova, Azerbaijan, Turkmenistan
+Default format is &ldquo;#############&rdquo;, imagePath is nil.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultOutputPattern:imagePath:">&ndash;&nbsp;setDefaultOutputPattern:imagePath:</a></code>
+		<span class="tooltip"><p>Apply default format style and image
+Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
+Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addOutputPattern:forRegExp:imagePath:">&ndash;&nbsp;addOutputPattern:forRegExp:imagePath:</a></code>
+		<span class="tooltip"><p>All number matched your regexp will formatted with your style and image
+Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
+Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/formattedRemove:AtIndex:" title="formattedRemove:AtIndex:"></a>
+	<h3 class="subsubtitle method-title">formattedRemove:AtIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove required number of digits in phone text.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)formattedRemove:(NSString *)<em>string</em> AtIndex:(NSRange)<em>range</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Remove required number of digits in phone text.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SHSPhoneNumberFormatter.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isValuableChar:" title="isValuableChar:"></a>
+	<h3 class="subsubtitle method-title">isValuableChar:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Check if a chas is valuable symbol(part of number).
+Valuable chars are all digits and &lsquo;+&rsquo;</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)isValuableChar:(unichar)<em>ch</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Check if a chas is valuable symbol(part of number).
+Valuable chars are all digits and &lsquo;+&rsquo;</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SHSPhoneNumberFormatter.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/valuableCharCountIn:" title="valuableCharCountIn:"></a>
+	<h3 class="subsubtitle method-title">valuableCharCountIn:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a count of valuable symbols in string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (int)valuableCharCountIn:(NSString *)<em>string</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a count of valuable symbols in string.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SHSPhoneNumberFormatter.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addOutputPattern:forRegExp:imagePath:" title="addOutputPattern:forRegExp:imagePath:"></a>
+	<h3 class="subsubtitle method-title">addOutputPattern:forRegExp:imagePath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>All number matched your regexp will formatted with your style and image
+Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
+Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addOutputPattern:(NSString *)<em>pattern</em> forRegExp:(NSString *)<em>regexp</em> imagePath:(NSString *)<em>imagePath</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>All number matched your regexp will formatted with your style and image
+Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
+Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SHSPhoneNumberFormatter+UserConfig.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resetFormats" title="resetFormats"></a>
+	<h3 class="subsubtitle method-title">resetFormats</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove all patterns and apply clear format style.
+Default format is @&ldquo;#############&rdquo;, imagePath is nil.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)resetFormats</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Remove all patterns and apply clear format style.
+Default format is @&ldquo;#############&rdquo;, imagePath is nil.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SHSPhoneNumberFormatter+UserConfig.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDefaultFormat" title="setDefaultFormat"></a>
+	<h3 class="subsubtitle method-title">setDefaultFormat</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove all patterns and apply default format style.
+Default format is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDefaultFormat</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Remove all patterns and apply default format style.
+Default format is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SHSPhoneNumberFormatter+UserConfig.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setDefaultOutputPattern:imagePath:" title="setDefaultOutputPattern:imagePath:"></a>
+	<h3 class="subsubtitle method-title">setDefaultOutputPattern:imagePath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Apply default format style and image
+Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
+Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDefaultOutputPattern:(NSString *)<em>pattern</em> imagePath:(NSString *)<em>imagePath</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Apply default format style and image
+Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
+Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SHSPhoneNumberFormatter+UserConfig.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setPredefinedFormats" title="setPredefinedFormats"></a>
+	<h3 class="subsubtitle method-title">setPredefinedFormats</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove all patterns and set predefined values.
+Method contains values for next countries:
+Russia, Kazakhstan, Belorussia, Ukraine, Armenia, Tajikistan, Kirgistan,
+Uzbekistan, Moldova, Azerbaijan, Turkmenistan
+Default format is &ldquo;#############&rdquo;, imagePath is nil.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setPredefinedFormats</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Remove all patterns and set predefined values.
+Method contains values for next countries:
+Russia, Kazakhstan, Belorussia, Ukraine, Armenia, Tajikistan, Kirgistan,
+Uzbekistan, Moldova, Azerbaijan, Turkmenistan
+Default format is &ldquo;#############&rdquo;, imagePath is nil.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SHSPhoneNumberFormatter+UserConfig.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/valuesForString:" title="valuesForString:"></a>
+	<h3 class="subsubtitle method-title">valuesForString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Converts input string to dictionary.
+Return value format {text: &ldquo;FORMATTED_PHONE_NUMBER&rdquo;, image: &ldquo;PATH_TO_IMAGE&rdquo;}
+Image path can be nil</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)valuesForString:(NSString *)<em>aString</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Converts input string to dictionary.
+Return value format {text: &ldquo;FORMATTED_PHONE_NUMBER&rdquo;, image: &ldquo;PATH_TO_IMAGE&rdquo;}
+Image path can be nil</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SHSPhoneNumberFormatter.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 SHS. All rights reserved. (Last updated: 2013-05-03)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
