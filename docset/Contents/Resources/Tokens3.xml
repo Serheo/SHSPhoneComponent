@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SHSPhoneTextField.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SHSPhoneTextField</TokenIdentifier>
+			<Abstract type="html">Simple UITextField subclass to handle phone numbers formats
+ARC enabled.</Abstract>
+			<DeclaredIn>SHSPhoneTextField.h</DeclaredIn>
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHSPhoneTextField/resetFormats</TokenIdentifier>
+			<Abstract type="html">Remove all patterns and apply clear format style.
+Default format is @&quot;#############&quot;, imagePath is nil.</Abstract>
+			<DeclaredIn>SHSPhoneTextField.h</DeclaredIn>			
+			
+			<Declaration>- (void)resetFormats</Declaration>
+			
+			
+			<Anchor>//api/name/resetFormats</Anchor>
+            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHSPhoneTextField/setPredefinedFormats</TokenIdentifier>
+			<Abstract type="html">Remove all patterns and set predefined values.
+Method contains values for next countries:
+Russia, Kazakhstan, Belorussia, Ukraine, Armenia, Tajikistan, Kirgistan,
+Uzbekistan, Moldova, Azerbaijan, Turkmenistan
+Default format is &quot;#############&quot;, imagePath is nil.</Abstract>
+			<DeclaredIn>SHSPhoneTextField.h</DeclaredIn>			
+			
+			<Declaration>- (void)setPredefinedFormats</Declaration>
+			
+			
+			<Anchor>//api/name/setPredefinedFormats</Anchor>
+            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHSPhoneTextField/setDefaultOutputPattern:imagePath:</TokenIdentifier>
+			<Abstract type="html">Apply default format style and image
+Symbol &apos;#&apos; assumes all digits and &apos;+&apos;.
+Example is &quot;## (###) ###-##-##&quot;, imagePath is &quot;flag_ru&quot;.</Abstract>
+			<DeclaredIn>SHSPhoneTextField.h</DeclaredIn>			
+			
+			<Declaration>- (void)setDefaultOutputPattern:(NSString *)pattern imagePath:(NSString *)imagePath</Declaration>
+			
+			
+			<Anchor>//api/name/setDefaultOutputPattern:imagePath:</Anchor>
+            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHSPhoneTextField/addOutputPattern:forRegExp:imagePath:</TokenIdentifier>
+			<Abstract type="html">All number matched your regexp will formatted with your style and image
+Symbol &apos;#&apos; assumes all digits and &apos;+&apos;.
+Example: pattern is &quot;## (###) ###-##-##&quot;, imagePath is &quot;flag_ru&quot;, regexp is &quot;^\\+375\\d*$&quot;</Abstract>
+			<DeclaredIn>SHSPhoneTextField.h</DeclaredIn>			
+			
+			<Declaration>- (void)addOutputPattern:(NSString *)pattern forRegExp:(NSString *)regexp imagePath:(NSString *)imagePath</Declaration>
+			
+			
+			<Anchor>//api/name/addOutputPattern:forRegExp:imagePath:</Anchor>
+            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHSPhoneTextField/setLogicDelegate:</TokenIdentifier>
+			<Abstract type="html">If you want to use delegate methods you need to subclass SHSPhoneLogicDelegate
+and call setLogicDelegate: method. It initialize your delegate subclass with required parameters.
+Be careful with textField:shouldChangeCharactersInRange:replacementString: - it should always return NO.</Abstract>
+			<DeclaredIn>SHSPhoneTextField.h</DeclaredIn>			
+			
+			<Declaration>- (void)setLogicDelegate:(SHSPhoneLogicDelegate *)delegate</Declaration>
+			
+			
+			<Anchor>//api/name/setLogicDelegate:</Anchor>
+            
+		</Token>
+		
+	</File>
+</Tokens>

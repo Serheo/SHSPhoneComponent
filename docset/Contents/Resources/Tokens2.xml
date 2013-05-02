@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/SHSPhoneNumberFormatter.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/SHSPhoneNumberFormatter</TokenIdentifier>
+			<Abstract type="html">Formatter class that converts input string to phone format.</Abstract>
+			<DeclaredIn>SHSPhoneNumberFormatter.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHSPhoneNumberFormatter/valuesForString:</TokenIdentifier>
+			<Abstract type="html">Converts input string to dictionary.
+Return value format {text: &quot;FORMATTEDPHONENUMBER&quot;, image: &quot;PATHTOIMAGE&quot;}
+Image path can be nil</Abstract>
+			<DeclaredIn>SHSPhoneNumberFormatter.h</DeclaredIn>			
+			
+			<Declaration>- (NSDictionary *)valuesForString:(NSString *)aString</Declaration>
+			
+			
+			<Anchor>//api/name/valuesForString:</Anchor>
+            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SHSPhoneNumberFormatter/formattedRemove:AtIndex:</TokenIdentifier>
+			<Abstract type="html">Remove required number of digits in phone text.</Abstract>
+			<DeclaredIn>SHSPhoneNumberFormatter.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)formattedRemove:(NSString *)string AtIndex:(NSRange)range</Declaration>
+			
+			
+			<Anchor>//api/name/formattedRemove:AtIndex:</Anchor>
+            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SHSPhoneNumberFormatter/isValuableChar:</TokenIdentifier>
+			<Abstract type="html">Check if a chas is valuable symbol(part of number).
+Valuable chars are all digits and &apos;+&apos;</Abstract>
+			<DeclaredIn>SHSPhoneNumberFormatter.h</DeclaredIn>			
+			
+			<Declaration>+ (BOOL)isValuableChar:(unichar)ch</Declaration>
+			
+			
+			<Anchor>//api/name/isValuableChar:</Anchor>
+            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/SHSPhoneNumberFormatter/valuableCharCountIn:</TokenIdentifier>
+			<Abstract type="html">Returns a count of valuable symbols in string.</Abstract>
+			<DeclaredIn>SHSPhoneNumberFormatter.h</DeclaredIn>			
+			
+			<Declaration>+ (int)valuableCharCountIn:(NSString *)string</Declaration>
+			
+			
+			<Anchor>//api/name/valuableCharCountIn:</Anchor>
+            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHSPhoneNumberFormatter/resetFormats</TokenIdentifier>
+			<Abstract type="html">Remove all patterns and apply clear format style.
+Default format is @&quot;#############&quot;, imagePath is nil.</Abstract>
+			<DeclaredIn>SHSPhoneNumberFormatter+UserConfig.h</DeclaredIn>			
+			
+			<Declaration>- (void)resetFormats</Declaration>
+			
+			
+			<Anchor>//api/name/resetFormats</Anchor>
+            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHSPhoneNumberFormatter/setDefaultFormat</TokenIdentifier>
+			<Abstract type="html">Remove all patterns and apply default format style.
+Default format is &quot;## (###) ###-##-##&quot;, imagePath is nil.</Abstract>
+			<DeclaredIn>SHSPhoneNumberFormatter+UserConfig.h</DeclaredIn>			
+			
+			<Declaration>- (void)setDefaultFormat</Declaration>
+			
+			
+			<Anchor>//api/name/setDefaultFormat</Anchor>
+            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHSPhoneNumberFormatter/setPredefinedFormats</TokenIdentifier>
+			<Abstract type="html">Remove all patterns and set predefined values.
+Method contains values for next countries:
+Russia, Kazakhstan, Belorussia, Ukraine, Armenia, Tajikistan, Kirgistan,
+Uzbekistan, Moldova, Azerbaijan, Turkmenistan
+Default format is &quot;#############&quot;, imagePath is nil.</Abstract>
+			<DeclaredIn>SHSPhoneNumberFormatter+UserConfig.h</DeclaredIn>			
+			
+			<Declaration>- (void)setPredefinedFormats</Declaration>
+			
+			
+			<Anchor>//api/name/setPredefinedFormats</Anchor>
+            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHSPhoneNumberFormatter/setDefaultOutputPattern:imagePath:</TokenIdentifier>
+			<Abstract type="html">Apply default format style and image
+Symbol &apos;#&apos; assumes all digits and &apos;+&apos;.
+Example is &quot;## (###) ###-##-##&quot;, imagePath is &quot;flag_ru&quot;.</Abstract>
+			<DeclaredIn>SHSPhoneNumberFormatter+UserConfig.h</DeclaredIn>			
+			
+			<Declaration>- (void)setDefaultOutputPattern:(NSString *)pattern imagePath:(NSString *)imagePath</Declaration>
+			
+			
+			<Anchor>//api/name/setDefaultOutputPattern:imagePath:</Anchor>
+            
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/SHSPhoneNumberFormatter/addOutputPattern:forRegExp:imagePath:</TokenIdentifier>
+			<Abstract type="html">All number matched your regexp will formatted with your style and image
+Symbol &apos;#&apos; assumes all digits and &apos;+&apos;.
+Example: pattern is &quot;## (###) ###-##-##&quot;, imagePath is &quot;flag_ru&quot;, regexp is &quot;^\\+375\\d*$&quot;</Abstract>
+			<DeclaredIn>SHSPhoneNumberFormatter+UserConfig.h</DeclaredIn>			
+			
+			<Declaration>- (void)addOutputPattern:(NSString *)pattern forRegExp:(NSString *)regexp imagePath:(NSString *)imagePath</Declaration>
+			
+			
+			<Anchor>//api/name/addOutputPattern:forRegExp:imagePath:</Anchor>
+            
+		</Token>
+		
+	</File>
+</Tokens>
