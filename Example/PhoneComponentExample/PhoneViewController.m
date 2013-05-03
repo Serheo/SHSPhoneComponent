@@ -14,9 +14,7 @@
 {
     [super viewDidLoad];
 	[self.phoneField becomeFirstResponder];
-    //[self.phoneField setPredefinedFormats];
-    
-    [self.phoneField addOutputPattern:@"#### (##) ###-###" forRegExp:@"^\\+374\\d*$" imagePath:@"flagAM"];
+    [self.phoneField setPredefinedFormats];
 }
 
 @end
