@@ -38,6 +38,7 @@ Be careful with textField:shouldChangeCharactersInRange:replacementString: - it 
 
 ##Formatting
 If you need only formatting function you can use SHSPhoneNumberFormatter class. 
+For additional class info see http://serheo.github.io/SHSPhoneComponent/
 
 ##Requirements
 ARC Enabled.
