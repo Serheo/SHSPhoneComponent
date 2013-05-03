@@ -14,7 +14,7 @@ If you need complete example please see /example folder.
 [self.phoneField setDefaultOutputPattern:@"## (###) ###-##-##" imagePath:nil];
 ```
 <p align="center">
-  <img src="https://dl.dropboxusercontent.com/u/3310118/github/shsphonecomponent/r3.png" alt="shspc example 1"/>
+  <img src="http://serheo.github.io/SHSPhoneComponent/readme/r1.jpg" alt="shspc example 1"/>
 </p>
 All input strings will be parsed in that way. 
 Example: +7 (920) 123-45-67
@@ -22,10 +22,11 @@ Example: +7 (920) 123-45-67
 ### Specific Formats
 If you want to format some numbers in specific way just do
 ``` objective-c
+[self.phoneField addOutputPattern:@"## (###) ###-##-##" forRegExp:@"^\\+7[0-689]\\d*$" imagePath:@"flagRU"];
 [self.phoneField addOutputPattern:@"#### (##) ###-###" forRegExp:@"^\\+374\\d*$" imagePath:@"flagAM"];
 ```
 <p align="center">
-  <img src="https://dl.dropboxusercontent.com/u/3310118/github/shsphonecomponent/r4.png" alt="shspc example 2"/>
+  <img src="http://serheo.github.io/SHSPhoneComponent/readme/r2.jpg" alt="shspc example 2"/>
 </p>
 
 ##Subclassing/Extending
@@ -38,6 +39,7 @@ Be careful with textField:shouldChangeCharactersInRange:replacementString: - it 
 
 ##Formatting
 If you need only formatting function you can use SHSPhoneNumberFormatter class. 
+For additional class info see http://serheo.github.io/SHSPhoneComponent/
 
 ##Requirements
 ARC Enabled.
