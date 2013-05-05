@@ -7,7 +7,11 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "SHSPhoneLibrary.h"
 
 @interface PhoneComponentTest : SenTestCase
+{
+    SHSPhoneNumberFormatter *formatter;
+}
 
 @end

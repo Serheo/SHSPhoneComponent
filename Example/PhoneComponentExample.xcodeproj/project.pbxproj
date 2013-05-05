@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1F26161735907500709EE7 /* SHSPhoneLogicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342161727D5F8002EE850 /* SHSPhoneLogicDelegate.m */; };
+		BE1F26171735907500709EE7 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342181727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m */; };
+		BE1F26181735907500709EE7 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m */; };
+		BE1F26191735907500709EE7 /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421C1727D5F8002EE850 /* SHSPhoneTextField.m */; };
 		BE6342281727D5F8002EE850 /* SHSPhoneLogicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342161727D5F8002EE850 /* SHSPhoneLogicDelegate.m */; };
 		BE6342291727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342181727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m */; };
 		BE63422A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m */; };
@@ -326,6 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1F26161735907500709EE7 /* SHSPhoneLogicDelegate.m in Sources */,
+				BE1F26171735907500709EE7 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
+				BE1F26181735907500709EE7 /* SHSPhoneNumberFormatter.m in Sources */,
+				BE1F26191735907500709EE7 /* SHSPhoneTextField.m in Sources */,
 				BEE6EF2E17353FA10023C1C3 /* PhoneComponentTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +451,7 @@
 				GCC_PREFIX_HEADER = "PhoneComponentTest/PhoneComponentTest-Prefix.pch";
 				INFOPLIST_FILE = "PhoneComponentTest/PhoneComponentTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -458,6 +467,7 @@
 				GCC_PREFIX_HEADER = "PhoneComponentTest/PhoneComponentTest-Prefix.pch";
 				INFOPLIST_FILE = "PhoneComponentTest/PhoneComponentTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -490,6 +500,7 @@
 				BEE6EF3117353FA10023C1C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
