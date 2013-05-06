@@ -29,6 +29,10 @@
 
 
 typedef void (^SHSTextBlock)(UITextField *textField);
+
+/**
+ Block will be called when text changed
+*/
 @property (nonatomic, copy) SHSTextBlock textDidChangeBlock;
 
 @end
