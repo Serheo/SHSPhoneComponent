@@ -51,7 +51,7 @@
 	
 	<option value="//api/name/setLogicDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- setLogicDelegate:</option>
 	
-	<option value="//api/name/setPredefinedFormats">&nbsp;&nbsp;&nbsp;&nbsp;- setPredefinedFormats</option>
+	<option value="//api/name/setTextDidChangeBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- setTextDidChangeBlock:</option>
 	
 	
 	
@@ -89,7 +89,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLogicDelegate:">setLogicDelegate:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setPredefinedFormats">setPredefinedFormats</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setTextDidChangeBlock:">setTextDidChangeBlock:</a></span></li>
 	
 </ul></li>
 
@@ -155,21 +155,10 @@ Default format is @&ldquo;#############&rdquo;, imagePath is nil.</p></span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/setPredefinedFormats">&ndash;&nbsp;setPredefinedFormats</a></code>
-		<span class="tooltip"><p>Remove all patterns and set predefined values.
-Method contains values for next countries:
-Russia, Kazakhstan, Belorussia, Ukraine, Armenia, Tajikistan, Kirgistan,
-Uzbekistan, Moldova, Azerbaijan, Turkmenistan
-Default format is &ldquo;#############&rdquo;, imagePath is nil.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/setDefaultOutputPattern:imagePath:">&ndash;&nbsp;setDefaultOutputPattern:imagePath:</a></code>
 		<span class="tooltip"><p>Apply default format style and image
-Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
-Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p></span>
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p></span>
 	</span>
 	
 	
@@ -177,8 +166,8 @@ Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;fla
 	<span class="tooltip">
 		<code><a href="#//api/name/addOutputPattern:forRegExp:imagePath:">&ndash;&nbsp;addOutputPattern:forRegExp:imagePath:</a></code>
 		<span class="tooltip"><p>All number matched your regexp will formatted with your style and image
-Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
-Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p></span>
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p></span>
 	</span>
 	
 	
@@ -188,6 +177,13 @@ Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &
 		<span class="tooltip"><p>If you want to use delegate methods you need to subclass <a href="../Classes/SHSPhoneLogicDelegate.html">SHSPhoneLogicDelegate</a>
 and call setLogicDelegate: method. It initialize your delegate subclass with required parameters.
 Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndash; it should always return NO.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setTextDidChangeBlock:">&ndash;&nbsp;setTextDidChangeBlock:</a></code>
+		<span class="tooltip"><p>Block will be called when text changed</p></span>
 	</span>
 	
 	
@@ -216,8 +212,8 @@ Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndas
 	
 	<div class="method-subsection brief-description">
 		<p>All number matched your regexp will formatted with your style and image
-Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
-Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p>
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p>
 	</div>		
 	
     
@@ -235,8 +231,8 @@ Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>All number matched your regexp will formatted with your style and image
-Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
-Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p>
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p>
 	</div>
 	
 	
@@ -304,8 +300,8 @@ Default format is @&ldquo;#############&rdquo;, imagePath is nil.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Apply default format style and image
-Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
-Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
 	</div>		
 	
     
@@ -323,8 +319,8 @@ Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;fla
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Apply default format style and image
-Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
-Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
 	</div>
 	
 	
@@ -387,22 +383,18 @@ Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndas
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/setPredefinedFormats" title="setPredefinedFormats"></a>
-	<h3 class="subsubtitle method-title">setPredefinedFormats</h3>
+	<a name="//api/name/setTextDidChangeBlock:" title="setTextDidChangeBlock:"></a>
+	<h3 class="subsubtitle method-title">setTextDidChangeBlock:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Remove all patterns and set predefined values.
-Method contains values for next countries:
-Russia, Kazakhstan, Belorussia, Ukraine, Armenia, Tajikistan, Kirgistan,
-Uzbekistan, Moldova, Azerbaijan, Turkmenistan
-Default format is &ldquo;#############&rdquo;, imagePath is nil.</p>
+		<p>Block will be called when text changed</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setPredefinedFormats</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setTextDidChangeBlock:(SHSTextBlock)<em>block</em></code></div>
 
     
 	
@@ -414,11 +406,7 @@ Default format is &ldquo;#############&rdquo;, imagePath is nil.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Remove all patterns and set predefined values.
-Method contains values for next countries:
-Russia, Kazakhstan, Belorussia, Ukraine, Armenia, Tajikistan, Kirgistan,
-Uzbekistan, Moldova, Azerbaijan, Turkmenistan
-Default format is &ldquo;#############&rdquo;, imagePath is nil.</p>
+		<p>Block will be called when text changed</p>
 	</div>
 	
 	
@@ -448,7 +436,7 @@ Default format is &ldquo;#############&rdquo;, imagePath is nil.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 SHS. All rights reserved. (Last updated: 2013-05-03)</span><br />
+						<p><span class="copyright">&copy; 2013 SHS. All rights reserved. (Last updated: 2013-05-06)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						

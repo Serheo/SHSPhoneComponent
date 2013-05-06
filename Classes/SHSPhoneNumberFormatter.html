@@ -60,8 +60,6 @@
 	
 	<option value="//api/name/setDefaultOutputPattern:imagePath:">&nbsp;&nbsp;&nbsp;&nbsp;- setDefaultOutputPattern:imagePath:</option>
 	
-	<option value="//api/name/setPredefinedFormats">&nbsp;&nbsp;&nbsp;&nbsp;- setPredefinedFormats</option>
-	
 	<option value="//api/name/valuesForString:">&nbsp;&nbsp;&nbsp;&nbsp;- valuesForString:</option>
 	
 	
@@ -111,8 +109,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultFormat">setDefaultFormat</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultOutputPattern:imagePath:">setDefaultOutputPattern:imagePath:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setPredefinedFormats">setPredefinedFormats</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/valuesForString:">valuesForString:</a></span></li>
 	
@@ -189,7 +185,7 @@ Image path can be nil</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/isValuableChar:">+&nbsp;isValuableChar:</a></code>
 		<span class="tooltip"><p>Check if a chas is valuable symbol(part of number).
-Valuable chars are all digits and &lsquo;+&rsquo;</p></span>
+Valuable chars are all digits.</p></span>
 	</span>
 	
 	
@@ -220,18 +216,7 @@ Default format is @&ldquo;#############&rdquo;, imagePath is nil.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/setDefaultFormat">&ndash;&nbsp;setDefaultFormat</a></code>
 		<span class="tooltip"><p>Remove all patterns and apply default format style.
-Default format is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/setPredefinedFormats">&ndash;&nbsp;setPredefinedFormats</a></code>
-		<span class="tooltip"><p>Remove all patterns and set predefined values.
-Method contains values for next countries:
-Russia, Kazakhstan, Belorussia, Ukraine, Armenia, Tajikistan, Kirgistan,
-Uzbekistan, Moldova, Azerbaijan, Turkmenistan
-Default format is &ldquo;#############&rdquo;, imagePath is nil.</p></span>
+Default format is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil.</p></span>
 	</span>
 	
 	
@@ -239,8 +224,8 @@ Default format is &ldquo;#############&rdquo;, imagePath is nil.</p></span>
 	<span class="tooltip">
 		<code><a href="#//api/name/setDefaultOutputPattern:imagePath:">&ndash;&nbsp;setDefaultOutputPattern:imagePath:</a></code>
 		<span class="tooltip"><p>Apply default format style and image
-Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
-Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p></span>
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p></span>
 	</span>
 	
 	
@@ -248,8 +233,8 @@ Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;fla
 	<span class="tooltip">
 		<code><a href="#//api/name/addOutputPattern:forRegExp:imagePath:">&ndash;&nbsp;addOutputPattern:forRegExp:imagePath:</a></code>
 		<span class="tooltip"><p>All number matched your regexp will formatted with your style and image
-Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
-Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p></span>
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^375\d*$&rdquo;</p></span>
 	</span>
 	
 	
@@ -317,7 +302,7 @@ Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &
 	
 	<div class="method-subsection brief-description">
 		<p>Check if a chas is valuable symbol(part of number).
-Valuable chars are all digits and &lsquo;+&rsquo;</p>
+Valuable chars are all digits.</p>
 	</div>		
 	
     
@@ -335,7 +320,7 @@ Valuable chars are all digits and &lsquo;+&rsquo;</p>
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Check if a chas is valuable symbol(part of number).
-Valuable chars are all digits and &lsquo;+&rsquo;</p>
+Valuable chars are all digits.</p>
 	</div>
 	
 	
@@ -409,8 +394,8 @@ Valuable chars are all digits and &lsquo;+&rsquo;</p>
 	
 	<div class="method-subsection brief-description">
 		<p>All number matched your regexp will formatted with your style and image
-Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
-Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p>
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^375\d*$&rdquo;</p>
 	</div>		
 	
     
@@ -428,8 +413,8 @@ Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>All number matched your regexp will formatted with your style and image
-Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
-Example: pattern is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p>
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^375\d*$&rdquo;</p>
 	</div>
 	
 	
@@ -497,7 +482,7 @@ Default format is @&ldquo;#############&rdquo;, imagePath is nil.</p>
 	
 	<div class="method-subsection brief-description">
 		<p>Remove all patterns and apply default format style.
-Default format is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil.</p>
+Default format is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil.</p>
 	</div>		
 	
     
@@ -515,7 +500,7 @@ Default format is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Remove all patterns and apply default format style.
-Default format is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil.</p>
+Default format is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil.</p>
 	</div>
 	
 	
@@ -540,8 +525,8 @@ Default format is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil
 	
 	<div class="method-subsection brief-description">
 		<p>Apply default format style and image
-Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
-Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
 	</div>		
 	
     
@@ -559,57 +544,8 @@ Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;fla
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Apply default format style and image
-Symbol &lsquo;#&rsquo; assumes all digits and &lsquo;+&rsquo;.
-Example is &ldquo;## (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SHSPhoneNumberFormatter+UserConfig.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/setPredefinedFormats" title="setPredefinedFormats"></a>
-	<h3 class="subsubtitle method-title">setPredefinedFormats</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Remove all patterns and set predefined values.
-Method contains values for next countries:
-Russia, Kazakhstan, Belorussia, Ukraine, Armenia, Tajikistan, Kirgistan,
-Uzbekistan, Moldova, Azerbaijan, Turkmenistan
-Default format is &ldquo;#############&rdquo;, imagePath is nil.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)setPredefinedFormats</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Remove all patterns and set predefined values.
-Method contains values for next countries:
-Russia, Kazakhstan, Belorussia, Ukraine, Armenia, Tajikistan, Kirgistan,
-Uzbekistan, Moldova, Azerbaijan, Turkmenistan
-Default format is &ldquo;#############&rdquo;, imagePath is nil.</p>
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
 	</div>
 	
 	
@@ -684,7 +620,7 @@ Image path can be nil</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 SHS. All rights reserved. (Last updated: 2013-05-03)</span><br />
+						<p><span class="copyright">&copy; 2013 SHS. All rights reserved. (Last updated: 2013-05-06)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
