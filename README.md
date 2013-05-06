@@ -1,4 +1,4 @@
-SHSPhoneComponent <img src="https://travis-ci.org/Serheo/SHSPhoneComponent.png" />
+SHSPhoneComponent <a href="https://travis-ci.org/Serheo/SHSPhoneComponent"><img src="https://travis-ci.org/Serheo/SHSPhoneComponent.png"/></a>
 =================
 
 UITextField and NSFormatter subclasses for formatting phone numbers. Allow different formats for different countries(patterns).
@@ -11,7 +11,7 @@ If you need complete example please see /example folder.
 
 ### Default Format
 ``` objective-c
-[self.phoneField setDefaultOutputPattern:@"## (###) ###-##-##" imagePath:nil];
+[self.phoneField setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
 ```
 <p align="center">
   <img src="http://serheo.github.io/SHSPhoneComponent/readme/r1.jpg" alt="shspc example 1"/>
@@ -22,8 +22,8 @@ Example: +7 (920) 123-45-67
 ### Specific Formats
 If you want to format some numbers in specific way just do
 ``` objective-c
-[self.phoneField addOutputPattern:@"## (###) ###-##-##" forRegExp:@"^\\+7[0-689]\\d*$" imagePath:@"flagRU"];
-[self.phoneField addOutputPattern:@"#### (##) ###-###" forRegExp:@"^\\+374\\d*$" imagePath:@"flagAM"];
+[self.phoneField addOutputPattern:@"+# (###) ###-##-##" forRegExp:@"^7[0-689]\\d*$" imagePath:@"flagRU"];
+[self.phoneField addOutputPattern:@"+### (##) ###-###" forRegExp:@"^374\\d*$" imagePath:@"flagAM"];
 ```
 <p align="center">
   <img src="http://serheo.github.io/SHSPhoneComponent/readme/r2.jpg" alt="shspc example 2"/>
