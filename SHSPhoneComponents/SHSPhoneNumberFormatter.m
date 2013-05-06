@@ -113,7 +113,7 @@
 
 +(BOOL) isValuableChar:(unichar)ch
 {
-    return (ch >= '0' && ch <= '9') || (ch == '+') ? YES : NO;
+    return (ch >= '0' && ch <= '9') ? YES : NO;
 }
 
 +(NSString *) formattedRemove:(NSString *)string AtIndex:(NSRange)range
