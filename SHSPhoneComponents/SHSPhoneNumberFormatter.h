@@ -30,7 +30,7 @@
 
 /**
  Check if a chas is valuable symbol(part of number).
- Valuable chars are all digits and '+'
+ Valuable chars are all digits.
 */
 +(BOOL) isValuableChar:(unichar)ch;
 

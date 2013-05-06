@@ -33,15 +33,6 @@
     return [regex stringByReplacingMatchesInString:aString options:0 range:NSMakeRange(0, [aString length]) withTemplate:@""];
 }
 
--(NSString *) formatedString:(NSString *)aString
-{
-    if ([aString length] == 0 ) return aString;
-    NSString *digits = [self digitOnlyString:aString];
-    if ([digits length] > 0 || [aString characterAtIndex:0] == '+')
-        return [@"+" stringByAppendingString:digits];
-    else
-        return digits;
-}
 
 #pragma mark -
 #pragma mark Find Matched Dictionary
@@ -100,7 +91,7 @@
 
 -(NSDictionary *) valuesForString:(NSString *)aString
 {
-    NSString *formattedDigits = [self formatedString:aString];
+    NSString *formattedDigits = [self digitOnlyString:aString];
     NSDictionary *configDict = [self configForSequence:formattedDigits];
     NSString *result = [self applyFormat: configDict[@"format"] forFormattedString:formattedDigits];
     
@@ -150,7 +141,7 @@
 #pragma mark NSFormatter requirements
 
 -(BOOL) getObjectValue:(id *)obj forString:(NSString *)string errorDescription:(NSString  **)error {
-    *obj = [self formatedString:string];
+    *obj = [self digitOnlyString:string];
     return YES;
 }
 

@@ -25,13 +25,13 @@
 - (void)testShouldFormatByDefault
 {
     NSString *inputNumber = @"12345678901";
-    [formatter setDefaultOutputPattern:@"## (###) ###-##-##" imagePath:nil];
+    [formatter setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
     
     NSDictionary *result = [formatter valuesForString:inputNumber];
     STAssertTrue([result[@"text"] isEqualToString:@"+1 (234) 567-89-01"], @"should format number by default");
     STAssertTrue(result[@"image"] == [NSNull null], @"default image is nil");
 
-    [formatter setDefaultOutputPattern:@"## (###) ###-####" imagePath:nil];
+    [formatter setDefaultOutputPattern:@"+# (###) ###-####" imagePath:nil];
     
     result = [formatter valuesForString:inputNumber];
     STAssertTrue([result[@"text"] isEqualToString:@"+1 (234) 567-8901"], @"should format number by new default");
@@ -44,9 +44,9 @@
     NSString *specififcInputNumber = @"38012345678901";
 
     NSString *imagePath = @"SOME_IMAGE_PATH";
-    [formatter setDefaultOutputPattern:@"## (###) ###-##-##" imagePath:nil];
+    [formatter setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
     
-    [formatter addOutputPattern:@"#### (##) ###-##-##" forRegExp:@"^\\+380\\d*$" imagePath:imagePath];
+    [formatter addOutputPattern:@"+### (##) ###-##-##" forRegExp:@"^380\\d*$" imagePath:imagePath];
     
     NSDictionary *result = [formatter valuesForString:inputNumber];
     STAssertTrue([result[@"text"] isEqualToString:@"+1 (234) 567-89-01"], @"should format number by default");
@@ -62,7 +62,7 @@
 {
     NSString *inputNumber = @"!#dsti*&";
     
-    [formatter setDefaultOutputPattern:@"## (###) ###-##-##" imagePath:nil];
+    [formatter setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
     
     NSDictionary *result = [formatter valuesForString:inputNumber];
     STAssertTrue([result[@"text"] isEqualToString:@""], @"should remove non-number symbols");
@@ -70,7 +70,7 @@
     
     inputNumber = @"+12345678901";
     
-    [formatter setDefaultOutputPattern:@"## (###) ###-##-##" imagePath:nil];
+    [formatter setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
     
     result = [formatter valuesForString:inputNumber];
     STAssertTrue([result[@"text"] isEqualToString:@"+1 (234) 567-89-01"], @"should format number by default and handle + symbol");

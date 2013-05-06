@@ -14,7 +14,16 @@
 {
     [super viewDidLoad];
 	[self.phoneField becomeFirstResponder];
-    [self.phoneField setPredefinedFormats];
+    [self.phoneField setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
+    
+    [self.phoneField addOutputPattern:@"+# (###) ###-##-##" forRegExp:@"^7[0-689]\\d*$" imagePath:@"flag_RU"];
+    [self.phoneField addOutputPattern:@"# (###) ###-##-##" forRegExp:@"^8[0-689]\\d*$" imagePath:@"flag_RU"];
+    
+    [self.phoneField addOutputPattern:@"+### (##) ###-###" forRegExp:@"^374\\d*$" imagePath:@"flag_AM"];
+    
+    [self.phoneField setTextDidChangeBlock:^(UITextField *textField) {
+       // NSLog(@"%@", textField.text);
+    }];
 }
 
 @end

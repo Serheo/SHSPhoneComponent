@@ -27,4 +27,8 @@
 -(id) initWithTextField:(UITextField *)textField formatter:(SHSPhoneNumberFormatter *)formatter;
 -(void) loadRequirements:(UITextField *)textField formatter:(SHSPhoneNumberFormatter *)formatter;
 
+
+typedef void (^SHSTextBlock)(UITextField *textField);
+@property (nonatomic, copy) SHSTextBlock textDidChangeBlock;
+
 @end

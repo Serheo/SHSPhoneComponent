@@ -32,6 +32,11 @@
 
 #pragma mark UITextField Delegate
 
+-(void) blockCallbacks:(UITextField *)textField
+{
+    if (self.textDidChangeBlock) self.textDidChangeBlock(textField);
+}
+
 - (BOOL)textFieldShouldClear:(UITextField *)textField
 {
     textField.leftViewMode = UITextFieldViewModeNever;
@@ -61,6 +66,7 @@
         textField.leftViewMode =  UITextFieldViewModeNever;
     
     [self popCaretPosition:textField range:range];
+    [self blockCallbacks:textField];
     return NO;
 }
 
@@ -94,8 +100,6 @@
 }
 
 - (void)selectTextForInput:(UITextField *)input atRange:(NSRange)range {
-    
-    if (range.location == 0 && [input.text length] > 0) range.location = 1;
     UITextPosition *start = [input positionFromPosition:[input beginningOfDocument]
                                                  offset:range.location ];
     UITextPosition *end = [input positionFromPosition:start

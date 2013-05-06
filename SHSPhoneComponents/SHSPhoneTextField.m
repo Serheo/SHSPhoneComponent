@@ -53,11 +53,6 @@
     [formatter resetFormats];
 }
 
--(void) setPredefinedFormats
-{
-    [formatter setPredefinedFormats];
-}
-
 -(void) setDefaultOutputPattern:(NSString *)pattern imagePath:(NSString *)imagePath
 {
     [formatter setDefaultOutputPattern:pattern imagePath:imagePath];
@@ -69,5 +64,10 @@
 }
 
 #pragma mark -
+
+-(void) setTextDidChangeBlock:(SHSTextBlock)block
+{
+    logicDelegate.textDidChangeBlock = block;
+}
 
 @end
