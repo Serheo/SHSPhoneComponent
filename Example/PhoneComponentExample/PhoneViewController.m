@@ -14,26 +14,16 @@
 {
     [super viewDidLoad];
 	[self.phoneField becomeFirstResponder];
-    [self.phoneField.formatter setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
+    [self.phoneField setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
     
-    [self.phoneField.formatter addOutputPattern:@"+# (###) ###-##-##" forRegExp:@"^7[0-689]\\d*$" imagePath:[SHSFlags FlagRU]];
-    [self.phoneField.formatter addOutputPattern:@"# (###) ###-##-##" forRegExp:@"^8[0-689]\\d*$" imagePath:[SHSFlags FlagRU]];
+    [self.phoneField addOutputPattern:@"+# (###) ###-##-##" forRegExp:@"^7[0-689]\\d*$" imagePath:@"flag_RU"];
+    [self.phoneField addOutputPattern:@"# (###) ###-##-##" forRegExp:@"^8[0-689]\\d*$" imagePath:@"flag_RU"];
     
-    [self.phoneField.formatter addOutputPattern:@"+### (##) ###-###" forRegExp:@"^380\\d*$" imagePath:[SHSFlags FlagUA]];
+    [self.phoneField addOutputPattern:@"+### (##) ###-###" forRegExp:@"^374\\d*$" imagePath:@"flag_AM"];
     
-    self.phoneField.textDidChangeBlock = ^(UITextField *textField) {
-        NSLog(@"number is %@", textField.text);
-    };
-    
-    //self.phoneField.delegate = self;
-}
-
-// other delegate methods use as you want
--(BOOL)textField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    [SHSPhoneLogic logicTextField:textField shouldChangeCharactersInRange:range replacementString:string];
-    // ..your logic
-    return NO;
+    [self.phoneField setTextDidChangeBlock:^(UITextField *textField) {
+       // NSLog(@"%@", textField.text);
+    }];
 }
 
 @end

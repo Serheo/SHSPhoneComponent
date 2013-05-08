@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SHSPhoneLogic.h"
+#import "SHSPhoneLogicDelegate.h"
 #import "SHSPhoneNumberFormatter.h"
 
 /**
@@ -16,35 +16,40 @@
 */
 @interface SHSPhoneTextField : UITextField
 {
-    SHSPhoneLogic *logicDelegate;
+    SHSPhoneNumberFormatter *formatter;
+    SHSPhoneLogicDelegate *logicDelegate;
 }
 
 /**
- SHSPhoneNumberFormatter instance.
- Use is to configure format properties.
+ Remove all patterns and apply clear format style.
+ Default format is @"#############", imagePath is nil.
 */
-@property (readonly, strong) SHSPhoneNumberFormatter *formatter;
+-(void) resetFormats;
+
+/**
+ Apply default format style and image
+ Symbol '#' assumes all digits.
+ Example is "+# (###) ###-##-##", imagePath is "flag_ru".
+*/
+-(void) setDefaultOutputPattern:(NSString *)pattern imagePath:(NSString *)imagePath;
+
+/**
+ All number matched your regexp will formatted with your style and image
+ Symbol '#' assumes all digits.
+ Example: pattern is "+# (###) ###-##-##", imagePath is "flag_ru", regexp is "^\\+375\\d*$"
+*/
+-(void) addOutputPattern:(NSString *)pattern forRegExp:(NSString *)regexp imagePath:(NSString *)imagePath;
+
+/**
+ If you want to use delegate methods you need to subclass SHSPhoneLogicDelegate
+ and call setLogicDelegate: method. It initialize your delegate subclass with required parameters.
+ Be careful with textField:shouldChangeCharactersInRange:replacementString: - it should always return NO.
+*/
+-(void) setLogicDelegate:(SHSPhoneLogicDelegate *)delegate;
 
 /**
  Block will be called when text changed
 */
-typedef void (^SHSTextBlock)(UITextField *textField);
-@property (nonatomic, copy) SHSTextBlock textDidChangeBlock;
+-(void) setTextDidChangeBlock:(SHSTextBlock)block;
 
-/**
- If you want to use leftView or leftViewMode property set this property to NO.
- Default is YES.
- */
-@property (readwrite) BOOL canAffectLeftViewByFormatter;
 @end
-
-/**
- Flags String Constants. Each method is NSString path to image.
- */
-@interface SHSFlags : NSObject
-+ (NSString *) FlagRU;
-+ (NSString *) FlagUS;
-+ (NSString *) FlagDE;
-+ (NSString *) FlagUA;
-@end
-

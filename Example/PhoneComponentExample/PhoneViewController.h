@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SHSPhoneLibrary.h"
 
-@interface PhoneViewController : UIViewController <UITextFieldDelegate>
+@interface PhoneViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet SHSPhoneTextField *phoneField;
 
