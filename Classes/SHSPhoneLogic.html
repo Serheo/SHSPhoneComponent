@@ -115,22 +115,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Incapsulate number formatting and caret positioning logics.</p>
-
-<p>If you want to use delegate methods please
-design textField:shouldChangeCharactersInRange:replacementString: method in next way</p>
-
-<p>&ndash;(BOOL)textField:(<a href="../Classes/SHSPhoneTextField.html">SHSPhoneTextField</a> <em>)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString </em>)string
-{</p>
-
-<pre><code>[SHSPhoneLogic logicTextField:textField shouldChangeCharactersInRange:range replacementString:string];
-// ..your logic
-return NO;
-</code></pre>
-
-<p>}</p>
-
-<p>Other delegate methods use as you want.</p>
+						<p>Incapsulate number formatting and caret positioning logics. Also used as inner delegate.</p>
 					</div>
 					
 					
