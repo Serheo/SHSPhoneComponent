@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>SHSPhoneLogicDelegate Class Reference</title>
+		<title>SHSPhoneLogic Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">SHSPhoneLogicDelegate Class Reference</h1>
+				<h1 class="hideInXcode">SHSPhoneLogic Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -31,10 +31,17 @@
 	
 	
 	
+	<option value="tasks">Tasks</option>
 	
 	
 	
 	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/logicTextField:shouldChangeCharactersInRange:replacementString:">&nbsp;&nbsp;&nbsp;&nbsp;+ logicTextField:shouldChangeCharactersInRange:replacementString:</option>
 	
 	
 	
@@ -52,11 +59,21 @@
 
 
 
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
 
 
 
 
 
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/logicTextField:shouldChangeCharactersInRange:replacementString:">logicTextField:shouldChangeCharactersInRange:replacementString:</a></span></li>
+	
+</ul></li>
 
 
 
@@ -65,7 +82,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="SHSPhoneLogicDelegate Class Reference" name="top"></a>
+				<a title="SHSPhoneLogic Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -74,7 +91,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">SHSPhoneLogicDelegate Class Reference</h1>
+						<h1 class="title title-header">SHSPhoneLogic Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -88,7 +105,7 @@
 	<td class="specification-value">UITextFieldDelegate</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">SHSPhoneLogicDelegate.h<br />SHSPhoneLogicDelegate.m</td>
+	<td class="specification-value">SHSPhoneLogic.h<br />SHSPhoneLogic.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -98,11 +115,47 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>UITextField Delegate. Incapsulate formatting logic.</p>
+						<p>Incapsulate number formatting and caret positioning logics.</p>
 
-<p>If you want to use delegate methods you need to subclass SHSPhoneLogicDelegate
-and call setLogicDelegate: method on SHSPhoneTextFeild.
-Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndash; it should always return NO.</p>
+<p>If you want to use delegate methods please
+design textField:shouldChangeCharactersInRange:replacementString: method in next way</p>
+
+<p>&ndash;(BOOL)textField:(<a href="../Classes/SHSPhoneTextField.html">SHSPhoneTextField</a> <em>)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString </em>)string
+{</p>
+
+<pre><code>[SHSPhoneLogic logicTextField:textField shouldChangeCharactersInRange:range replacementString:string];
+// ..your logic
+return NO;
+</code></pre>
+
+<p>}</p>
+
+<p>Other delegate methods use as you want.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/logicTextField:shouldChangeCharactersInRange:replacementString:">+&nbsp;logicTextField:shouldChangeCharactersInRange:replacementString:</a></code>
+		<span class="tooltip"><p>  Incapsulate number formatting and caret positioning logics.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
 					</div>
 					
 					
@@ -111,9 +164,52 @@ Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndas
 					
 					
 					
-					
-					
-					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/logicTextField:shouldChangeCharactersInRange:replacementString:" title="logicTextField:shouldChangeCharactersInRange:replacementString:"></a>
+	<h3 class="subsubtitle method-title">logicTextField:shouldChangeCharactersInRange:replacementString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>  Incapsulate number formatting and caret positioning logics.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)logicTextField:(SHSPhoneTextField *)<em>textField</em> shouldChangeCharactersInRange:(NSRange)<em>range</em> replacementString:(NSString *)<em>string</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>  Incapsulate number formatting and caret positioning logics.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SHSPhoneLogic.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 					
@@ -128,7 +224,7 @@ Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndas
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 SHS. All rights reserved. (Last updated: 2013-05-06)</span><br />
+						<p><span class="copyright">&copy; 2013 SHS. All rights reserved. (Last updated: 2013-05-09)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						

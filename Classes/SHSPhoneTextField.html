@@ -37,21 +37,17 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/canAffectLeftViewByFormatter">&nbsp;&nbsp;&nbsp;&nbsp;canAffectLeftViewByFormatter</option>
+	
+	<option value="//api/name/formatter">&nbsp;&nbsp;&nbsp;&nbsp;formatter</option>
+	
+	<option value="//api/name/textDidChangeBlock">&nbsp;&nbsp;&nbsp;&nbsp;textDidChangeBlock</option>
 	
 	
 	
 	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/addOutputPattern:forRegExp:imagePath:">&nbsp;&nbsp;&nbsp;&nbsp;- addOutputPattern:forRegExp:imagePath:</option>
-	
-	<option value="//api/name/resetFormats">&nbsp;&nbsp;&nbsp;&nbsp;- resetFormats</option>
-	
-	<option value="//api/name/setDefaultOutputPattern:imagePath:">&nbsp;&nbsp;&nbsp;&nbsp;- setDefaultOutputPattern:imagePath:</option>
-	
-	<option value="//api/name/setLogicDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- setLogicDelegate:</option>
-	
-	<option value="//api/name/setTextDidChangeBlock:">&nbsp;&nbsp;&nbsp;&nbsp;- setTextDidChangeBlock:</option>
 	
 	
 	
@@ -75,23 +71,19 @@
 
 
 
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addOutputPattern:forRegExp:imagePath:">addOutputPattern:forRegExp:imagePath:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canAffectLeftViewByFormatter">canAffectLeftViewByFormatter</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetFormats">resetFormats</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/formatter">formatter</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultOutputPattern:imagePath:">setDefaultOutputPattern:imagePath:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setLogicDelegate:">setLogicDelegate:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setTextDidChangeBlock:">setTextDidChangeBlock:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textDidChangeBlock">textDidChangeBlock</a></span></li>
 	
 </ul></li>
+
+
+
+
 
 
 			</ul>
@@ -147,45 +139,26 @@ ARC enabled.</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/resetFormats">&ndash;&nbsp;resetFormats</a></code>
-		<span class="tooltip"><p>Remove all patterns and apply clear format style.
-Default format is @&ldquo;#############&rdquo;, imagePath is nil.</p></span>
+		<code><a href="#//api/name/formatter">&nbsp;&nbsp;formatter</a></code>
+		<span class="tooltip"><p><a href="../Classes/SHSPhoneNumberFormatter.html">SHSPhoneNumberFormatter</a> instance.
+Use is to configure format properties.</p></span>
 	</span>
-	
+	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/setDefaultOutputPattern:imagePath:">&ndash;&nbsp;setDefaultOutputPattern:imagePath:</a></code>
-		<span class="tooltip"><p>Apply default format style and image
-Symbol &lsquo;#&rsquo; assumes all digits.
-Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/addOutputPattern:forRegExp:imagePath:">&ndash;&nbsp;addOutputPattern:forRegExp:imagePath:</a></code>
-		<span class="tooltip"><p>All number matched your regexp will formatted with your style and image
-Symbol &lsquo;#&rsquo; assumes all digits.
-Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/setLogicDelegate:">&ndash;&nbsp;setLogicDelegate:</a></code>
-		<span class="tooltip"><p>If you want to use delegate methods you need to subclass <a href="../Classes/SHSPhoneLogicDelegate.html">SHSPhoneLogicDelegate</a>
-and call setLogicDelegate: method. It initialize your delegate subclass with required parameters.
-Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndash; it should always return NO.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/setTextDidChangeBlock:">&ndash;&nbsp;setTextDidChangeBlock:</a></code>
+		<code><a href="#//api/name/textDidChangeBlock">&nbsp;&nbsp;textDidChangeBlock</a></code>
 		<span class="tooltip"><p>Block will be called when text changed</p></span>
 	</span>
+	<span class="task-item-suffix">property</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/canAffectLeftViewByFormatter">&nbsp;&nbsp;canAffectLeftViewByFormatter</a></code>
+		<span class="tooltip"><p>If you want to use leftView or leftViewMode property set this property to NO.
+Default is YES.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -196,29 +169,24 @@ Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndas
 					
 					
 					
-					
-					
-					
-					
 					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/addOutputPattern:forRegExp:imagePath:" title="addOutputPattern:forRegExp:imagePath:"></a>
-	<h3 class="subsubtitle method-title">addOutputPattern:forRegExp:imagePath:</h3>
+	<a name="//api/name/canAffectLeftViewByFormatter" title="canAffectLeftViewByFormatter"></a>
+	<h3 class="subsubtitle method-title">canAffectLeftViewByFormatter</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>All number matched your regexp will formatted with your style and image
-Symbol &lsquo;#&rsquo; assumes all digits.
-Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p>
+		<p>If you want to use leftView or leftViewMode property set this property to NO.
+Default is YES.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)addOutputPattern:(NSString *)<em>pattern</em> forRegExp:(NSString *)<em>regexp</em> imagePath:(NSString *)<em>imagePath</em></code></div>
+	<div class="method-subsection method-declaration"><code>@property (readwrite) BOOL canAffectLeftViewByFormatter</code></div>
 
     
 	
@@ -230,9 +198,8 @@ Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>All number matched your regexp will formatted with your style and image
-Symbol &lsquo;#&rsquo; assumes all digits.
-Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^\+375\d*$&rdquo;</p>
+		<p>If you want to use leftView or leftViewMode property set this property to NO.
+Default is YES.</p>
 	</div>
 	
 	
@@ -250,19 +217,19 @@ Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/resetFormats" title="resetFormats"></a>
-	<h3 class="subsubtitle method-title">resetFormats</h3>
+	<a name="//api/name/formatter" title="formatter"></a>
+	<h3 class="subsubtitle method-title">formatter</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Remove all patterns and apply clear format style.
-Default format is @&ldquo;#############&rdquo;, imagePath is nil.</p>
+		<p><a href="../Classes/SHSPhoneNumberFormatter.html">SHSPhoneNumberFormatter</a> instance.
+Use is to configure format properties.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)resetFormats</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, strong) SHSPhoneNumberFormatter *formatter</code></div>
 
     
 	
@@ -274,8 +241,8 @@ Default format is @&ldquo;#############&rdquo;, imagePath is nil.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Remove all patterns and apply clear format style.
-Default format is @&ldquo;#############&rdquo;, imagePath is nil.</p>
+		<p><a href="../Classes/SHSPhoneNumberFormatter.html">SHSPhoneNumberFormatter</a> instance.
+Use is to configure format properties.</p>
 	</div>
 	
 	
@@ -293,98 +260,8 @@ Default format is @&ldquo;#############&rdquo;, imagePath is nil.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/setDefaultOutputPattern:imagePath:" title="setDefaultOutputPattern:imagePath:"></a>
-	<h3 class="subsubtitle method-title">setDefaultOutputPattern:imagePath:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Apply default format style and image
-Symbol &lsquo;#&rsquo; assumes all digits.
-Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)setDefaultOutputPattern:(NSString *)<em>pattern</em> imagePath:(NSString *)<em>imagePath</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Apply default format style and image
-Symbol &lsquo;#&rsquo; assumes all digits.
-Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SHSPhoneTextField.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/setLogicDelegate:" title="setLogicDelegate:"></a>
-	<h3 class="subsubtitle method-title">setLogicDelegate:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>If you want to use delegate methods you need to subclass <a href="../Classes/SHSPhoneLogicDelegate.html">SHSPhoneLogicDelegate</a>
-and call setLogicDelegate: method. It initialize your delegate subclass with required parameters.
-Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndash; it should always return NO.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)setLogicDelegate:(SHSPhoneLogicDelegate *)<em>delegate</em></code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>If you want to use delegate methods you need to subclass <a href="../Classes/SHSPhoneLogicDelegate.html">SHSPhoneLogicDelegate</a>
-and call setLogicDelegate: method. It initialize your delegate subclass with required parameters.
-Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndash; it should always return NO.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SHSPhoneTextField.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/setTextDidChangeBlock:" title="setTextDidChangeBlock:"></a>
-	<h3 class="subsubtitle method-title">setTextDidChangeBlock:</h3>
+	<a name="//api/name/textDidChangeBlock" title="textDidChangeBlock"></a>
+	<h3 class="subsubtitle method-title">textDidChangeBlock</h3>
 	
 	
 	
@@ -394,7 +271,7 @@ Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndas
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)setTextDidChangeBlock:(SHSTextBlock)<em>block</em></code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) SHSTextBlock textDidChangeBlock</code></div>
 
     
 	
@@ -424,6 +301,10 @@ Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndas
 </div>
 						
 					</div>
+					
+					
+					
+					
 					
 					
 				</div>
@@ -436,7 +317,7 @@ Be careful with textField:shouldChangeCharactersInRange:replacementString: &ndas
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 SHS. All rights reserved. (Last updated: 2013-05-06)</span><br />
+						<p><span class="copyright">&copy; 2013 SHS. All rights reserved. (Last updated: 2013-05-09)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
