@@ -26,6 +26,7 @@
     logicDelegate = [[SHSPhoneLogic alloc] init];
     _canAffectLeftViewByFormatter = YES;
     self.delegate = logicDelegate;
+    self.keyboardType = UIKeyboardTypeNumberPad;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder

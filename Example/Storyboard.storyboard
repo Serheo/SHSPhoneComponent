@@ -16,7 +16,7 @@
                                 <rect key="frame" x="25" y="67" width="271" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" id="cyU-8V-Gs6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -47,6 +47,17 @@
             <point key="canvasLocation" x="-213" y="-508"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="PhoneViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PhoneViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="phoneField" candidateClass="SHSPhoneTextField"/>
+            </relationships>
+        </class>
+        <class className="SHSPhoneTextField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHSPhoneTextField.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
