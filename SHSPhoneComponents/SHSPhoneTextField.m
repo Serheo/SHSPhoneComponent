@@ -25,7 +25,8 @@
     _formatter = [[SHSPhoneNumberFormatter alloc]init];
     logicDelegate = [[SHSPhoneLogic alloc] init];
     _canAffectLeftViewByFormatter = YES;
-    self.delegate = logicDelegate;
+    
+    [super setDelegate:logicDelegate];
     self.keyboardType = UIKeyboardTypeNumberPad;
 }
 
@@ -49,5 +50,14 @@
 
 #pragma mark -
 
+-(void) setDelegate:(id<UITextFieldDelegate>)delegate
+{
+    logicDelegate.delegate = delegate;
+}
+
+-(id<UITextFieldDelegate>) delegate
+{
+    return logicDelegate.delegate;
+}
 
 @end

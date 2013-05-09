@@ -25,15 +25,7 @@
         NSLog(@"number is %@", textField.text);
     };
     
-    //self.phoneField.delegate = self;
 }
 
-// other delegate methods use as you want
--(BOOL)textField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    [SHSPhoneLogic logicTextField:textField shouldChangeCharactersInRange:range replacementString:string];
-    // ..your logic
-    return NO;
-}
 
 @end

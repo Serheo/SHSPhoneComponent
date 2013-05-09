@@ -47,17 +47,6 @@
             <point key="canvasLocation" x="-213" y="-508"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="PhoneViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PhoneViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="phoneField" candidateClass="SHSPhoneTextField"/>
-            </relationships>
-        </class>
-        <class className="SHSPhoneTextField" superclassName="UITextField">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SHSPhoneTextField.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

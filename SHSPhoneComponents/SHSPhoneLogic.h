@@ -11,19 +11,7 @@
 @class SHSPhoneTextField;
 
 /**
- Incapsulate number formatting and caret positioning logics.
- 
- If you want to use delegate methods please
- design textField:shouldChangeCharactersInRange:replacementString: method in next way
- 
- -(BOOL)textField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
- {
-    [SHSPhoneLogic logicTextField:textField shouldChangeCharactersInRange:range replacementString:string];
-    // ..your logic
-    return NO;
- }
- 
- Other delegate methods use as you want.
+ Incapsulate number formatting and caret positioning logics. Also used as inner delegate.
 */
 @interface SHSPhoneLogic : NSObject <UITextFieldDelegate>
 
@@ -31,4 +19,6 @@
   Incapsulate number formatting and caret positioning logics.
 */
 +(BOOL)logicTextField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
+
+@property(nonatomic, weak) id<UITextFieldDelegate> delegate;
 @end

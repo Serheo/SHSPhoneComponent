@@ -26,21 +26,22 @@
 @property (readonly, strong) SHSPhoneNumberFormatter *formatter;
 
 /**
+ If you want to use leftView or leftViewMode property set this property to NO.
+ Default is YES.
+*/
+@property (readwrite) BOOL canAffectLeftViewByFormatter;
+
+/**
  Block will be called when text changed
 */
 typedef void (^SHSTextBlock)(UITextField *textField);
 @property (nonatomic, copy) SHSTextBlock textDidChangeBlock;
 
-/**
- If you want to use leftView or leftViewMode property set this property to NO.
- Default is YES.
- */
-@property (readwrite) BOOL canAffectLeftViewByFormatter;
 @end
 
 /**
  Flags String Constants. Each method is NSString path to image.
- */
+*/
 @interface SHSFlags : NSObject
 + (NSString *) FlagRU;
 + (NSString *) FlagUS;

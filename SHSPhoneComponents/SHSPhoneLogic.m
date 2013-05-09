@@ -10,19 +10,7 @@
 #import "SHSPhoneTextField.h"
 
 @implementation SHSPhoneLogic
-
-#pragma mark UITextField Delegate
-
-- (BOOL)textFieldShouldClear:(SHSPhoneTextField *)textField
-{
-    if ( textField.canAffectLeftViewByFormatter) textField.leftViewMode = UITextFieldViewModeNever;
-    return YES;
-}
-
--(BOOL)textField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    return [SHSPhoneLogic logicTextField:textField shouldChangeCharactersInRange:range replacementString:string];
-}
+@synthesize delegate = _delegate;
 
 #pragma mark -
 #pragma mark Logic Method
@@ -109,5 +97,62 @@
 }
 
 #pragma mark -
+#pragma mark UITextField Delegate
+
+-(BOOL)textField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    [SHSPhoneLogic logicTextField:textField shouldChangeCharactersInRange:range replacementString:string];
+    
+    if ([_delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)])
+        [_delegate textField:textField shouldChangeCharactersInRange:range replacementString:string];
+    
+    return NO;
+}
+
+- (BOOL)textFieldShouldClear:(SHSPhoneTextField *)textField
+{
+    if ( textField.canAffectLeftViewByFormatter) textField.leftViewMode = UITextFieldViewModeNever;
+
+    if ([_delegate respondsToSelector:@selector(textFieldShouldClear:)])
+        return [_delegate textFieldShouldClear:textField];
+    
+    return YES;
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if ([_delegate respondsToSelector:@selector(textFieldShouldBeginEditing:)])
+        return [_delegate textFieldShouldBeginEditing:textField];
+    
+    return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if ([_delegate respondsToSelector:@selector(textFieldDidBeginEditing:)])
+        [_delegate textFieldDidBeginEditing:textField];
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    if ([_delegate respondsToSelector:@selector(textFieldShouldEndEditing:)])
+        return [_delegate textFieldShouldEndEditing:textField];
+    
+    return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if ([_delegate respondsToSelector:@selector(textFieldDidEndEditing:)])
+        [_delegate textFieldDidEndEditing:textField];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if ([_delegate respondsToSelector:@selector(textFieldShouldReturn:)])
+        return [_delegate textFieldShouldReturn:textField];
+    
+    return YES;
+}
 
 @end
