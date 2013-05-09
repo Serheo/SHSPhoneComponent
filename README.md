@@ -32,16 +32,17 @@ If you want to format some numbers in specific way just do
 
 ###Delegate Methods
 If you want to use delegate methods please design textField:shouldChangeCharactersInRange:replacementString: method in next way
-
+``` objective-c
 -(BOOL)textField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
    [SHSPhoneLogic logicTextField:textField shouldChangeCharactersInRange:range replacementString:string];
    // ..your logic
    return NO;
 }
+```
 
 Other delegate methods use as you want.
-```
+
 
 ##Formatting
 If you need only formatting function you can use SHSPhoneNumberFormatter class. 
