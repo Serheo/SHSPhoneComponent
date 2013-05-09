@@ -2,6 +2,7 @@ SHSPhoneComponent <a href="https://travis-ci.org/Serheo/SHSPhoneComponent"><img 
 =================
 
 UITextField and NSFormatter subclasses for formatting phone numbers. Allow different formats for different countries(patterns).
+Caret positioning works excellent.
 
 ## How To Install
 pod 'SHSPhoneComponent' or copy /SHSPhoneComponent folder to your project.
@@ -9,9 +10,9 @@ pod 'SHSPhoneComponent' or copy /SHSPhoneComponent folder to your project.
 ##Example Usage
 If you need complete example please see /example folder.
 
-### Default Format
+###Default Format
 ``` objective-c
-[self.phoneField setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
+[self.phoneField.formatter setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
 ```
 <p align="center">
   <img src="http://serheo.github.io/SHSPhoneComponent/readme/r1.jpg" alt="shspc example 1"/>
@@ -19,22 +20,27 @@ If you need complete example please see /example folder.
 All input strings will be parsed in that way. 
 Example: +7 (920) 123-45-67
 
-### Specific Formats
+###Specific Formats
 If you want to format some numbers in specific way just do
 ``` objective-c
-[self.phoneField addOutputPattern:@"+# (###) ###-##-##" forRegExp:@"^7[0-689]\\d*$" imagePath:@"flagRU"];
-[self.phoneField addOutputPattern:@"+### (##) ###-###" forRegExp:@"^374\\d*$" imagePath:@"flagAM"];
+[self.phoneField.formatter addOutputPattern:@"+# (###) ###-##-##" forRegExp:@"^7[0-689]\\d*$" imagePath:@"flagRU"];
+[self.phoneField.formatter addOutputPattern:@"+### (##) ###-###" forRegExp:@"^374\\d*$" imagePath:@"flagAM"];
 ```
 <p align="center">
   <img src="http://serheo.github.io/SHSPhoneComponent/readme/r2.jpg" alt="shspc example 2"/>
 </p>
 
-##Subclassing/Extending
-If you want to use delegate methods you need to subclass SHSPhoneLogicDelegate
- and call setLogicDelegate: method on SHSPhoneTextFeild.
-Be careful with textField:shouldChangeCharactersInRange:replacementString: - it should always return NO.
-``` objective-c
-[self.phoneField setLogicDelegate:newLogicDelegate];
+###Delegate Methods
+If you want to use delegate methods please design textField:shouldChangeCharactersInRange:replacementString: method in next way
+
+-(BOOL)textField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+   [SHSPhoneLogic logicTextField:textField shouldChangeCharactersInRange:range replacementString:string];
+   // ..your logic
+   return NO;
+}
+
+Other delegate methods use as you want.
 ```
 
 ##Formatting

@@ -7,6 +7,6 @@
 //
 
 #import "SHSPhoneTextField.h"
-#import "SHSPhoneLogicDelegate.h"
+#import "SHSPhoneLogic.h"
 #import "SHSPhoneNumberFormatter.h"
 #import "SHSPhoneNumberFormatter+UserConfig.h"

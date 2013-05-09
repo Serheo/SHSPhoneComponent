@@ -7,22 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE1549551738026A005B565E /* flag_AM.png in Resources */ = {isa = PBXBuildFile; fileRef = BE15494A1738026A005B565E /* flag_AM.png */; };
-		BE1549561738026A005B565E /* flag_AZ.png in Resources */ = {isa = PBXBuildFile; fileRef = BE15494B1738026A005B565E /* flag_AZ.png */; };
-		BE1549571738026A005B565E /* flag_BY.png in Resources */ = {isa = PBXBuildFile; fileRef = BE15494C1738026A005B565E /* flag_BY.png */; };
-		BE1549581738026A005B565E /* flag_KG.png in Resources */ = {isa = PBXBuildFile; fileRef = BE15494D1738026A005B565E /* flag_KG.png */; };
-		BE1549591738026A005B565E /* flag_KZ.png in Resources */ = {isa = PBXBuildFile; fileRef = BE15494E1738026A005B565E /* flag_KZ.png */; };
-		BE15495A1738026A005B565E /* flag_MD.png in Resources */ = {isa = PBXBuildFile; fileRef = BE15494F1738026A005B565E /* flag_MD.png */; };
-		BE15495B1738026A005B565E /* flag_RU.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1549501738026A005B565E /* flag_RU.png */; };
-		BE15495C1738026A005B565E /* flag_TJ.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1549511738026A005B565E /* flag_TJ.png */; };
-		BE15495D1738026A005B565E /* flag_TM.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1549521738026A005B565E /* flag_TM.png */; };
-		BE15495E1738026A005B565E /* flag_UA.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1549531738026A005B565E /* flag_UA.png */; };
-		BE15495F1738026A005B565E /* flag_UZ.png in Resources */ = {isa = PBXBuildFile; fileRef = BE1549541738026A005B565E /* flag_UZ.png */; };
-		BE1F26161735907500709EE7 /* SHSPhoneLogicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342161727D5F8002EE850 /* SHSPhoneLogicDelegate.m */; };
+		BE1F26161735907500709EE7 /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342161727D5F8002EE850 /* SHSPhoneLogic.m */; };
 		BE1F26171735907500709EE7 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342181727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m */; };
 		BE1F26181735907500709EE7 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m */; };
 		BE1F26191735907500709EE7 /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421C1727D5F8002EE850 /* SHSPhoneTextField.m */; };
-		BE6342281727D5F8002EE850 /* SHSPhoneLogicDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342161727D5F8002EE850 /* SHSPhoneLogicDelegate.m */; };
+		BE6342281727D5F8002EE850 /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342161727D5F8002EE850 /* SHSPhoneLogic.m */; };
 		BE6342291727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342181727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m */; };
 		BE63422A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m */; };
 		BE63422B1727D5F8002EE850 /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421C1727D5F8002EE850 /* SHSPhoneTextField.m */; };
@@ -37,6 +26,7 @@
 		BEAA01DF1720149300252141 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEAA01DE1720149300252141 /* Default-568h@2x.png */; };
 		BEAA01E6172014A100252141 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAA01E5172014A100252141 /* Storyboard.storyboard */; };
 		BEAA01E9172014E600252141 /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA01E8172014E600252141 /* PhoneViewController.m */; };
+		BED45960173AAB9F00C83DCB /* SHSPhoneImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BED4595F173AAB9F00C83DCB /* SHSPhoneImage.bundle */; };
 		BEE6EF2317353FA10023C1C3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6EF2217353FA10023C1C3 /* SenTestingKit.framework */; };
 		BEE6EF2417353FA10023C1C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01C81720149300252141 /* UIKit.framework */; };
 		BEE6EF2517353FA10023C1C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01CA1720149300252141 /* Foundation.framework */; };
@@ -45,20 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BE15494A1738026A005B565E /* flag_AM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_AM.png; sourceTree = "<group>"; };
-		BE15494B1738026A005B565E /* flag_AZ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_AZ.png; sourceTree = "<group>"; };
-		BE15494C1738026A005B565E /* flag_BY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_BY.png; sourceTree = "<group>"; };
-		BE15494D1738026A005B565E /* flag_KG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_KG.png; sourceTree = "<group>"; };
-		BE15494E1738026A005B565E /* flag_KZ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_KZ.png; sourceTree = "<group>"; };
-		BE15494F1738026A005B565E /* flag_MD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_MD.png; sourceTree = "<group>"; };
-		BE1549501738026A005B565E /* flag_RU.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_RU.png; sourceTree = "<group>"; };
-		BE1549511738026A005B565E /* flag_TJ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_TJ.png; sourceTree = "<group>"; };
-		BE1549521738026A005B565E /* flag_TM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_TM.png; sourceTree = "<group>"; };
-		BE1549531738026A005B565E /* flag_UA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_UA.png; sourceTree = "<group>"; };
-		BE1549541738026A005B565E /* flag_UZ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_UZ.png; sourceTree = "<group>"; };
 		BE6342141727D5F8002EE850 /* SHSPhoneLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLibrary.h; sourceTree = "<group>"; };
-		BE6342151727D5F8002EE850 /* SHSPhoneLogicDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLogicDelegate.h; sourceTree = "<group>"; };
-		BE6342161727D5F8002EE850 /* SHSPhoneLogicDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneLogicDelegate.m; sourceTree = "<group>"; };
+		BE6342151727D5F8002EE850 /* SHSPhoneLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLogic.h; sourceTree = "<group>"; };
+		BE6342161727D5F8002EE850 /* SHSPhoneLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneLogic.m; sourceTree = "<group>"; };
 		BE6342171727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHSPhoneNumberFormatter+UserConfig.h"; sourceTree = "<group>"; };
 		BE6342181727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SHSPhoneNumberFormatter+UserConfig.m"; sourceTree = "<group>"; };
 		BE6342191727D5F8002EE850 /* SHSPhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneNumberFormatter.h; sourceTree = "<group>"; };
@@ -81,6 +60,7 @@
 		BEAA01E5172014A100252141 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		BEAA01E7172014E600252141 /* PhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneViewController.h; sourceTree = "<group>"; };
 		BEAA01E8172014E600252141 /* PhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneViewController.m; sourceTree = "<group>"; };
+		BED4595F173AAB9F00C83DCB /* SHSPhoneImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SHSPhoneImage.bundle; sourceTree = "<group>"; };
 		BEE6EF2117353FA10023C1C3 /* PhoneComponentTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneComponentTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE6EF2217353FA10023C1C3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		BEE6EF2817353FA10023C1C3 /* PhoneComponentTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhoneComponentTest-Info.plist"; sourceTree = "<group>"; };
@@ -114,30 +94,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BE1549491738026A005B565E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BE15494A1738026A005B565E /* flag_AM.png */,
-				BE15494B1738026A005B565E /* flag_AZ.png */,
-				BE15494C1738026A005B565E /* flag_BY.png */,
-				BE15494D1738026A005B565E /* flag_KG.png */,
-				BE15494E1738026A005B565E /* flag_KZ.png */,
-				BE15494F1738026A005B565E /* flag_MD.png */,
-				BE1549501738026A005B565E /* flag_RU.png */,
-				BE1549511738026A005B565E /* flag_TJ.png */,
-				BE1549521738026A005B565E /* flag_TM.png */,
-				BE1549531738026A005B565E /* flag_UA.png */,
-				BE1549541738026A005B565E /* flag_UZ.png */,
-			);
-			path = Resources;
-			sourceTree = SOURCE_ROOT;
-		};
 		BE6342071727D5F8002EE850 /* SHSPhoneComponents */ = {
 			isa = PBXGroup;
 			children = (
+				BED4595F173AAB9F00C83DCB /* SHSPhoneImage.bundle */,
 				BE6342141727D5F8002EE850 /* SHSPhoneLibrary.h */,
-				BE6342151727D5F8002EE850 /* SHSPhoneLogicDelegate.h */,
-				BE6342161727D5F8002EE850 /* SHSPhoneLogicDelegate.m */,
+				BE6342151727D5F8002EE850 /* SHSPhoneLogic.h */,
+				BE6342161727D5F8002EE850 /* SHSPhoneLogic.m */,
 				BE6342171727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.h */,
 				BE6342181727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m */,
 				BE6342191727D5F8002EE850 /* SHSPhoneNumberFormatter.h */,
@@ -209,7 +172,6 @@
 		BEAA01EA172014EB00252141 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BE1549491738026A005B565E /* Resources */,
 				BEAA01E7172014E600252141 /* PhoneViewController.h */,
 				BEAA01E8172014E600252141 /* PhoneViewController.m */,
 			);
@@ -319,17 +281,7 @@
 				BEAA01DD1720149300252141 /* Default@2x.png in Resources */,
 				BEAA01DF1720149300252141 /* Default-568h@2x.png in Resources */,
 				BEAA01E6172014A100252141 /* Storyboard.storyboard in Resources */,
-				BE1549551738026A005B565E /* flag_AM.png in Resources */,
-				BE1549561738026A005B565E /* flag_AZ.png in Resources */,
-				BE1549571738026A005B565E /* flag_BY.png in Resources */,
-				BE1549581738026A005B565E /* flag_KG.png in Resources */,
-				BE1549591738026A005B565E /* flag_KZ.png in Resources */,
-				BE15495A1738026A005B565E /* flag_MD.png in Resources */,
-				BE15495B1738026A005B565E /* flag_RU.png in Resources */,
-				BE15495C1738026A005B565E /* flag_TJ.png in Resources */,
-				BE15495D1738026A005B565E /* flag_TM.png in Resources */,
-				BE15495E1738026A005B565E /* flag_UA.png in Resources */,
-				BE15495F1738026A005B565E /* flag_UZ.png in Resources */,
+				BED45960173AAB9F00C83DCB /* SHSPhoneImage.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +319,7 @@
 				BEAA01D51720149300252141 /* main.m in Sources */,
 				BEAA01D91720149300252141 /* AppDelegate.m in Sources */,
 				BEAA01E9172014E600252141 /* PhoneViewController.m in Sources */,
-				BE6342281727D5F8002EE850 /* SHSPhoneLogicDelegate.m in Sources */,
+				BE6342281727D5F8002EE850 /* SHSPhoneLogic.m in Sources */,
 				BE6342291727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
 				BE63422A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m in Sources */,
 				BE63422B1727D5F8002EE850 /* SHSPhoneTextField.m in Sources */,
@@ -378,7 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE1F26161735907500709EE7 /* SHSPhoneLogicDelegate.m in Sources */,
+				BE1F26161735907500709EE7 /* SHSPhoneLogic.m in Sources */,
 				BE1F26171735907500709EE7 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
 				BE1F26181735907500709EE7 /* SHSPhoneNumberFormatter.m in Sources */,
 				BE1F26191735907500709EE7 /* SHSPhoneTextField.m in Sources */,

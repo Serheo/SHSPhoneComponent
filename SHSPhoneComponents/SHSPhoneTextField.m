@@ -9,14 +9,23 @@
 #import "SHSPhoneTextField.h"
 #import "SHSPhoneNumberFormatter+UserConfig.h"
 
+@implementation SHSFlags
+
++ (NSString *) FlagRU { return @"SHSPhoneImage.bundle/flag_ru"; }
++ (NSString *) FlagUS { return @"SHSPhoneImage.bundle/flag_us"; }
++ (NSString *) FlagDE { return @"SHSPhoneImage.bundle/flag_de"; }
++ (NSString *) FlagUA { return @"SHSPhoneImage.bundle/flag_ua"; }
+
+@end
+
 @implementation SHSPhoneTextField
 
 -(void) logicInitialization
 {
-    formatter = [[SHSPhoneNumberFormatter alloc]init];
-    
-    logicDelegate = [[SHSPhoneLogicDelegate alloc] initWithTextField:self formatter:formatter];
-    [super setDelegate:logicDelegate];
+    _formatter = [[SHSPhoneNumberFormatter alloc]init];
+    logicDelegate = [[SHSPhoneLogic alloc] init];
+    _canAffectLeftViewByFormatter = YES;
+    self.delegate = logicDelegate;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -37,37 +46,7 @@
     return self;
 }
 
-#pragma mark Delegate Suclass Helper
-
--(void) setLogicDelegate:(SHSPhoneLogicDelegate *)delegate
-{
-    [delegate loadRequirements:self formatter:formatter];
-    [super setDelegate:logicDelegate];
-}
-
-#pragma mark -
-#pragma mark Format Style Methods
-
--(void) resetFormats
-{
-    [formatter resetFormats];
-}
-
--(void) setDefaultOutputPattern:(NSString *)pattern imagePath:(NSString *)imagePath
-{
-    [formatter setDefaultOutputPattern:pattern imagePath:imagePath];
-}
-
--(void) addOutputPattern:(NSString *)pattern forRegExp:(NSString *)regexp imagePath:(NSString *)imagePath
-{
-    [formatter addOutputPattern:pattern forRegExp:regexp imagePath:imagePath];
-}
-
 #pragma mark -
 
--(void) setTextDidChangeBlock:(SHSTextBlock)block
-{
-    logicDelegate.textDidChangeBlock = block;
-}
 
 @end
