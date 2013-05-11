@@ -52,11 +52,15 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/addOutputPattern:forRegExp:">&nbsp;&nbsp;&nbsp;&nbsp;- addOutputPattern:forRegExp:</option>
+	
 	<option value="//api/name/addOutputPattern:forRegExp:imagePath:">&nbsp;&nbsp;&nbsp;&nbsp;- addOutputPattern:forRegExp:imagePath:</option>
 	
 	<option value="//api/name/resetFormats">&nbsp;&nbsp;&nbsp;&nbsp;- resetFormats</option>
 	
 	<option value="//api/name/setDefaultFormat">&nbsp;&nbsp;&nbsp;&nbsp;- setDefaultFormat</option>
+	
+	<option value="//api/name/setDefaultOutputPattern:">&nbsp;&nbsp;&nbsp;&nbsp;- setDefaultOutputPattern:</option>
 	
 	<option value="//api/name/setDefaultOutputPattern:imagePath:">&nbsp;&nbsp;&nbsp;&nbsp;- setDefaultOutputPattern:imagePath:</option>
 	
@@ -102,11 +106,15 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addOutputPattern:forRegExp:">addOutputPattern:forRegExp:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addOutputPattern:forRegExp:imagePath:">addOutputPattern:forRegExp:imagePath:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetFormats">resetFormats</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultFormat">setDefaultFormat</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultOutputPattern:">setDefaultOutputPattern:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setDefaultOutputPattern:imagePath:">setDefaultOutputPattern:imagePath:</a></span></li>
 	
@@ -223,9 +231,18 @@ Default format is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setDefaultOutputPattern:imagePath:">&ndash;&nbsp;setDefaultOutputPattern:imagePath:</a></code>
-		<span class="tooltip"><p>Apply default format style and image
+		<span class="tooltip"><p>Apply default format style and image.
 Symbol &lsquo;#&rsquo; assumes all digits.
 Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setDefaultOutputPattern:">&ndash;&nbsp;setDefaultOutputPattern:</a></code>
+		<span class="tooltip"><p>Apply default format style.
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;</p></span>
 	</span>
 	
 	
@@ -235,6 +252,15 @@ Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;fla
 		<span class="tooltip"><p>All number matched your regexp will formatted with your style and image
 Symbol &lsquo;#&rsquo; assumes all digits.
 Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;, regexp is &ldquo;^375\d*$&rdquo;</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addOutputPattern:forRegExp:">&ndash;&nbsp;addOutputPattern:forRegExp:</a></code>
+		<span class="tooltip"><p>All number matched your regexp will formatted with your style.
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, regexp is &ldquo;^375\d*$&rdquo;</p></span>
 	</span>
 	
 	
@@ -387,6 +413,51 @@ Valuable chars are all digits.</p>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/addOutputPattern:forRegExp:" title="addOutputPattern:forRegExp:"></a>
+	<h3 class="subsubtitle method-title">addOutputPattern:forRegExp:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>All number matched your regexp will formatted with your style.
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, regexp is &ldquo;^375\d*$&rdquo;</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addOutputPattern:(NSString *)<em>pattern</em> forRegExp:(NSString *)<em>regexp</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>All number matched your regexp will formatted with your style.
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example: pattern is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, regexp is &ldquo;^375\d*$&rdquo;</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SHSPhoneNumberFormatter+UserConfig.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/addOutputPattern:forRegExp:imagePath:" title="addOutputPattern:forRegExp:imagePath:"></a>
 	<h3 class="subsubtitle method-title">addOutputPattern:forRegExp:imagePath:</h3>
 	
@@ -518,13 +589,58 @@ Default format is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is nil
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/setDefaultOutputPattern:" title="setDefaultOutputPattern:"></a>
+	<h3 class="subsubtitle method-title">setDefaultOutputPattern:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Apply default format style.
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setDefaultOutputPattern:(NSString *)<em>pattern</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Apply default format style.
+Symbol &lsquo;#&rsquo; assumes all digits.
+Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SHSPhoneNumberFormatter+UserConfig.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/setDefaultOutputPattern:imagePath:" title="setDefaultOutputPattern:imagePath:"></a>
 	<h3 class="subsubtitle method-title">setDefaultOutputPattern:imagePath:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Apply default format style and image
+		<p>Apply default format style and image.
 Symbol &lsquo;#&rsquo; assumes all digits.
 Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
 	</div>		
@@ -543,7 +659,7 @@ Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;fla
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Apply default format style and image
+		<p>Apply default format style and image.
 Symbol &lsquo;#&rsquo; assumes all digits.
 Example is &ldquo;+# (###) ###&ndash;##&ndash;##&rdquo;, imagePath is &ldquo;flag_ru&rdquo;.</p>
 	</div>
@@ -620,7 +736,7 @@ Image path can be nil</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 SHS. All rights reserved. (Last updated: 2013-05-09)</span><br />
+						<p><span class="copyright">&copy; 2013 SHS. All rights reserved. (Last updated: 2013-05-11)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 840)</a>.</span></p>
 						
