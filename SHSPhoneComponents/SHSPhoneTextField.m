@@ -49,6 +49,7 @@
 }
 
 #pragma mark -
+#pragma mark Delegates
 
 -(void) setDelegate:(id<UITextFieldDelegate>)delegate
 {
@@ -60,4 +61,14 @@
     return logicDelegate.delegate;
 }
 
+#pragma mark -
+#pragma mark Additional Text Setter
+
+-(void) setFormattedText:(NSString *)text
+{
+    [SHSPhoneLogic applyFormat:self forText:text];
+}
+
 @end
+
+

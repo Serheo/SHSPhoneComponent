@@ -12,7 +12,7 @@ If you need complete example please see /example folder.
 
 ###Default Format
 ``` objective-c
-[self.phoneField.formatter setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
+[self.phoneField.formatter setDefaultOutputPattern:@"+# (###) ###-##-##"];
 ```
 <p align="center">
   <img src="http://serheo.github.io/SHSPhoneComponent/readme/r1.jpg" alt="shspc example 1"/>

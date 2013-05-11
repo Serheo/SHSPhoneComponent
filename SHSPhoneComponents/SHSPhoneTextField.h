@@ -32,6 +32,11 @@
 @property (readwrite) BOOL canAffectLeftViewByFormatter;
 
 /**
+ Formate a text and set it to a textfield.
+*/
+-(void) setFormattedText:(NSString *)text;
+
+/**
  Block will be called when text changed
 */
 typedef void (^SHSTextBlock)(UITextField *textField);

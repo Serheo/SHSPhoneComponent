@@ -40,10 +40,20 @@
     [config setObject:@{@"format": pattern, @"image": imagePath} forKey:@"default"];
 }
 
+-(void) setDefaultOutputPattern:(NSString *)pattern
+{
+    [config setObject:@{@"format": pattern, @"image": [NSNull null]} forKey:@"default"];
+}
+
 -(void) addOutputPattern:(NSString *)pattern forRegExp:(NSString *)regexp imagePath:(NSString *)imagePath
 {
     if (!imagePath) imagePath = (id)[NSNull null];
     [config setObject:@{@"format": pattern, @"image": imagePath} forKey:regexp];
+}
+
+-(void) addOutputPattern:(NSString *)pattern forRegExp:(NSString *)regexp
+{
+    [config setObject:@{@"format": pattern, @"image": [NSNull null]} forKey:regexp];
 }
 
 #pragma mark -

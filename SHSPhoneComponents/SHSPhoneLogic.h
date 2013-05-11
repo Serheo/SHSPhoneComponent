@@ -20,5 +20,10 @@
 */
 +(BOOL)logicTextField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
 
+/**
+ Formate a text and set it to a textfield.
+*/
++(void) applyFormat:(SHSPhoneTextField *)textField forText:(NSString *)text;
+
 @property(nonatomic, weak) id<UITextFieldDelegate> delegate;
 @end

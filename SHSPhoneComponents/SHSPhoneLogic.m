@@ -29,11 +29,22 @@
 
 +(void) updateLeftImageView:(UITextField *)textField imagePath:(NSString *)imagePath
 {
-    if (imagePath == (id)[NSNull null]) {
-        textField.leftViewMode = UITextFieldViewModeNever;
-    }
+    if (imagePath == (id)[NSNull null]) imagePath = nil;
+    UIImage *givenImage = [UIImage imageNamed:imagePath];
+    
+    if (givenImage)
+        [self setImageLeftView:textField image:givenImage];
     else
-        [self setImageLeftView:textField image:[UIImage imageNamed:imagePath]];
+       textField.leftViewMode = UITextFieldViewModeNever; 
+}
+
++(void) applyFormat:(SHSPhoneTextField *)textField forText:(NSString *)text
+{
+    NSDictionary *result = [textField.formatter valuesForString:text];
+    textField.text = result[@"text"];
+    
+    if ( textField.canAffectLeftViewByFormatter )
+        [self updateLeftImageView:textField imagePath:result[@"image"]];
 }
 
 +(BOOL)logicTextField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
@@ -47,12 +58,7 @@
     else
         newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
-    NSDictionary *result = [textField.formatter valuesForString:newString];
-    textField.text = result[@"text"];
-
-    if ( textField.canAffectLeftViewByFormatter )
-        [self updateLeftImageView:textField imagePath:result[@"image"]];
-    
+    [self applyFormat:textField forText:newString];
     [self popCaretPosition:textField range:range caretPosition:caretPosition];
     
     if (textField.textDidChangeBlock) textField.textDidChangeBlock(textField);

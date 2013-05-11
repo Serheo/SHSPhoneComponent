@@ -24,11 +24,18 @@
 -(void) setDefaultFormat;
 
 /**
- Apply default format style and image
+ Apply default format style and image.
  Symbol '#' assumes all digits.
  Example is "+# (###) ###-##-##", imagePath is "flag_ru".
 */
 -(void) setDefaultOutputPattern:(NSString *)pattern imagePath:(NSString *)imagePath;
+
+/**
+ Apply default format style.
+ Symbol '#' assumes all digits.
+ Example is "+# (###) ###-##-##"
+*/
+-(void) setDefaultOutputPattern:(NSString *)pattern;
 
 /**
  All number matched your regexp will formatted with your style and image
@@ -36,4 +43,12 @@
  Example: pattern is "+# (###) ###-##-##", imagePath is "flag_ru", regexp is "^375\\d*$"
 */
 -(void) addOutputPattern:(NSString *)pattern forRegExp:(NSString *)regexp imagePath:(NSString *)imagePath;
+
+/**
+ All number matched your regexp will formatted with your style.
+ Symbol '#' assumes all digits.
+ Example: pattern is "+# (###) ###-##-##", regexp is "^375\\d*$"
+*/
+-(void) addOutputPattern:(NSString *)pattern forRegExp:(NSString *)regexp;
+
 @end
