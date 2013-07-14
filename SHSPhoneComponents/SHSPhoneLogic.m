@@ -8,6 +8,7 @@
 
 #import "SHSPhoneLogic.h"
 #import "SHSPhoneTextField.h"
+#import "SHSFlagAccessoryView.h"
 
 @implementation SHSPhoneLogic
 @synthesize delegate = _delegate;
@@ -17,14 +18,12 @@
 
 +(void) setImageLeftView:(UITextField *)textField image:(UIImage *)image
 {
-    if (![textField.leftView isKindOfClass:[UIImageView class]])
+    if (![textField.leftView isKindOfClass:[SHSFlagAccessoryView class]])
     {
-        UIImageView *langImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 18, 18)];
-        langImage.contentMode = UIViewContentModeScaleAspectFit;
-        textField.leftView = langImage;
+        textField.leftView = [[SHSFlagAccessoryView alloc] init];
     }
     textField.leftViewMode =  UITextFieldViewModeAlways;
-    ((UIImageView *)textField.leftView).image = image;
+    ((SHSFlagAccessoryView *)textField.leftView).image = image;
 }
 
 +(void) updateLeftImageView:(UITextField *)textField imagePath:(NSString *)imagePath

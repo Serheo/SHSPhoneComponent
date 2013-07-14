@@ -15,6 +15,8 @@
 		BE6342291727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342181727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m */; };
 		BE63422A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m */; };
 		BE63422B1727D5F8002EE850 /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421C1727D5F8002EE850 /* SHSPhoneTextField.m */; };
+		BEA38DA31791FF92008DA244 /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA38DA21791FF92008DA244 /* SHSFlagAccessoryView.m */; };
+		BEA38DA41791FF92008DA244 /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA38DA21791FF92008DA244 /* SHSFlagAccessoryView.m */; };
 		BEAA01C91720149300252141 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01C81720149300252141 /* UIKit.framework */; };
 		BEAA01CB1720149300252141 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01CA1720149300252141 /* Foundation.framework */; };
 		BEAA01CD1720149300252141 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01CC1720149300252141 /* CoreGraphics.framework */; };
@@ -44,6 +46,8 @@
 		BE63421A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneNumberFormatter.m; sourceTree = "<group>"; };
 		BE63421B1727D5F8002EE850 /* SHSPhoneTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneTextField.h; sourceTree = "<group>"; };
 		BE63421C1727D5F8002EE850 /* SHSPhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneTextField.m; sourceTree = "<group>"; };
+		BEA38DA11791FF92008DA244 /* SHSFlagAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFlagAccessoryView.h; sourceTree = "<group>"; };
+		BEA38DA21791FF92008DA244 /* SHSFlagAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFlagAccessoryView.m; sourceTree = "<group>"; };
 		BEAA01C51720149300252141 /* PhoneComponentExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneComponentExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA01C81720149300252141 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BEAA01CA1720149300252141 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +111,8 @@
 				BE63421A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m */,
 				BE63421B1727D5F8002EE850 /* SHSPhoneTextField.h */,
 				BE63421C1727D5F8002EE850 /* SHSPhoneTextField.m */,
+				BEA38DA11791FF92008DA244 /* SHSFlagAccessoryView.h */,
+				BEA38DA21791FF92008DA244 /* SHSFlagAccessoryView.m */,
 			);
 			name = SHSPhoneComponents;
 			path = ../../SHSPhoneComponents;
@@ -323,6 +329,7 @@
 				BE6342291727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
 				BE63422A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m in Sources */,
 				BE63422B1727D5F8002EE850 /* SHSPhoneTextField.m in Sources */,
+				BEA38DA31791FF92008DA244 /* SHSFlagAccessoryView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +342,7 @@
 				BE1F26181735907500709EE7 /* SHSPhoneNumberFormatter.m in Sources */,
 				BE1F26191735907500709EE7 /* SHSPhoneTextField.m in Sources */,
 				BEE6EF2E17353FA10023C1C3 /* PhoneComponentTest.m in Sources */,
+				BEA38DA41791FF92008DA244 /* SHSFlagAccessoryView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
