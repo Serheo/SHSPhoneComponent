@@ -8,6 +8,7 @@
 
 #import "SHSPhoneNumberFormatter.h"
 #import "SHSPhoneNumberFormatter+UserConfig.h"
+#import "SHSPhoneLogic.h"
 
 @implementation SHSPhoneNumberFormatter
 
@@ -15,6 +16,8 @@
 {
     self = [super init];
     if (self) {
+        _canAffectLeftViewByFormatter = NO;
+        _showFormatOnlyIfTextExist = YES;
         [self setDefaultFormat];
     }
     return self;
@@ -32,6 +35,35 @@
     
     return [regex stringByReplacingMatchesInString:aString options:0 range:NSMakeRange(0, [aString length]) withTemplate:@""];
 }
+
+-(NSString *) stringWithoutFormat:(NSString *)aString
+{
+    NSDictionary *dict = [self configForSequence:aString];
+    
+    NSArray *removeRanges = @[];
+    NSString *format = dict[@"format"];
+    for (NSInteger i = 0; i < MIN(format.length, [aString length]); i++)
+    {
+        unichar formatCh = [format characterAtIndex:i];
+        if (formatCh != [aString characterAtIndex:i])
+        {
+            break;
+        }
+        
+        if ([SHSPhoneNumberFormatter isValuableChar:formatCh])
+        {
+            removeRanges = [removeRanges arrayByAddingObject:[NSValue valueWithRange:NSMakeRange(i, 1)]];
+        }
+    }
+    
+    for (NSInteger i = removeRanges.count -1; i >= 0; i--) {
+        NSValue *value = removeRanges[i];
+        aString = [aString stringByReplacingCharactersInRange:[value rangeValue] withString:@""];
+    }
+    
+    return [self digitOnlyString:aString];
+}
+
 
 
 #pragma mark -
@@ -70,10 +102,31 @@
 
 -(NSString *) applyFormat:(NSString *)format forFormattedString:(NSString *)formattedDigits
 {
+    if (formattedDigits.length == 0)
+    {
+        if (self.showFormatOnlyIfTextExist == YES) return @"";
+        NSInteger lastSignificant = -1;
+        
+        for (NSInteger i = 0; i < [format length] ; i++) {
+            
+            unichar ch = [format characterAtIndex:i];
+            if ([self isRequireSubstitute:ch])
+            {
+                return (lastSignificant == -1) ? [format substringToIndex:i] : [format substringToIndex:lastSignificant];
+            }
+            
+            if ([SHSPhoneNumberFormatter isValuableChar:ch])
+            {
+                lastSignificant = i+1;
+            }
+        }
+        return (lastSignificant == -1 ? format : [format substringToIndex:lastSignificant]);
+            
+    }
     NSMutableString *result = [[NSMutableString alloc] init];
     
-    int charIndex = 0;
-    for (int i = 0; i < [format length] && charIndex < [formattedDigits length]; i++) {
+    NSInteger charIndex = 0;
+    for (NSInteger i = 0; i < [format length] && charIndex < [formattedDigits length]; i++) {
         
         unichar ch = [format characterAtIndex:i];
         if ([self isRequireSubstitute:ch])
@@ -91,7 +144,7 @@
 
 -(NSDictionary *) valuesForString:(NSString *)aString
 {
-    NSString *formattedDigits = [self digitOnlyString:aString];
+    NSString *formattedDigits = [self stringWithoutFormat:aString];
     NSDictionary *configDict = [self configForSequence:formattedDigits];
     NSString *result = [self applyFormat: configDict[@"format"] forFormattedString:formattedDigits];
     
@@ -101,10 +154,10 @@
 #pragma mark -
 #pragma mark Formatted Remove
 
-+(int) valuableCharCountIn:(NSString *)string
++(NSInteger) valuableCharCountIn:(NSString *)string
 {
-    int count = 0;
-    for (int i = 0; i< [string length]; i++) {
+    NSInteger count = 0;
+    for (NSInteger i = 0; i< [string length]; i++) {
         unichar ch = [string characterAtIndex:i];
         if ([self isValuableChar:ch]) count++;
     }
@@ -119,12 +172,12 @@
 +(NSString *) formattedRemove:(NSString *)string AtIndex:(NSRange)range
 {
     NSMutableString *newString = [[NSMutableString alloc] initWithString:string];
-    int removeCount = [self valuableCharCountIn:[newString substringWithRange:range]];
+    NSInteger removeCount = [self valuableCharCountIn:[newString substringWithRange:range]];
     if (range.length == 1) removeCount = 1;
     
-    for (int wordCount = 0 ; wordCount < removeCount; wordCount++) {
+    for (NSInteger wordCount = 0 ; wordCount < removeCount; wordCount++) {
         
-        for (int i = range.location + range.length - wordCount -1; i >= 0; i--) {
+        for (NSInteger i = range.location + range.length - wordCount -1; i >= 0; i--) {
             unichar ch = [newString characterAtIndex:i];
             if ( [self isValuableChar:ch] )
             {

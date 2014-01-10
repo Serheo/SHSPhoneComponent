@@ -14,10 +14,13 @@
 {
     [super viewDidLoad];
 	[self.phoneField becomeFirstResponder];
-    [self.phoneField.formatter setDefaultOutputPattern:@"+# (###) ###-##-##"];
     
-    [self.phoneField.formatter addOutputPattern:@"+# (###) ###-##-##" forRegExp:@"^7[0-689]\\d*$" imagePath:[SHSFlags FlagRU]];
-    [self.phoneField.formatter addOutputPattern:@"# (###) ###-##-##" forRegExp:@"^8[0-689]\\d*$" imagePath:[SHSFlags FlagRU]];
+//    [self.phoneField.formatter setDefaultOutputPattern:@"+7 (###) ###-##-##" imagePath:@"SHSPhoneImage.bundle/flag_ru"];
+//    self.phoneField.formatter.showFormatOnlyIfTextExist = NO;
+//    [self.phoneField setFormattedText:@""];
+    
+    [self.phoneField.formatter addOutputPattern:@"+# (###) ###-##-##" forRegExp:@"^7[0-689]\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ru"];
+    [self.phoneField.formatter addOutputPattern:@"# (###) ###-##-##" forRegExp:@"^8[0-689]\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ru"];
     
     [self.phoneField.formatter addOutputPattern:@"+### (##) ###-###" forRegExp:@"^380\\d*$"];
     

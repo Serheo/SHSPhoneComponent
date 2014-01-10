@@ -9,22 +9,12 @@
 #import "SHSPhoneTextField.h"
 #import "SHSPhoneNumberFormatter+UserConfig.h"
 
-@implementation SHSFlags
-
-+ (NSString *) FlagRU { return @"SHSPhoneImage.bundle/flag_ru"; }
-+ (NSString *) FlagUS { return @"SHSPhoneImage.bundle/flag_us"; }
-+ (NSString *) FlagDE { return @"SHSPhoneImage.bundle/flag_de"; }
-+ (NSString *) FlagUA { return @"SHSPhoneImage.bundle/flag_ua"; }
-
-@end
-
 @implementation SHSPhoneTextField
 
 -(void) logicInitialization
 {
-    _formatter = [[SHSPhoneNumberFormatter alloc]init];
+    _formatter = [[SHSPhoneNumberFormatter alloc] init];
     logicDelegate = [[SHSPhoneLogic alloc] init];
-    _canAffectLeftViewByFormatter = YES;
     
     [super setDelegate:logicDelegate];
     self.keyboardType = UIKeyboardTypeNumberPad;
@@ -67,6 +57,11 @@
 -(void) setFormattedText:(NSString *)text
 {
     [SHSPhoneLogic applyFormat:self forText:text];
+}
+
+-(NSString *) phoneNumber
+{
+    return [self.formatter digitOnlyString:self.text];
 }
 
 @end

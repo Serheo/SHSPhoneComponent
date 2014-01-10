@@ -37,7 +37,23 @@
 /**
  Returns a count of valuable symbols in string.
 */
-+(int) valuableCharCountIn:(NSString *)string;
++(NSInteger) valuableCharCountIn:(NSString *)string;
 
+/**
+ If you want to use leftView or leftViewMode property set this property to NO.
+ Default is NO.
+*/
+@property (readwrite) BOOL canAffectLeftViewByFormatter;
+
+/**
+ If there is no text the format can be set as value of textfield.
+ Default is YES.
+*/
+@property (readwrite) BOOL showFormatOnlyIfTextExist;
+
+/**
+ Returns all digits from string.
+*/
+-(NSString *) digitOnlyString:(NSString *)aString;
 
 @end

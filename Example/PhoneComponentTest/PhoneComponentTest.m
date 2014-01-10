@@ -78,4 +78,37 @@
     
 }
 
+- (void)testShouldHandleFormatWithDigits
+{
+    NSString *inputNumber = @"9201234567";
+    
+    [formatter setDefaultOutputPattern:@"+7 (###) ###-##-##"];
+    
+    NSDictionary *result = [formatter valuesForString:inputNumber];
+    STAssertTrue([result[@"text"] isEqualToString:@"+7 (920) 123-45-67"], @"should format correctly");
+    STAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+    
+    inputNumber = @"7777778877";
+    
+    result = [formatter valuesForString:inputNumber];
+    STAssertTrue([result[@"text"] isEqualToString:@"+7 (777) 777-88-77"], @"should format correctly");
+    STAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+    
+    
+    inputNumber = @"3211231";
+    [formatter setDefaultOutputPattern:@"### 123 ##-##"];
+    
+    result = [formatter valuesForString:inputNumber];
+    STAssertTrue([result[@"text"] isEqualToString:@"321 123 12-31"], @"should format correctly");
+    STAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+
+    inputNumber = @"1113333";
+    
+    result = [formatter valuesForString:inputNumber];
+    STAssertTrue([result[@"text"] isEqualToString:@"111 123 33-33"], @"should format correctly");
+    STAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+    
+    
+}
+
 @end

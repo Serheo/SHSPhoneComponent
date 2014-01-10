@@ -21,7 +21,7 @@
     return self;
 }
 
--(int) startPoint
+-(NSInteger) startPoint
 {
     NSString *version = [[UIDevice currentDevice] systemVersion];
     if ([version compare:@"7" options:NSNumericSearch] != NSOrderedAscending)

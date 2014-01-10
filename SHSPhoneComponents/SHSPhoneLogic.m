@@ -42,7 +42,7 @@
     NSDictionary *result = [textField.formatter valuesForString:text];
     textField.text = result[@"text"];
     
-    if ( textField.canAffectLeftViewByFormatter )
+    if ( textField.formatter.canAffectLeftViewByFormatter )
         [self updateLeftImageView:textField imagePath:result[@"image"]];
 }
 
@@ -50,7 +50,7 @@
 {
     NSString *newString;
     BOOL isDeleting = (string.length == 0);
-    int caretPosition = [self pushCaretPosition:textField range:range];
+    NSInteger caretPosition = [self pushCaretPosition:textField range:range];
     
     if (isDeleting)
         newString = [SHSPhoneNumberFormatter formattedRemove:textField.text AtIndex:range];
@@ -67,20 +67,20 @@
 #pragma mark -
 #pragma mark Caret Control
 
-+(int) pushCaretPosition:(UITextField *)textField range:(NSRange)range
++(NSInteger) pushCaretPosition:(UITextField *)textField range:(NSRange)range
 {
     NSString *subString = [textField.text substringFromIndex:range.location + range.length];
     return [SHSPhoneNumberFormatter valuableCharCountIn:subString];
 }
 
-+(void) popCaretPosition:(UITextField *)textField range:(NSRange)range caretPosition:(int)caretPosition
++(void) popCaretPosition:(UITextField *)textField range:(NSRange)range caretPosition:(NSInteger)caretPosition
 {
     if (range.length == 0) range.length = 1;
     
     NSString *text = textField.text;
-    int lasts = caretPosition;
-    int start = [text length];
-    for (int index = [text length] - 1; index >= 0 && lasts > 0; index--) {
+    NSInteger lasts = caretPosition;
+    NSInteger start = [text length];
+    for (NSInteger index = [text length] - 1; index >= 0 && lasts > 0; index--) {
         unichar ch = [text characterAtIndex:index];
         if ([SHSPhoneNumberFormatter isValuableChar:ch]) lasts--;
         if (lasts <= 0 )
@@ -116,7 +116,7 @@
 
 - (BOOL)textFieldShouldClear:(SHSPhoneTextField *)textField
 {
-    if ( textField.canAffectLeftViewByFormatter) textField.leftViewMode = UITextFieldViewModeNever;
+    if ( textField.formatter.canAffectLeftViewByFormatter) textField.leftViewMode = UITextFieldViewModeNever;
 
     if ([_delegate respondsToSelector:@selector(textFieldShouldClear:)])
         return [_delegate textFieldShouldClear:textField];

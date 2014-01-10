@@ -36,7 +36,10 @@
 
 -(void) setDefaultOutputPattern:(NSString *)pattern imagePath:(NSString *)imagePath
 {
-    if (!imagePath) imagePath = (id)[NSNull null];
+    if (imagePath)
+        self.canAffectLeftViewByFormatter = YES;
+    else
+        imagePath = (id)[NSNull null];
     [config setObject:@{@"format": pattern, @"image": imagePath} forKey:@"default"];
 }
 
@@ -47,7 +50,11 @@
 
 -(void) addOutputPattern:(NSString *)pattern forRegExp:(NSString *)regexp imagePath:(NSString *)imagePath
 {
-    if (!imagePath) imagePath = (id)[NSNull null];
+    if (imagePath)
+        self.canAffectLeftViewByFormatter = YES;
+    else
+        imagePath = (id)[NSNull null];
+    
     [config setObject:@{@"format": pattern, @"image": imagePath} forKey:regexp];
 }
 
