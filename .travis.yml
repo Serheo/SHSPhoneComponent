@@ -7,4 +7,4 @@ branches:
 before_install:
   - cd Example
 
-script: make test
+script: xcodebuild -scheme PhoneComponentTest -sdk iphonesimulator test

@@ -38,6 +38,16 @@
                ReferencedContainer = "container:PhoneComponentExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BEA1E3FF1883075B00759292"
+               BuildableName = "PhoneComponentTests.xctest"
+               BlueprintName = "PhoneComponentTests"
+               ReferencedContainer = "container:PhoneComponentExample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

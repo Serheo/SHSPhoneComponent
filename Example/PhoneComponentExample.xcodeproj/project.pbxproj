@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE1F26161735907500709EE7 /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342161727D5F8002EE850 /* SHSPhoneLogic.m */; };
-		BE1F26171735907500709EE7 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342181727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m */; };
-		BE1F26181735907500709EE7 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m */; };
-		BE1F26191735907500709EE7 /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421C1727D5F8002EE850 /* SHSPhoneTextField.m */; };
 		BE6342281727D5F8002EE850 /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342161727D5F8002EE850 /* SHSPhoneLogic.m */; };
 		BE6342291727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342181727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m */; };
 		BE63422A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m */; };
 		BE63422B1727D5F8002EE850 /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421C1727D5F8002EE850 /* SHSPhoneTextField.m */; };
 		BE6AF3381882CE5200228DA9 /* SHSPhoneImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE6AF3371882CE5200228DA9 /* SHSPhoneImage.bundle */; };
-		BE6AF3391882CE5600228DA9 /* SHSPhoneImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE6AF3371882CE5200228DA9 /* SHSPhoneImage.bundle */; };
+		BEA1E4011883075B00759292 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1E3B21883016C00759292 /* XCTest.framework */; };
+		BEA1E4021883075B00759292 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01CA1720149300252141 /* Foundation.framework */; };
+		BEA1E4031883075B00759292 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01C81720149300252141 /* UIKit.framework */; };
+		BEA1E4091883075B00759292 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEA1E4071883075B00759292 /* InfoPlist.strings */; };
+		BEA1E40B1883075B00759292 /* PhoneComponentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA1E40A1883075B00759292 /* PhoneComponentTests.m */; };
 		BEA38DA31791FF92008DA244 /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA38DA21791FF92008DA244 /* SHSFlagAccessoryView.m */; };
-		BEA38DA41791FF92008DA244 /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA38DA21791FF92008DA244 /* SHSFlagAccessoryView.m */; };
 		BEAA01C91720149300252141 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01C81720149300252141 /* UIKit.framework */; };
 		BEAA01CB1720149300252141 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01CA1720149300252141 /* Foundation.framework */; };
 		BEAA01CD1720149300252141 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01CC1720149300252141 /* CoreGraphics.framework */; };
@@ -30,12 +29,17 @@
 		BEAA01DF1720149300252141 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEAA01DE1720149300252141 /* Default-568h@2x.png */; };
 		BEAA01E6172014A100252141 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAA01E5172014A100252141 /* Storyboard.storyboard */; };
 		BEAA01E9172014E600252141 /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA01E8172014E600252141 /* PhoneViewController.m */; };
-		BEE6EF2317353FA10023C1C3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE6EF2217353FA10023C1C3 /* SenTestingKit.framework */; };
-		BEE6EF2417353FA10023C1C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01C81720149300252141 /* UIKit.framework */; };
-		BEE6EF2517353FA10023C1C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01CA1720149300252141 /* Foundation.framework */; };
-		BEE6EF2B17353FA10023C1C3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEE6EF2917353FA10023C1C3 /* InfoPlist.strings */; };
-		BEE6EF2E17353FA10023C1C3 /* PhoneComponentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE6EF2D17353FA10023C1C3 /* PhoneComponentTest.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEA1E40D1883075B00759292 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEAA01BD1720149300252141 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEAA01C41720149300252141;
+			remoteInfo = PhoneComponentExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BE6342141727D5F8002EE850 /* SHSPhoneLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLibrary.h; sourceTree = "<group>"; };
@@ -48,6 +52,12 @@
 		BE63421B1727D5F8002EE850 /* SHSPhoneTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneTextField.h; sourceTree = "<group>"; };
 		BE63421C1727D5F8002EE850 /* SHSPhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneTextField.m; sourceTree = "<group>"; };
 		BE6AF3371882CE5200228DA9 /* SHSPhoneImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SHSPhoneImage.bundle; sourceTree = "<group>"; };
+		BEA1E3B21883016C00759292 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BEA1E4001883075B00759292 /* PhoneComponentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneComponentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA1E4061883075B00759292 /* PhoneComponentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhoneComponentTests-Info.plist"; sourceTree = "<group>"; };
+		BEA1E4081883075B00759292 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BEA1E40A1883075B00759292 /* PhoneComponentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneComponentTests.m; sourceTree = "<group>"; };
+		BEA1E40C1883075B00759292 /* PhoneComponentTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoneComponentTests-Prefix.pch"; sourceTree = "<group>"; };
 		BEA38DA11791FF92008DA244 /* SHSFlagAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFlagAccessoryView.h; sourceTree = "<group>"; };
 		BEA38DA21791FF92008DA244 /* SHSFlagAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFlagAccessoryView.m; sourceTree = "<group>"; };
 		BEAA01C51720149300252141 /* PhoneComponentExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneComponentExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,16 +76,19 @@
 		BEAA01E5172014A100252141 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		BEAA01E7172014E600252141 /* PhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneViewController.h; sourceTree = "<group>"; };
 		BEAA01E8172014E600252141 /* PhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneViewController.m; sourceTree = "<group>"; };
-		BEE6EF2117353FA10023C1C3 /* PhoneComponentTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneComponentTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEE6EF2217353FA10023C1C3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		BEE6EF2817353FA10023C1C3 /* PhoneComponentTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhoneComponentTest-Info.plist"; sourceTree = "<group>"; };
-		BEE6EF2A17353FA10023C1C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BEE6EF2C17353FA10023C1C3 /* PhoneComponentTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneComponentTest.h; sourceTree = "<group>"; };
-		BEE6EF2D17353FA10023C1C3 /* PhoneComponentTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneComponentTest.m; sourceTree = "<group>"; };
-		BEE6EF2F17353FA10023C1C3 /* PhoneComponentTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoneComponentTest-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BEA1E3FD1883075B00759292 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA1E4011883075B00759292 /* XCTest.framework in Frameworks */,
+				BEA1E4031883075B00759292 /* UIKit.framework in Frameworks */,
+				BEA1E4021883075B00759292 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEAA01C21720149300252141 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,16 +96,6 @@
 				BEAA01C91720149300252141 /* UIKit.framework in Frameworks */,
 				BEAA01CB1720149300252141 /* Foundation.framework in Frameworks */,
 				BEAA01CD1720149300252141 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEE6EF1D17353FA10023C1C3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BEE6EF2317353FA10023C1C3 /* SenTestingKit.framework in Frameworks */,
-				BEE6EF2417353FA10023C1C3 /* UIKit.framework in Frameworks */,
-				BEE6EF2517353FA10023C1C3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,12 +121,31 @@
 			path = ../../SHSPhoneComponents;
 			sourceTree = "<group>";
 		};
+		BEA1E4041883075B00759292 /* PhoneComponentTests */ = {
+			isa = PBXGroup;
+			children = (
+				BEA1E40A1883075B00759292 /* PhoneComponentTests.m */,
+				BEA1E4051883075B00759292 /* Supporting Files */,
+			);
+			path = PhoneComponentTests;
+			sourceTree = "<group>";
+		};
+		BEA1E4051883075B00759292 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEA1E4061883075B00759292 /* PhoneComponentTests-Info.plist */,
+				BEA1E4071883075B00759292 /* InfoPlist.strings */,
+				BEA1E40C1883075B00759292 /* PhoneComponentTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		BEAA01BC1720149300252141 = {
 			isa = PBXGroup;
 			children = (
 				BEAA01E5172014A100252141 /* Storyboard.storyboard */,
 				BEAA01CE1720149300252141 /* PhoneComponentExample */,
-				BEE6EF2617353FA10023C1C3 /* PhoneComponentTest */,
+				BEA1E4041883075B00759292 /* PhoneComponentTests */,
 				BEAA01C71720149300252141 /* Frameworks */,
 				BEAA01C61720149300252141 /* Products */,
 			);
@@ -133,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				BEAA01C51720149300252141 /* PhoneComponentExample.app */,
-				BEE6EF2117353FA10023C1C3 /* PhoneComponentTest.octest */,
+				BEA1E4001883075B00759292 /* PhoneComponentTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,10 +163,10 @@
 		BEAA01C71720149300252141 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEA1E3B21883016C00759292 /* XCTest.framework */,
 				BEAA01C81720149300252141 /* UIKit.framework */,
 				BEAA01CA1720149300252141 /* Foundation.framework */,
 				BEAA01CC1720149300252141 /* CoreGraphics.framework */,
-				BEE6EF2217353FA10023C1C3 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -193,29 +215,27 @@
 			name = Libs;
 			sourceTree = "<group>";
 		};
-		BEE6EF2617353FA10023C1C3 /* PhoneComponentTest */ = {
-			isa = PBXGroup;
-			children = (
-				BEE6EF2C17353FA10023C1C3 /* PhoneComponentTest.h */,
-				BEE6EF2D17353FA10023C1C3 /* PhoneComponentTest.m */,
-				BEE6EF2717353FA10023C1C3 /* Supporting Files */,
-			);
-			path = PhoneComponentTest;
-			sourceTree = "<group>";
-		};
-		BEE6EF2717353FA10023C1C3 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BEE6EF2817353FA10023C1C3 /* PhoneComponentTest-Info.plist */,
-				BEE6EF2917353FA10023C1C3 /* InfoPlist.strings */,
-				BEE6EF2F17353FA10023C1C3 /* PhoneComponentTest-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BEA1E3FF1883075B00759292 /* PhoneComponentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEA1E40F1883075B00759292 /* Build configuration list for PBXNativeTarget "PhoneComponentTests" */;
+			buildPhases = (
+				BEA1E3FC1883075B00759292 /* Sources */,
+				BEA1E3FD1883075B00759292 /* Frameworks */,
+				BEA1E3FE1883075B00759292 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEA1E40E1883075B00759292 /* PBXTargetDependency */,
+			);
+			name = PhoneComponentTests;
+			productName = PhoneComponentTests;
+			productReference = BEA1E4001883075B00759292 /* PhoneComponentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BEAA01C41720149300252141 /* PhoneComponentExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEAA01E21720149300252141 /* Build configuration list for PBXNativeTarget "PhoneComponentExample" */;
@@ -233,24 +253,6 @@
 			productReference = BEAA01C51720149300252141 /* PhoneComponentExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BEE6EF2017353FA10023C1C3 /* PhoneComponentTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BEE6EF3217353FA10023C1C3 /* Build configuration list for PBXNativeTarget "PhoneComponentTest" */;
-			buildPhases = (
-				BEE6EF1C17353FA10023C1C3 /* Sources */,
-				BEE6EF1D17353FA10023C1C3 /* Frameworks */,
-				BEE6EF1E17353FA10023C1C3 /* Resources */,
-				BEE6EF1F17353FA10023C1C3 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PhoneComponentTest;
-			productName = PhoneComponentTest;
-			productReference = BEE6EF2117353FA10023C1C3 /* PhoneComponentTest.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -259,6 +261,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = SHS;
+				TargetAttributes = {
+					BEA1E3FF1883075B00759292 = {
+						TestTargetID = BEAA01C41720149300252141;
+					};
+				};
 			};
 			buildConfigurationList = BEAA01C01720149300252141 /* Build configuration list for PBXProject "PhoneComponentExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -273,12 +280,20 @@
 			projectRoot = "";
 			targets = (
 				BEAA01C41720149300252141 /* PhoneComponentExample */,
-				BEE6EF2017353FA10023C1C3 /* PhoneComponentTest */,
+				BEA1E3FF1883075B00759292 /* PhoneComponentTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BEA1E3FE1883075B00759292 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEA1E4091883075B00759292 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEAA01C31720149300252141 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -292,34 +307,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BEE6EF1E17353FA10023C1C3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BEE6EF2B17353FA10023C1C3 /* InfoPlist.strings in Resources */,
-				BE6AF3391882CE5600228DA9 /* SHSPhoneImage.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		BEE6EF1F17353FA10023C1C3 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
+/* Begin PBXSourcesBuildPhase section */
+		BEA1E3FC1883075B00759292 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
+				BEA1E40B1883075B00759292 /* PhoneComponentTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
 		BEAA01C11720149300252141 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,22 +333,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BEE6EF1C17353FA10023C1C3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BE1F26161735907500709EE7 /* SHSPhoneLogic.m in Sources */,
-				BE1F26171735907500709EE7 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
-				BE1F26181735907500709EE7 /* SHSPhoneNumberFormatter.m in Sources */,
-				BE1F26191735907500709EE7 /* SHSPhoneTextField.m in Sources */,
-				BEE6EF2E17353FA10023C1C3 /* PhoneComponentTest.m in Sources */,
-				BEA38DA41791FF92008DA244 /* SHSFlagAccessoryView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BEA1E40E1883075B00759292 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEAA01C41720149300252141 /* PhoneComponentExample */;
+			targetProxy = BEA1E40D1883075B00759292 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		BEA1E4071883075B00759292 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEA1E4081883075B00759292 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		BEAA01D11720149300252141 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -359,17 +360,68 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		BEE6EF2917353FA10023C1C3 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BEE6EF2A17353FA10023C1C3 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BEA1E4101883075B00759292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PhoneComponentExample.app/PhoneComponentExample";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PhoneComponentTests/PhoneComponentTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "PhoneComponentTests/PhoneComponentTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BEA1E4111883075B00759292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PhoneComponentExample.app/PhoneComponentExample";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PhoneComponentTests/PhoneComponentTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "PhoneComponentTests/PhoneComponentTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		BEAA01E01720149300252141 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -452,41 +504,17 @@
 			};
 			name = Release;
 		};
-		BEE6EF3017353FA10023C1C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PhoneComponentTest/PhoneComponentTest-Prefix.pch";
-				INFOPLIST_FILE = "PhoneComponentTest/PhoneComponentTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		BEE6EF3117353FA10023C1C3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PhoneComponentTest/PhoneComponentTest-Prefix.pch";
-				INFOPLIST_FILE = "PhoneComponentTest/PhoneComponentTest-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BEA1E40F1883075B00759292 /* Build configuration list for PBXNativeTarget "PhoneComponentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEA1E4101883075B00759292 /* Debug */,
+				BEA1E4111883075B00759292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		BEAA01C01720149300252141 /* Build configuration list for PBXProject "PhoneComponentExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -501,15 +529,6 @@
 			buildConfigurations = (
 				BEAA01E31720149300252141 /* Debug */,
 				BEAA01E41720149300252141 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BEE6EF3217353FA10023C1C3 /* Build configuration list for PBXNativeTarget "PhoneComponentTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BEE6EF3017353FA10023C1C3 /* Debug */,
-				BEE6EF3117353FA10023C1C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
