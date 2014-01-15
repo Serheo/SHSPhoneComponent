@@ -20,6 +20,17 @@ If you need complete example please see /example folder.
 All input strings will be parsed in that way. 
 Example: +7 (920) 123-45-67
 
+Also you can preset first part of number with format. For example, if you want numbers only from Russia, use next code:
+
+``` objective-c
+[self.phoneField.formatter setDefaultOutputPattern:@"+7 (###) ###-##-##"];
+self.phoneField.formatter.showFormatOnlyIfTextExist = NO;
+[self.phoneField setFormattedText:@""];
+```
+<p align="center">
+  <img src="http://serheo.github.io/SHSPhoneComponent/readme/r7.jpg" alt="shspc example 1"/>
+</p>
+
 ###Specific Formats
 If you want to format some numbers in specific way just do
 ``` objective-c
