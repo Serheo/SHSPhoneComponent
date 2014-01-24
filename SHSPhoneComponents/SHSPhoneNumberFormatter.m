@@ -26,7 +26,7 @@
 #pragma mark -
 #pragma mark Filtering Input String
 
--(NSString *) digitOnlyString:(NSString *)aString
++(NSString *) digitOnlyString:(NSString *)aString
 {
     NSError *error = NULL;
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\D"
@@ -34,6 +34,11 @@
                                                                              error:&error];
     
     return [regex stringByReplacingMatchesInString:aString options:0 range:NSMakeRange(0, [aString length]) withTemplate:@""];
+}
+
+-(NSString *) digitOnlyString:(NSString *)aString
+{
+    return [SHSPhoneNumberFormatter digitOnlyString:aString];
 }
 
 -(NSString *) stringWithoutFormat:(NSString *)aString

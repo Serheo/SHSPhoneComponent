@@ -54,6 +54,7 @@
 /**
  Returns all digits from string.
 */
++(NSString *) digitOnlyString:(NSString *)aString;
 -(NSString *) digitOnlyString:(NSString *)aString;
 
 @end
