@@ -14,6 +14,8 @@
 -(void) logicInitialization
 {
     _formatter = [[SHSPhoneNumberFormatter alloc] init];
+    _formatter.textField = self;
+    
     logicDelegate = [[SHSPhoneLogic alloc] init];
     
     [super setDelegate:logicDelegate];

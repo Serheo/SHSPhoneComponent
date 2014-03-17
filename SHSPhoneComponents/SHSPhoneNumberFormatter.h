@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class SHSPhoneTextField;
 /**
  Formatter class that converts input string to phone format.
 */
@@ -46,10 +46,10 @@
 @property (readwrite) BOOL canAffectLeftViewByFormatter;
 
 /**
- If there is no text the format can be set as value of textfield.
- Default is YES.
+ Prefix for all formats.
 */
-@property (readwrite) BOOL showFormatOnlyIfTextExist;
+@property (copy, nonatomic) NSString *prefix;
+@property (weak) SHSPhoneTextField *textField;
 
 /**
  Returns all digits from string.

@@ -9,6 +9,7 @@
 #import "SHSPhoneNumberFormatter.h"
 #import "SHSPhoneNumberFormatter+UserConfig.h"
 #import "SHSPhoneLogic.h"
+#import "SHSPhoneTextField.h"
 
 @implementation SHSPhoneNumberFormatter
 
@@ -17,8 +18,8 @@
     self = [super init];
     if (self) {
         _canAffectLeftViewByFormatter = NO;
-        _showFormatOnlyIfTextExist = YES;
-        [self setDefaultFormat];
+        [self resetFormats];
+        self.prefix = @"";
     }
     return self;
 }
@@ -107,27 +108,6 @@
 
 -(NSString *) applyFormat:(NSString *)format forFormattedString:(NSString *)formattedDigits
 {
-    if (formattedDigits.length == 0)
-    {
-        if (self.showFormatOnlyIfTextExist == YES) return @"";
-        NSInteger lastSignificant = -1;
-        
-        for (NSInteger i = 0; i < [format length] ; i++) {
-            
-            unichar ch = [format characterAtIndex:i];
-            if ([self isRequireSubstitute:ch])
-            {
-                return (lastSignificant == -1) ? [format substringToIndex:i] : [format substringToIndex:lastSignificant];
-            }
-            
-            if ([SHSPhoneNumberFormatter isValuableChar:ch])
-            {
-                lastSignificant = i+1;
-            }
-        }
-        return (lastSignificant == -1 ? format : [format substringToIndex:lastSignificant]);
-            
-    }
     NSMutableString *result = [[NSMutableString alloc] init];
     
     NSInteger charIndex = 0;
@@ -144,15 +124,18 @@
             [result appendString:[NSString stringWithCharacters:&ch length:1]];
         }
     }
-    return result;
+    return [NSString stringWithFormat:@"%@%@", self.prefix, result];
 }
 
 -(NSDictionary *) valuesForString:(NSString *)aString
 {
-    NSString *formattedDigits = [self stringWithoutFormat:aString];
+    NSString *nonPrefix = aString;
+    if ([aString hasPrefix:self.prefix]) nonPrefix = [aString substringFromIndex:self.prefix.length];
+    NSString *formattedDigits = [self digitOnlyString:nonPrefix];
     NSDictionary *configDict = [self configForSequence:formattedDigits];
     NSString *result = [self applyFormat: configDict[@"format"] forFormattedString:formattedDigits];
     
+//    result = [self.prefix stringByAppendingString:result];
     return @{ @"image": configDict[@"image"], @"text": result };
 }
 
@@ -210,5 +193,11 @@
 }
 
 #pragma mark -
+
+-(void) setPrefix:(NSString *)prefix
+{
+    _prefix = (prefix ? prefix : @"");
+    [SHSPhoneLogic applyFormat:self.textField forText:[self.textField text]];
+}
 
 @end

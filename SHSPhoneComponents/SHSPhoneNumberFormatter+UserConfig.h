@@ -18,12 +18,6 @@
 -(void) resetFormats;
 
 /**
- Remove all patterns and apply default format style. 
- Default format is "+# (###) ###-##-##", imagePath is nil.
-*/
--(void) setDefaultFormat;
-
-/**
  Apply default format style and image.
  Symbol '#' assumes all digits.
  Example is "+# (###) ###-##-##", imagePath is "flag_ru".

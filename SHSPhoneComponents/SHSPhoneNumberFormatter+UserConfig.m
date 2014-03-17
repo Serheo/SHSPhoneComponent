@@ -16,10 +16,6 @@
 {
     return @{ @"default": @{ @"format": @"#############", @"image": [NSNull null]} };
 }
--(NSDictionary *) defaultConfig
-{
-    return @{ @"default": @{ @"format": @"+# (###) ###-##-##", @"image": [NSNull null]} };
-}
 
 #pragma mark -
 #pragma mark Format Setters
@@ -27,11 +23,6 @@
 -(void) resetFormats
 {
     config = [[NSMutableDictionary alloc]initWithDictionary:[self resetConfig]];
-}
-
--(void) setDefaultFormat
-{
-    config = [[NSMutableDictionary alloc]initWithDictionary:[self defaultConfig]];
 }
 
 -(void) setDefaultOutputPattern:(NSString *)pattern imagePath:(NSString *)imagePath

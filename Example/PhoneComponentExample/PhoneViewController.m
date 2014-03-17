@@ -15,20 +15,46 @@
     [super viewDidLoad];
 	[self.phoneField becomeFirstResponder];
     
-//    [self.phoneField.formatter setDefaultOutputPattern:@"+7 (###) ###-##-##" imagePath:@"SHSPhoneImage.bundle/flag_ru"];
-//    self.phoneField.formatter.showFormatOnlyIfTextExist = NO;
-//    [self.phoneField setFormattedText:@""];
-    
-    [self.phoneField.formatter addOutputPattern:@"+# (###) ###-##-##" forRegExp:@"^7[0-689]\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ru"];
-    [self.phoneField.formatter addOutputPattern:@"# (###) ###-##-##" forRegExp:@"^8[0-689]\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ru"];
-    
-    [self.phoneField.formatter addOutputPattern:@"+### (##) ###-###" forRegExp:@"^380\\d*$"];
+//    [self defaultExample];
+//    [self prefixExample];
+//    [self doubleFormatExample];
+    [self doubleFormatExamplePrefixed];
     
     self.phoneField.textDidChangeBlock = ^(UITextField *textField) {
         NSLog(@"number is %@", textField.text);
     };
-    
 }
 
+#pragma mark Examples
+
+-(void) defaultExample
+{
+    [self.phoneField.formatter setDefaultOutputPattern:@"+# (###) ###-##-##"];
+}
+
+-(void) doubleFormatExample
+{
+    [self.phoneField.formatter setDefaultOutputPattern:@"##########" imagePath:nil];
+    self.phoneField.formatter.prefix = nil;
+    [self.phoneField.formatter addOutputPattern:@"+# (###) ###-##-##" forRegExp:@"^7[0-689]\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ru"];
+    [self.phoneField.formatter addOutputPattern:@"+### ###-##-##" forRegExp:@"^380\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ua"];
+}
+
+-(void) prefixExample
+{
+    [self.phoneField.formatter setDefaultOutputPattern:@"(###) ###-##-##"];
+    self.phoneField.formatter.prefix = @"+7 ";
+    [self.phoneField.formatter addOutputPattern:@"(###) ###-##-##" forRegExp:@"^[0-689]\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ru"];
+}
+
+-(void) doubleFormatExamplePrefixed
+{
+    [self.phoneField.formatter setDefaultOutputPattern:@"### ### ###"];
+    self.phoneField.formatter.prefix = @"+7 ";
+    [self.phoneField.formatter addOutputPattern:@"(###) ###-##-##" forRegExp:@"^1\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ru"];
+    [self.phoneField.formatter addOutputPattern:@"(###) ###-###" forRegExp:@"^2\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ua"];
+}
+
+#pragma mark -
 
 @end

@@ -114,8 +114,44 @@
     result = [formatter valuesForString:inputNumber];
     XCTAssertTrue([result[@"text"] isEqualToString:@"111 123 33-33"], @"should format correctly");
     XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+}
+
+- (void)testShouldCheckPrefix
+{
+    NSString *inputNumber = @"9201234567";
+    formatter.prefix = @"pr3f1x";
+    [formatter setDefaultOutputPattern:@"(###) ###-##-##"];
     
+    NSDictionary *result = [formatter valuesForString:inputNumber];
+    NSString *should = [NSString stringWithFormat:@"%@%@", formatter.prefix, @"(920) 123-45-67"];
+    XCTAssertTrue([result[@"text"] isEqualToString:should], @"should format correctly");
+    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+
+    result = [formatter valuesForString:should];
+    XCTAssertTrue([result[@"text"] isEqualToString:should], @"should format correctly");
+    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+}
+
+- (void)testShouldCheckPrefixAndDifferentFormats
+{
+    NSString *inputNumber = @"3801234567";
+    NSString *inputNumberNonImage = @"1231234567";
+    NSString *imagePath = @"SOME_IMAGE_PATH";
+    formatter.prefix = @"pr3-f1x";
     
+    [formatter setDefaultOutputPattern:@"##########"];
+    [formatter addOutputPattern:@"+### (##) ###-##-##" forRegExp:@"^380\\d*$" imagePath:imagePath];
+    [formatter addOutputPattern:@"+### (##) ###-##-##" forRegExp:@"^123\\d*$" imagePath:nil];
+    
+    NSDictionary *result = [formatter valuesForString:inputNumber];
+    NSString *should = [NSString stringWithFormat:@"%@%@", formatter.prefix, @"+380 (12) 345-67"];
+    XCTAssertTrue([result[@"text"] isEqualToString:should], @"should format correctly");
+    XCTAssertTrue([result[@"image"]isEqualToString:imagePath], @"image should not be nil");
+
+    result = [formatter valuesForString:inputNumberNonImage];
+    should = [NSString stringWithFormat:@"%@%@", formatter.prefix, @"+123 (12) 345-67"];
+    XCTAssertTrue([result[@"text"] isEqualToString:should], @"should format correctly");
+    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
 }
 
 @end
