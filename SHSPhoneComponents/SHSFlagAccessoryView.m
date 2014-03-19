@@ -8,30 +8,40 @@
 
 #import "SHSFlagAccessoryView.h"
 
+#define ICON_SIZE 18.0
+#define MIN_SHIFT 5.0
+#define FONT_CORRECTION 1.0
+
 @implementation SHSFlagAccessoryView
 
-- (id)init
+- (id)initWithTextField:(UITextField *)textField
 {
-    self = [super initWithFrame:CGRectMake(0, 0, 20, 18)];
+    CGRect fieldRect = [textField textRectForBounds:textField.bounds];
+  
+    self = [super initWithFrame:CGRectMake(0, 0, [self viewWidth:fieldRect], textField.frame.size.height)];
     if (self) {
-        imageView = [[UIImageView alloc]initWithFrame:CGRectMake([self startPoint], 0, 18, 18)];
+        imageView = [[UIImageView alloc] initWithFrame:CGRectMake([self leftShift:fieldRect], fieldRect.origin.y + (fieldRect.size.height - ICON_SIZE)/2.0, ICON_SIZE, ICON_SIZE)];
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:imageView];
     }
     return self;
 }
 
--(NSInteger) startPoint
+-(float) leftShift:(CGRect)textFieldRect
 {
-    NSString *version = [[UIDevice currentDevice] systemVersion];
-    if ([version compare:@"7" options:NSNumericSearch] != NSOrderedAscending)
-    {
-       return 6;
-    }
+    float x = CGRectGetMinX(textFieldRect);
+    float result = x < MIN_SHIFT ? MIN_SHIFT : x;
+    return result + FONT_CORRECTION;
+}
+
+
+-(float) viewWidth:(CGRect )textFieldRect
+{
+    float x = CGRectGetMinX(textFieldRect);
+    if (x < MIN_SHIFT)
+        return MIN_SHIFT + ICON_SIZE + MIN_SHIFT - x;
     else
-    {
-       return 0;
-    }
+        return x + ICON_SIZE;
 }
 
 -(void) setImage:(UIImage *) image

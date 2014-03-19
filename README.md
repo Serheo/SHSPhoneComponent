@@ -47,8 +47,7 @@ For additional class info see http://serheo.github.io/SHSPhoneComponent/
 
 ##Requirements
 ARC Enabled.
-Tested under iOS >= 5.0.
-iOS 7 beta support.
+iOS 7 ready.
 
 ##License
 SHSPhoneComponent is available under the MIT license. See the LICENSE file for more info.

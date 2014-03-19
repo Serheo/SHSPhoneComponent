@@ -20,7 +20,7 @@
 {
     if (![textField.leftView isKindOfClass:[SHSFlagAccessoryView class]])
     {
-        textField.leftView = [[SHSFlagAccessoryView alloc] init];
+        textField.leftView = [[SHSFlagAccessoryView alloc] initWithTextField:textField];
     }
     textField.leftViewMode =  UITextFieldViewModeAlways;
     ((SHSFlagAccessoryView *)textField.leftView).image = image;
