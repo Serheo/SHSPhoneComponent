@@ -22,7 +22,7 @@
     {
         textField.leftView = [[SHSFlagAccessoryView alloc] initWithTextField:textField];
     }
-    textField.leftViewMode =  UITextFieldViewModeAlways;
+    textField.leftViewMode = UITextFieldViewModeAlways;
     ((SHSFlagAccessoryView *)textField.leftView).image = image;
 }
 
@@ -84,7 +84,7 @@
     for (NSInteger index = [text length] - 1; index >= 0 && lasts > 0; index--) {
         unichar ch = [text characterAtIndex:index];
         if ([SHSPhoneNumberFormatter isValuableChar:ch]) lasts--;
-        if (lasts <= 0 )
+        if (lasts <= 0)
         {
             start = index;
             break;
@@ -118,11 +118,19 @@
 - (BOOL)textFieldShouldClear:(SHSPhoneTextField *)textField
 {
     if ( textField.formatter.canAffectLeftViewByFormatter) textField.leftViewMode = UITextFieldViewModeNever;
-
+    
     if ([_delegate respondsToSelector:@selector(textFieldShouldClear:)])
         return [_delegate textFieldShouldClear:textField];
-    
-    return YES;
+
+    if (textField.formatter.prefix.length > 0)
+    {
+        [textField setFormattedText:@""];
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField

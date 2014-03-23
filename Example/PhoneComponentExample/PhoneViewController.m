@@ -32,19 +32,19 @@
     [self.phoneField.formatter setDefaultOutputPattern:@"+# (###) ###-##-##"];
 }
 
+-(void) prefixExample
+{
+    [self.phoneField.formatter setDefaultOutputPattern:@"(###) ###-##-##"];
+    self.phoneField.formatter.prefix = @"+7 ";
+    [self.phoneField.formatter addOutputPattern:@"(###) ###-##-##" forRegExp:@"^[0-689]\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ru"];
+}
+
 -(void) doubleFormatExample
 {
     [self.phoneField.formatter setDefaultOutputPattern:@"##########" imagePath:nil];
     self.phoneField.formatter.prefix = nil;
     [self.phoneField.formatter addOutputPattern:@"+# (###) ###-##-##" forRegExp:@"^7[0-689]\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ru"];
     [self.phoneField.formatter addOutputPattern:@"+### ###-##-##" forRegExp:@"^380\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ua"];
-}
-
--(void) prefixExample
-{
-    [self.phoneField.formatter setDefaultOutputPattern:@"(###) ###-##-##"];
-    self.phoneField.formatter.prefix = @"+7 ";
-    [self.phoneField.formatter addOutputPattern:@"(###) ###-##-##" forRegExp:@"^[0-689]\\d*$" imagePath:@"SHSPhoneImage.bundle/flag_ru"];
 }
 
 -(void) doubleFormatExamplePrefixed
