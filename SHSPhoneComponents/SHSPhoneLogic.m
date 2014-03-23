@@ -29,10 +29,11 @@
 +(void) updateLeftImageView:(UITextField *)textField imagePath:(NSString *)imagePath
 {
     if (imagePath == (id)[NSNull null]) imagePath = nil;
-    UIImage *givenImage = [UIImage imageNamed:imagePath];
-    
-    if (givenImage)
+    if (imagePath)
+    {
+        UIImage *givenImage = [UIImage imageNamed:imagePath];
         [self setImageLeftView:textField image:givenImage];
+    }
     else
        textField.leftViewMode = UITextFieldViewModeNever; 
 }
