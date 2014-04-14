@@ -154,4 +154,45 @@
     XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
 }
 
+- (void)testShouldHandlePrefixAndNumberFormatStyle
+{
+    [formatter setDefaultOutputPattern:@"+78 (###) ###-##-##"];
+    NSDictionary *result;
+    
+    result = [formatter valuesForString:@"+7 (123"];
+    XCTAssertTrue([result[@"text"] isEqualToString:@"+78 (123"], @"should format correctly");
+    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+    
+    result = [formatter valuesForString:@"+87 (1234"];
+    XCTAssertTrue([result[@"text"] isEqualToString:@"+78 (871) 234"], @"should format correctly");
+    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+    
+    [formatter setDefaultOutputPattern:@"+7 (###) 88#-##-##"];
+    
+    result = [formatter valuesForString:@"+7 (123"];
+    XCTAssertTrue([result[@"text"] isEqualToString:@"+7 (123"], @"should format correctly");
+    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+    
+    result = [formatter valuesForString:@"1234"];
+    XCTAssertTrue([result[@"text"] isEqualToString:@"+7 (123) 884"], @"should format correctly");
+    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+    
+    result = [formatter valuesForString:@"+7 (123) 884"];
+    XCTAssertTrue([result[@"text"] isEqualToString:@"+7 (123) 888-84"], @"should format correctly");
+    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+    
+    result = [formatter valuesForString:@"+7 (123) 8887"];
+    XCTAssertTrue([result[@"text"] isEqualToString:@"+7 (123) 888-88-7"], @"should format correctly");
+    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+    
+    formatter.prefix = @"pr3-f1x ";
+    result = [formatter valuesForString:@"+7 (123"];
+    XCTAssertTrue([result[@"text"] isEqualToString:@"pr3-f1x +7 (123"], @"should format correctly");
+    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+    
+    result = [formatter valuesForString:@"+7 (123) 8887"];
+    XCTAssertTrue([result[@"text"] isEqualToString:@"pr3-f1x +7 (123) 888-88-7"], @"should format correctly");
+    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+}
+
 @end

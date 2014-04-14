@@ -131,7 +131,7 @@
 {
     NSString *nonPrefix = aString;
     if ([aString hasPrefix:self.prefix]) nonPrefix = [aString substringFromIndex:self.prefix.length];
-    NSString *formattedDigits = [self digitOnlyString:nonPrefix];
+    NSString *formattedDigits = [self stringWithoutFormat:nonPrefix];
     NSDictionary *configDict = [self configForSequence:formattedDigits];
     NSString *result = [self applyFormat: configDict[@"format"] forFormattedString:formattedDigits];
     
