@@ -40,6 +40,7 @@
 
 +(void) applyFormat:(SHSPhoneTextField *)textField forText:(NSString *)text
 {
+    if (!text) text = @"";
     NSDictionary *result = [textField.formatter valuesForString:text];
     textField.text = result[@"text"];
     
