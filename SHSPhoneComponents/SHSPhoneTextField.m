@@ -66,6 +66,11 @@
     return [self.formatter digitOnlyString:self.text];
 }
 
+-(NSString *)phoneNumberWithoutPrefix
+{
+    return [self.formatter digitOnlyString:[self.text stringByReplacingOccurrencesOfString:self.formatter.prefix withString:@""]];
+}
+
 @end
 
 

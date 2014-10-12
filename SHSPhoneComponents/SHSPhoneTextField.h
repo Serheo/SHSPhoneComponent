@@ -37,6 +37,11 @@
 -(NSString *) phoneNumber;
 
 /**
+ Return phone number without format and prefix
+ */
+-(NSString *) phoneNumberWithoutPrefix;
+
+/**
  Block will be called when text changed
  */
 typedef void (^SHSTextBlock)(UITextField *textField);

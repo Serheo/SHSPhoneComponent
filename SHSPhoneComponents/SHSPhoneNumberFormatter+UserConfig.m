@@ -12,17 +12,40 @@
 
 #pragma mark Predefined Configs
 
+-(NSDictionary *) defaultPattern
+{
+    return @{ @"format": @"#############", @"image": [NSNull null]};
+}
+
 -(NSDictionary *) resetConfig
 {
-    return @{ @"default": @{ @"format": @"#############", @"image": [NSNull null]} };
+    return @{ @"default": [self defaultPattern] };
 }
 
 #pragma mark -
 #pragma mark Format Setters
 
+-(void) resetDefaultFormat
+{
+    if (config) {
+        [config setObject:[self defaultPattern] forKey:@"default"];
+    }
+    else {
+        config = [[NSMutableDictionary alloc] initWithDictionary:@{ @"default": [self defaultPattern] }];
+    }
+}
+
 -(void) resetFormats
 {
-    config = [[NSMutableDictionary alloc]initWithDictionary:[self resetConfig]];
+    NSDictionary * defaultPattern = [config objectForKey:@"default"];
+    
+    if (defaultPattern) {
+        // Don't reset default pattern if exists
+        config = [[NSMutableDictionary alloc]initWithDictionary:@{ @"default": defaultPattern }];
+    }
+    else {
+        config = [[NSMutableDictionary alloc]initWithDictionary:[self resetConfig]];
+    }
 }
 
 -(void) setDefaultOutputPattern:(NSString *)pattern imagePath:(NSString *)imagePath
@@ -52,6 +75,20 @@
 -(void) addOutputPattern:(NSString *)pattern forRegExp:(NSString *)regexp
 {
     [config setObject:@{@"format": pattern, @"image": [NSNull null]} forKey:regexp];
+}
+
+-(void) setOutputPatternsFromArray:(NSArray *)patterns
+{
+    if (patterns) {
+        for (NSDictionary * pattern in patterns) {
+            NSString * format = pattern[@"format"];
+            NSString * regexp = pattern[@"regexp"];
+            
+            if (format && regexp) {
+                [self addOutputPattern:format forRegExp:regexp imagePath:pattern[@"imagePath"]];
+            }
+        }
+    }
 }
 
 #pragma mark -

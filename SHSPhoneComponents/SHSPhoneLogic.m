@@ -50,14 +50,12 @@
 
 +(BOOL)logicTextField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    NSString *newString;
-    BOOL isDeleting = (string.length == 0);
-    NSInteger caretPosition = [self pushCaretPosition:textField range:range];
+    if (textField.formatter.prefix.length && range.location < textField.formatter.prefix.length) {
+        return NO;
+    }
     
-    if (isDeleting)
-        newString = [SHSPhoneNumberFormatter formattedRemove:textField.text AtIndex:range];
-    else
-        newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    NSInteger caretPosition = [self pushCaretPosition:textField range:range];    
+    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
     
     [self applyFormat:textField forText:newString];
     [self popCaretPosition:textField range:range caretPosition:caretPosition];

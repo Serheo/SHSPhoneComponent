@@ -14,6 +14,12 @@
 /**
  Remove all patterns and apply clear format style.
  Default format is @"#############", imagePath is nil.
+ */
+-(void) resetDefaultFormat;
+
+/**
+ Remove all patterns and apply clear format style.
+ Default format is @"#############", imagePath is nil.
 */
 -(void) resetFormats;
 
@@ -44,5 +50,14 @@
  Example: pattern is "+# (###) ###-##-##", regexp is "^375\\d*$"
 */
 -(void) addOutputPattern:(NSString *)pattern forRegExp:(NSString *)regexp;
+
+/**
+ Patters array keep references to dictionaries each with individual patterns configuration. Each pattern dictionary should contain key "format" with format representation string, key for regular expression named "regexp" with string value and optionally "imagePath" key with image name string
+ 
+ All number matched your regexp will formatted with your style and image
+ Symbol '#' assumes all digits.
+ Example: format is "+# (###) ###-##-##", imagePath is "flag_ru", regexp is "^375\\d*$"
+ */
+-(void) setOutputPatternsFromArray:(NSArray *)patterns;
 
 @end
