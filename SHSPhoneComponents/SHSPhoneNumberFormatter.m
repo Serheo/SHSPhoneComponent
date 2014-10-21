@@ -196,8 +196,10 @@
 
 -(void) setPrefix:(NSString *)prefix
 {
+    // Change only prefix if it was set before keeping phone number as it is
+    NSString * phoneNumber = self.textField.phoneNumberWithoutPrefix;
     _prefix = (prefix ? prefix : @"");
-    [SHSPhoneLogic applyFormat:self.textField forText:[self.textField text]];
+    [SHSPhoneLogic applyFormat:self.textField forText:[_prefix stringByAppendingString:phoneNumber ?: @""]];
 }
 
 @end
