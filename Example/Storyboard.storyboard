@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="6qn-Mb-L52">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WlQ-MB-XX5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--Phone View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="6yf-Ze-hOJ">
+            <objects>
+                <navigationController id="WlQ-MB-XX5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f2H-Ec-M5A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6qn-Mb-L52" kind="relationship" relationship="rootViewController" id="F60-99-l5B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zKS-j9-b2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-914" y="-734"/>
+        </scene>
+        <!--SHSPhoneComponent-->
         <scene sceneID="E05-OO-tIU">
             <objects>
                 <viewController id="6qn-Mb-L52" customClass="PhoneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xc7-oK-ZgO"/>
+                        <viewControllerLayoutGuide type="bottom" id="dS7-KM-qXM"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uRP-Ik-iP1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" id="7CK-cf-CPc" customClass="SHSPhoneTextField">
-                                <rect key="frame" x="25" y="67" width="271" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <navigationBar contentMode="scaleToFill" id="cyU-8V-Gs6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem id="kxD-Rn-F2I"/>
-                                </items>
-                            </navigationBar>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="nkx-64-kNj">
-                                <rect key="frame" x="20" y="111" width="280" height="106"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkx-64-kNj">
                                 <string key="text">Try next:
 1 ....
 2 ....
@@ -36,21 +42,40 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyb-p6-6RK">
+                                <rect key="frame" x="25" y="132" width="550" height="82"/>
+                                <string key="text">Try:
+1 ....
+2 ....
+3 ....</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7CK-cf-CPc" customClass="SHSPhoneTextField">
+                                <rect key="frame" x="25" y="89" width="550" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7CK-cf-CPc" firstAttribute="leading" secondItem="uRP-Ik-iP1" secondAttribute="leading" constant="25" id="QB3-xs-xsb"/>
+                            <constraint firstAttribute="trailing" secondItem="7CK-cf-CPc" secondAttribute="trailing" constant="25" id="a1A-Ec-lxe"/>
+                            <constraint firstItem="Gyb-p6-6RK" firstAttribute="width" secondItem="7CK-cf-CPc" secondAttribute="width" id="eAo-TM-VzL"/>
+                            <constraint firstItem="Gyb-p6-6RK" firstAttribute="top" secondItem="7CK-cf-CPc" secondAttribute="bottom" constant="13" id="fhs-Ah-gGS"/>
+                            <constraint firstItem="Gyb-p6-6RK" firstAttribute="centerX" secondItem="7CK-cf-CPc" secondAttribute="centerX" id="k9n-dv-5hD"/>
+                            <constraint firstItem="7CK-cf-CPc" firstAttribute="top" secondItem="xc7-oK-ZgO" secondAttribute="bottom" constant="25" id="u2O-Sk-cHF"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="SHSPhoneComponent" id="J4X-F1-Nt2"/>
                     <connections>
                         <outlet property="phoneField" destination="7CK-cf-CPc" id="sEQ-sF-IbH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-nv-mPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213" y="-508"/>
+            <point key="canvasLocation" x="-165" y="-734"/>
         </scene>
     </scenes>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

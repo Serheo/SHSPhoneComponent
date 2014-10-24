@@ -19,6 +19,8 @@
 		BEA1E4091883075B00759292 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEA1E4071883075B00759292 /* InfoPlist.strings */; };
 		BEA1E40B1883075B00759292 /* PhoneComponentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA1E40A1883075B00759292 /* PhoneComponentTests.m */; };
 		BEA38DA31791FF92008DA244 /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA38DA21791FF92008DA244 /* SHSFlagAccessoryView.m */; };
+		BEA7F14B19FA2DAE00D6286E /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEA7F14A19FA2DAE00D6286E /* LaunchView.xib */; };
+		BEA7F14C19FA2DAE00D6286E /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEA7F14A19FA2DAE00D6286E /* LaunchView.xib */; };
 		BEAA01C91720149300252141 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01C81720149300252141 /* UIKit.framework */; };
 		BEAA01CB1720149300252141 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01CA1720149300252141 /* Foundation.framework */; };
 		BEAA01CD1720149300252141 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01CC1720149300252141 /* CoreGraphics.framework */; };
@@ -62,6 +64,7 @@
 		BEA1E40C1883075B00759292 /* PhoneComponentTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoneComponentTests-Prefix.pch"; sourceTree = "<group>"; };
 		BEA38DA11791FF92008DA244 /* SHSFlagAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFlagAccessoryView.h; sourceTree = "<group>"; };
 		BEA38DA21791FF92008DA244 /* SHSFlagAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFlagAccessoryView.m; sourceTree = "<group>"; };
+		BEA7F14A19FA2DAE00D6286E /* LaunchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchView.xib; sourceTree = "<group>"; };
 		BEAA01C51720149300252141 /* PhoneComponentExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneComponentExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA01C81720149300252141 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BEAA01CA1720149300252141 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -181,6 +184,7 @@
 				BEAA01D71720149300252141 /* AppDelegate.h */,
 				BEAA01D81720149300252141 /* AppDelegate.m */,
 				BE806DB718DF46E000986A0C /* Images.xcassets */,
+				BEA7F14A19FA2DAE00D6286E /* LaunchView.xib */,
 				BEAA01CF1720149300252141 /* Supporting Files */,
 			);
 			path = PhoneComponentExample;
@@ -294,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEA1E4091883075B00759292 /* InfoPlist.strings in Resources */,
+				BEA7F14C19FA2DAE00D6286E /* LaunchView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +311,7 @@
 				BE806DB818DF46E000986A0C /* Images.xcassets in Resources */,
 				BEAA01DD1720149300252141 /* Default@2x.png in Resources */,
 				BEAA01DF1720149300252141 /* Default-568h@2x.png in Resources */,
+				BEA7F14B19FA2DAE00D6286E /* LaunchView.xib in Resources */,
 				BEAA01E6172014A100252141 /* Storyboard.storyboard in Resources */,
 				BE6AF3381882CE5200228DA9 /* SHSPhoneImage.bundle in Resources */,
 			);
@@ -484,7 +490,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhoneComponentExample/PhoneComponentExample-Prefix.pch";
 				INFOPLIST_FILE = "PhoneComponentExample/PhoneComponentExample-Info.plist";
@@ -498,7 +503,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhoneComponentExample/PhoneComponentExample-Prefix.pch";
 				INFOPLIST_FILE = "PhoneComponentExample/PhoneComponentExample-Info.plist";
