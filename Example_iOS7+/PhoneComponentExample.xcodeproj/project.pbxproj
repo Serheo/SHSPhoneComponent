@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE6342281727D5F8002EE850 /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342161727D5F8002EE850 /* SHSPhoneLogic.m */; };
-		BE6342291727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BE6342181727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m */; };
-		BE63422A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m */; };
-		BE63422B1727D5F8002EE850 /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BE63421C1727D5F8002EE850 /* SHSPhoneTextField.m */; };
+		3F26EAFB1A6EE6B30061C80B /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAF11A6EE6B30061C80B /* SHSFlagAccessoryView.m */; };
+		3F26EAFC1A6EE6B30061C80B /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAF41A6EE6B30061C80B /* SHSPhoneLogic.m */; };
+		3F26EAFD1A6EE6B30061C80B /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAF61A6EE6B30061C80B /* SHSPhoneNumberFormatter.m */; };
+		3F26EAFE1A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAF81A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.m */; };
+		3F26EAFF1A6EE6B30061C80B /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAFA1A6EE6B30061C80B /* SHSPhoneTextField.m */; };
 		BE6AF3381882CE5200228DA9 /* SHSPhoneImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE6AF3371882CE5200228DA9 /* SHSPhoneImage.bundle */; };
 		BE806DB818DF46E000986A0C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE806DB718DF46E000986A0C /* Images.xcassets */; };
 		BEA1E4011883075B00759292 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1E3B21883016C00759292 /* XCTest.framework */; };
@@ -18,7 +19,6 @@
 		BEA1E4031883075B00759292 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01C81720149300252141 /* UIKit.framework */; };
 		BEA1E4091883075B00759292 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEA1E4071883075B00759292 /* InfoPlist.strings */; };
 		BEA1E40B1883075B00759292 /* PhoneComponentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA1E40A1883075B00759292 /* PhoneComponentTests.m */; };
-		BEA38DA31791FF92008DA244 /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA38DA21791FF92008DA244 /* SHSFlagAccessoryView.m */; };
 		BEA7F14B19FA2DAE00D6286E /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEA7F14A19FA2DAE00D6286E /* LaunchView.xib */; };
 		BEA7F14C19FA2DAE00D6286E /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEA7F14A19FA2DAE00D6286E /* LaunchView.xib */; };
 		BEAA01C91720149300252141 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01C81720149300252141 /* UIKit.framework */; };
@@ -45,15 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BE6342141727D5F8002EE850 /* SHSPhoneLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLibrary.h; sourceTree = "<group>"; };
-		BE6342151727D5F8002EE850 /* SHSPhoneLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLogic.h; sourceTree = "<group>"; };
-		BE6342161727D5F8002EE850 /* SHSPhoneLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneLogic.m; sourceTree = "<group>"; };
-		BE6342171727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHSPhoneNumberFormatter+UserConfig.h"; sourceTree = "<group>"; };
-		BE6342181727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SHSPhoneNumberFormatter+UserConfig.m"; sourceTree = "<group>"; };
-		BE6342191727D5F8002EE850 /* SHSPhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneNumberFormatter.h; sourceTree = "<group>"; };
-		BE63421A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneNumberFormatter.m; sourceTree = "<group>"; };
-		BE63421B1727D5F8002EE850 /* SHSPhoneTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneTextField.h; sourceTree = "<group>"; };
-		BE63421C1727D5F8002EE850 /* SHSPhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneTextField.m; sourceTree = "<group>"; };
+		3F26EAF01A6EE6B30061C80B /* SHSFlagAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHSFlagAccessoryView.h; path = Library/SHSFlagAccessoryView.h; sourceTree = "<group>"; };
+		3F26EAF11A6EE6B30061C80B /* SHSFlagAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SHSFlagAccessoryView.m; path = Library/SHSFlagAccessoryView.m; sourceTree = "<group>"; };
+		3F26EAF21A6EE6B30061C80B /* SHSPhoneLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHSPhoneLibrary.h; path = Library/SHSPhoneLibrary.h; sourceTree = "<group>"; };
+		3F26EAF31A6EE6B30061C80B /* SHSPhoneLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHSPhoneLogic.h; path = Library/SHSPhoneLogic.h; sourceTree = "<group>"; };
+		3F26EAF41A6EE6B30061C80B /* SHSPhoneLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SHSPhoneLogic.m; path = Library/SHSPhoneLogic.m; sourceTree = "<group>"; };
+		3F26EAF51A6EE6B30061C80B /* SHSPhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHSPhoneNumberFormatter.h; path = Library/SHSPhoneNumberFormatter.h; sourceTree = "<group>"; };
+		3F26EAF61A6EE6B30061C80B /* SHSPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SHSPhoneNumberFormatter.m; path = Library/SHSPhoneNumberFormatter.m; sourceTree = "<group>"; };
+		3F26EAF71A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SHSPhoneNumberFormatter+UserConfig.h"; path = "Library/SHSPhoneNumberFormatter+UserConfig.h"; sourceTree = "<group>"; };
+		3F26EAF81A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SHSPhoneNumberFormatter+UserConfig.m"; path = "Library/SHSPhoneNumberFormatter+UserConfig.m"; sourceTree = "<group>"; };
+		3F26EAF91A6EE6B30061C80B /* SHSPhoneTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHSPhoneTextField.h; path = Library/SHSPhoneTextField.h; sourceTree = "<group>"; };
+		3F26EAFA1A6EE6B30061C80B /* SHSPhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SHSPhoneTextField.m; path = Library/SHSPhoneTextField.m; sourceTree = "<group>"; };
 		BE6AF3371882CE5200228DA9 /* SHSPhoneImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SHSPhoneImage.bundle; sourceTree = "<group>"; };
 		BE806DB718DF46E000986A0C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BEA1E3B21883016C00759292 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -62,8 +64,6 @@
 		BEA1E4081883075B00759292 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEA1E40A1883075B00759292 /* PhoneComponentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneComponentTests.m; sourceTree = "<group>"; };
 		BEA1E40C1883075B00759292 /* PhoneComponentTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoneComponentTests-Prefix.pch"; sourceTree = "<group>"; };
-		BEA38DA11791FF92008DA244 /* SHSFlagAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFlagAccessoryView.h; sourceTree = "<group>"; };
-		BEA38DA21791FF92008DA244 /* SHSFlagAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFlagAccessoryView.m; sourceTree = "<group>"; };
 		BEA7F14A19FA2DAE00D6286E /* LaunchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchView.xib; sourceTree = "<group>"; };
 		BEAA01C51720149300252141 /* PhoneComponentExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneComponentExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAA01C81720149300252141 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -78,7 +78,7 @@
 		BEAA01DA1720149300252141 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BEAA01DC1720149300252141 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BEAA01DE1720149300252141 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		BEAA01E5172014A100252141 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		BEAA01E5172014A100252141 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
 		BEAA01E7172014E600252141 /* PhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneViewController.h; sourceTree = "<group>"; };
 		BEAA01E8172014E600252141 /* PhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,17 +110,17 @@
 		BE6342071727D5F8002EE850 /* SHSPhoneComponents */ = {
 			isa = PBXGroup;
 			children = (
-				BE6342141727D5F8002EE850 /* SHSPhoneLibrary.h */,
-				BE6342151727D5F8002EE850 /* SHSPhoneLogic.h */,
-				BE6342161727D5F8002EE850 /* SHSPhoneLogic.m */,
-				BE6342171727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.h */,
-				BE6342181727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m */,
-				BE6342191727D5F8002EE850 /* SHSPhoneNumberFormatter.h */,
-				BE63421A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m */,
-				BE63421B1727D5F8002EE850 /* SHSPhoneTextField.h */,
-				BE63421C1727D5F8002EE850 /* SHSPhoneTextField.m */,
-				BEA38DA11791FF92008DA244 /* SHSFlagAccessoryView.h */,
-				BEA38DA21791FF92008DA244 /* SHSFlagAccessoryView.m */,
+				3F26EAF01A6EE6B30061C80B /* SHSFlagAccessoryView.h */,
+				3F26EAF11A6EE6B30061C80B /* SHSFlagAccessoryView.m */,
+				3F26EAF21A6EE6B30061C80B /* SHSPhoneLibrary.h */,
+				3F26EAF31A6EE6B30061C80B /* SHSPhoneLogic.h */,
+				3F26EAF41A6EE6B30061C80B /* SHSPhoneLogic.m */,
+				3F26EAF51A6EE6B30061C80B /* SHSPhoneNumberFormatter.h */,
+				3F26EAF61A6EE6B30061C80B /* SHSPhoneNumberFormatter.m */,
+				3F26EAF71A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.h */,
+				3F26EAF81A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.m */,
+				3F26EAF91A6EE6B30061C80B /* SHSPhoneTextField.h */,
+				3F26EAFA1A6EE6B30061C80B /* SHSPhoneTextField.m */,
 			);
 			name = SHSPhoneComponents;
 			path = ../../SHSPhoneComponents;
@@ -148,7 +148,6 @@
 		BEAA01BC1720149300252141 = {
 			isa = PBXGroup;
 			children = (
-				BEAA01E5172014A100252141 /* Storyboard.storyboard */,
 				BEAA01CE1720149300252141 /* PhoneComponentExample */,
 				BEA1E4041883075B00759292 /* PhoneComponentTests */,
 				BEAA01C71720149300252141 /* Frameworks */,
@@ -179,6 +178,7 @@
 		BEAA01CE1720149300252141 /* PhoneComponentExample */ = {
 			isa = PBXGroup;
 			children = (
+				BEAA01E5172014A100252141 /* Storyboard.storyboard */,
 				BEAA01EB172014F400252141 /* Libs */,
 				BEAA01EA172014EB00252141 /* Controllers */,
 				BEAA01D71720149300252141 /* AppDelegate.h */,
@@ -332,14 +332,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F26EAFB1A6EE6B30061C80B /* SHSFlagAccessoryView.m in Sources */,
+				3F26EAFE1A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
 				BEAA01D51720149300252141 /* main.m in Sources */,
 				BEAA01D91720149300252141 /* AppDelegate.m in Sources */,
 				BEAA01E9172014E600252141 /* PhoneViewController.m in Sources */,
-				BE6342281727D5F8002EE850 /* SHSPhoneLogic.m in Sources */,
-				BE6342291727D5F8002EE850 /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
-				BE63422A1727D5F8002EE850 /* SHSPhoneNumberFormatter.m in Sources */,
-				BE63422B1727D5F8002EE850 /* SHSPhoneTextField.m in Sources */,
-				BEA38DA31791FF92008DA244 /* SHSFlagAccessoryView.m in Sources */,
+				3F26EAFC1A6EE6B30061C80B /* SHSPhoneLogic.m in Sources */,
+				3F26EAFD1A6EE6B30061C80B /* SHSPhoneNumberFormatter.m in Sources */,
+				3F26EAFF1A6EE6B30061C80B /* SHSPhoneTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhoneComponentExample/PhoneComponentExample-Prefix.pch";
 				INFOPLIST_FILE = "PhoneComponentExample/PhoneComponentExample-Info.plist";
@@ -503,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhoneComponentExample/PhoneComponentExample-Prefix.pch";
 				INFOPLIST_FILE = "PhoneComponentExample/PhoneComponentExample-Info.plist";

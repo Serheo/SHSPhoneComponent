@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F26EADA1A6EE64F0061C80B /* SHSFlagAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F26EACF1A6EE64F0061C80B /* SHSFlagAccessoryView.h */; };
+		3F26EADB1A6EE64F0061C80B /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAD01A6EE64F0061C80B /* SHSFlagAccessoryView.m */; };
+		3F26EADC1A6EE64F0061C80B /* SHSPhoneLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F26EAD11A6EE64F0061C80B /* SHSPhoneLibrary.h */; };
+		3F26EADD1A6EE64F0061C80B /* SHSPhoneLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F26EAD21A6EE64F0061C80B /* SHSPhoneLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F26EADE1A6EE64F0061C80B /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAD31A6EE64F0061C80B /* SHSPhoneLogic.m */; };
+		3F26EADF1A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F26EAD41A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F26EAE01A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAD51A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.m */; };
+		3F26EAE11A6EE64F0061C80B /* SHSPhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F26EAD61A6EE64F0061C80B /* SHSPhoneNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F26EAE21A6EE64F0061C80B /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAD71A6EE64F0061C80B /* SHSPhoneNumberFormatter.m */; };
+		3F26EAE31A6EE64F0061C80B /* SHSPhoneTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F26EAD81A6EE64F0061C80B /* SHSPhoneTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F26EAE41A6EE64F0061C80B /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAD91A6EE64F0061C80B /* SHSPhoneTextField.m */; };
+		BEF0E2711A6E6FC400A918D5 /* SHSPhoneComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = BEF0E2701A6E6FC400A918D5 /* SHSPhoneComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEF0E29F1A6E700800A918D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF0E29E1A6E700800A918D5 /* UIKit.framework */; };
+		BEF0E2A11A6E700D00A918D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF0E2A01A6E700D00A918D5 /* Foundation.framework */; };
+		BEF0E2A31A6E701000A918D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF0E2A21A6E701000A918D5 /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F26EACF1A6EE64F0061C80B /* SHSFlagAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFlagAccessoryView.h; sourceTree = "<group>"; };
+		3F26EAD01A6EE64F0061C80B /* SHSFlagAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFlagAccessoryView.m; sourceTree = "<group>"; };
+		3F26EAD11A6EE64F0061C80B /* SHSPhoneLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLibrary.h; sourceTree = "<group>"; };
+		3F26EAD21A6EE64F0061C80B /* SHSPhoneLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLogic.h; sourceTree = "<group>"; };
+		3F26EAD31A6EE64F0061C80B /* SHSPhoneLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneLogic.m; sourceTree = "<group>"; };
+		3F26EAD41A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHSPhoneNumberFormatter+UserConfig.h"; sourceTree = "<group>"; };
+		3F26EAD51A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SHSPhoneNumberFormatter+UserConfig.m"; sourceTree = "<group>"; };
+		3F26EAD61A6EE64F0061C80B /* SHSPhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneNumberFormatter.h; sourceTree = "<group>"; };
+		3F26EAD71A6EE64F0061C80B /* SHSPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneNumberFormatter.m; sourceTree = "<group>"; };
+		3F26EAD81A6EE64F0061C80B /* SHSPhoneTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneTextField.h; sourceTree = "<group>"; };
+		3F26EAD91A6EE64F0061C80B /* SHSPhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneTextField.m; sourceTree = "<group>"; };
+		BEF0E26B1A6E6FC400A918D5 /* SHSPhoneComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SHSPhoneComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEF0E26F1A6E6FC400A918D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF0E2701A6E6FC400A918D5 /* SHSPhoneComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSPhoneComponent.h; sourceTree = "<group>"; };
+		BEF0E29E1A6E700800A918D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BEF0E2A01A6E700D00A918D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BEF0E2A21A6E701000A918D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEF0E2671A6E6FC400A918D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEF0E2A31A6E701000A918D5 /* CoreGraphics.framework in Frameworks */,
+				BEF0E2A11A6E700D00A918D5 /* Foundation.framework in Frameworks */,
+				BEF0E29F1A6E700800A918D5 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F26EACE1A6EE64F0061C80B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3F26EACF1A6EE64F0061C80B /* SHSFlagAccessoryView.h */,
+				3F26EAD01A6EE64F0061C80B /* SHSFlagAccessoryView.m */,
+				3F26EAD11A6EE64F0061C80B /* SHSPhoneLibrary.h */,
+				3F26EAD21A6EE64F0061C80B /* SHSPhoneLogic.h */,
+				3F26EAD31A6EE64F0061C80B /* SHSPhoneLogic.m */,
+				3F26EAD41A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.h */,
+				3F26EAD51A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.m */,
+				3F26EAD61A6EE64F0061C80B /* SHSPhoneNumberFormatter.h */,
+				3F26EAD71A6EE64F0061C80B /* SHSPhoneNumberFormatter.m */,
+				3F26EAD81A6EE64F0061C80B /* SHSPhoneTextField.h */,
+				3F26EAD91A6EE64F0061C80B /* SHSPhoneTextField.m */,
+			);
+			path = Library;
+			sourceTree = SOURCE_ROOT;
+		};
+		BEF0E2611A6E6FC400A918D5 = {
+			isa = PBXGroup;
+			children = (
+				BEF0E26D1A6E6FC400A918D5 /* SHSPhoneComponent */,
+				BEF0E26C1A6E6FC400A918D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BEF0E26C1A6E6FC400A918D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEF0E26B1A6E6FC400A918D5 /* SHSPhoneComponent.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEF0E26D1A6E6FC400A918D5 /* SHSPhoneComponent */ = {
+			isa = PBXGroup;
+			children = (
+				BEF0E2701A6E6FC400A918D5 /* SHSPhoneComponent.h */,
+				3F26EACE1A6EE64F0061C80B /* Library */,
+				BEF0E26E1A6E6FC400A918D5 /* Supporting Files */,
+			);
+			path = SHSPhoneComponent;
+			sourceTree = "<group>";
+		};
+		BEF0E26E1A6E6FC400A918D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEF0E26F1A6E6FC400A918D5 /* Info.plist */,
+				BEF0E2A21A6E701000A918D5 /* CoreGraphics.framework */,
+				BEF0E2A01A6E700D00A918D5 /* Foundation.framework */,
+				BEF0E29E1A6E700800A918D5 /* UIKit.framework */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BEF0E2681A6E6FC400A918D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F26EAE31A6EE64F0061C80B /* SHSPhoneTextField.h in Headers */,
+				BEF0E2711A6E6FC400A918D5 /* SHSPhoneComponent.h in Headers */,
+				3F26EAE11A6EE64F0061C80B /* SHSPhoneNumberFormatter.h in Headers */,
+				3F26EADF1A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.h in Headers */,
+				3F26EADD1A6EE64F0061C80B /* SHSPhoneLogic.h in Headers */,
+				3F26EADA1A6EE64F0061C80B /* SHSFlagAccessoryView.h in Headers */,
+				3F26EADC1A6EE64F0061C80B /* SHSPhoneLibrary.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BEF0E26A1A6E6FC400A918D5 /* SHSPhoneComponent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEF0E2811A6E6FC400A918D5 /* Build configuration list for PBXNativeTarget "SHSPhoneComponent" */;
+			buildPhases = (
+				BEF0E2661A6E6FC400A918D5 /* Sources */,
+				BEF0E2671A6E6FC400A918D5 /* Frameworks */,
+				BEF0E2681A6E6FC400A918D5 /* Headers */,
+				BEF0E2691A6E6FC400A918D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SHSPhoneComponent;
+			productName = SHSPhoneComponent;
+			productReference = BEF0E26B1A6E6FC400A918D5 /* SHSPhoneComponent.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEF0E2621A6E6FC400A918D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = SHS;
+				TargetAttributes = {
+					BEF0E26A1A6E6FC400A918D5 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = BEF0E2651A6E6FC400A918D5 /* Build configuration list for PBXProject "SHSPhoneComponent" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BEF0E2611A6E6FC400A918D5;
+			productRefGroup = BEF0E26C1A6E6FC400A918D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEF0E26A1A6E6FC400A918D5 /* SHSPhoneComponent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEF0E2691A6E6FC400A918D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEF0E2661A6E6FC400A918D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F26EADE1A6EE64F0061C80B /* SHSPhoneLogic.m in Sources */,
+				3F26EAE21A6EE64F0061C80B /* SHSPhoneNumberFormatter.m in Sources */,
+				3F26EADB1A6EE64F0061C80B /* SHSFlagAccessoryView.m in Sources */,
+				3F26EAE01A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
+				3F26EAE41A6EE64F0061C80B /* SHSPhoneTextField.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BEF0E27F1A6E6FC400A918D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BEF0E2801A6E6FC400A918D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BEF0E2821A6E6FC400A918D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SHSPhoneComponent/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BEF0E2831A6E6FC400A918D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SHSPhoneComponent/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEF0E2651A6E6FC400A918D5 /* Build configuration list for PBXProject "SHSPhoneComponent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEF0E27F1A6E6FC400A918D5 /* Debug */,
+				BEF0E2801A6E6FC400A918D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEF0E2811A6E6FC400A918D5 /* Build configuration list for PBXNativeTarget "SHSPhoneComponent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEF0E2821A6E6FC400A918D5 /* Debug */,
+				BEF0E2831A6E6FC400A918D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEF0E2621A6E6FC400A918D5 /* Project object */;
+}

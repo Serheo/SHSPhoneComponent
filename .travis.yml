@@ -5,6 +5,6 @@ branches:
     master
 
 before_install:
-  - cd Example
+  - cd Example_iOS7+
 
 script: xcodebuild -scheme PhoneComponentTest -sdk iphonesimulator test

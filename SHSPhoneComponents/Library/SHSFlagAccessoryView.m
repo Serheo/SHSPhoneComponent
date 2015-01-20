@@ -7,6 +7,7 @@
 //
 
 #import "SHSFlagAccessoryView.h"
+#import <UIKit/UIKit.h>
 
 #define ICON_SIZE 18.0
 #define MIN_SHIFT 5.0

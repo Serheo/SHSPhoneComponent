@@ -5,10 +5,13 @@ UITextField and NSFormatter subclasses for formatting phone numbers. Allow diffe
 Caret positioning works excellent.
 
 ## How To Install
-pod 'SHSPhoneComponent' or copy /SHSPhoneComponent folder to your project.
+Use any of next methods:
+- use embedded framework /SHSPhoneComponents/SHSPhoneComponent.xcodeproj (iOS 8+)
+- pod 'SHSPhoneComponent' 
+- copy /SHSPhoneComponents/Library folder to your project.
 
 ##Example Usage
-If you need complete example please see /example folder.
+If you need complete example please see 'Example_iOS7+' or 'Example_iOS8+embedded' folders.
 
 ###Default Format
 ``` objective-c

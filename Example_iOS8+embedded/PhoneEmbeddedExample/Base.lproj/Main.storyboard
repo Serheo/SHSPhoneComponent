@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AIH-yQ-Fq0">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6lG-kJ-8tI">
+            <objects>
+                <navigationController id="AIH-yQ-Fq0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e3F-FD-b4g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="v44-6f-VtF" kind="relationship" relationship="rootViewController" id="ZFe-7R-tD9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmt-2h-MP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-914" y="-734"/>
+        </scene>
+        <!--SHSPhoneComponent-->
+        <scene sceneID="vPe-mw-j5V">
+            <objects>
+                <viewController storyboardIdentifier="PhoneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v44-6f-VtF" customClass="PhoneViewController" customModule="PhoneEmbeddedExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u4A-dA-DHO"/>
+                        <viewControllerLayoutGuide type="bottom" id="jKg-aU-gB1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VZH-OR-LqP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faf-76-dmn">
+                                <string key="text">Try next:
+1 ....
+2 ....
+3 ....</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSi-3t-ibP">
+                                <rect key="frame" x="25" y="132" width="550" height="82"/>
+                                <string key="text">Try:
+1 ....
+2 ....
+3 ....</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-3D-O7a" customClass="SHSPhoneTextField">
+                                <rect key="frame" x="25" y="89" width="550" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vSi-3t-ibP" firstAttribute="top" secondItem="cnt-3D-O7a" secondAttribute="bottom" constant="13" id="3MZ-Td-JI1"/>
+                            <constraint firstAttribute="trailing" secondItem="cnt-3D-O7a" secondAttribute="trailing" constant="25" id="Qfm-hS-Wzo"/>
+                            <constraint firstItem="vSi-3t-ibP" firstAttribute="width" secondItem="cnt-3D-O7a" secondAttribute="width" id="eUZ-UQ-yMV"/>
+                            <constraint firstItem="vSi-3t-ibP" firstAttribute="centerX" secondItem="cnt-3D-O7a" secondAttribute="centerX" id="iYL-5F-Hcg"/>
+                            <constraint firstItem="cnt-3D-O7a" firstAttribute="leading" secondItem="VZH-OR-LqP" secondAttribute="leading" constant="25" id="p6K-9W-FUv"/>
+                            <constraint firstItem="cnt-3D-O7a" firstAttribute="top" secondItem="u4A-dA-DHO" secondAttribute="bottom" constant="25" id="yMz-s7-uth"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SHSPhoneComponent" id="QVi-D0-CSi"/>
+                    <connections>
+                        <outlet property="phoneField" destination="cnt-3D-O7a" id="TJW-cX-F0h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHp-WX-11h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-165" y="-734"/>
+        </scene>
+    </scenes>
+</document>
