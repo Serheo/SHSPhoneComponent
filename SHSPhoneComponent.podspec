@@ -7,6 +7,6 @@ Pod::Spec.new do |s|
   s.author       = { "Serheo Shatunov" => "sshatunov@yandex.ru" }
   s.source       = { :git => "https://github.com/Serheo/SHSPhoneComponent.git", :tag => s.version.to_s }
   s.platform     = :ios, '7.0'
-  s.source_files = 'SHSPhoneComponents/*.{h,m}'
+  s.source_files = 'SHSPhoneComponents/Library/*.{h,m}'
   s.requires_arc = true
 end
