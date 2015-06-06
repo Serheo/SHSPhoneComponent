@@ -60,6 +60,7 @@
     [self applyFormat:textField forText:newString];
     [self popCaretPosition:textField range:range caretPosition:caretPosition];
     
+    
     [textField sendActionsForControlEvents:UIControlEventValueChanged];
     if (textField.textDidChangeBlock) textField.textDidChangeBlock(textField);
     return NO;
