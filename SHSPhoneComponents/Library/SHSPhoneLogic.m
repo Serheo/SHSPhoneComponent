@@ -44,6 +44,8 @@
     NSDictionary *result = [textField.formatter valuesForString:text];
     textField.text = result[@"text"];
     
+    [textField sendActionsForControlEvents:UIControlEventValueChanged];
+
     if ( textField.formatter.canAffectLeftViewByFormatter )
         [self updateLeftImageView:textField imagePath:result[@"image"]];
 }
