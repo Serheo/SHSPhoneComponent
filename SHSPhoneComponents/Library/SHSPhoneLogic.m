@@ -43,8 +43,6 @@
     if (!text) text = @"";
     NSDictionary *result = [textField.formatter valuesForString:text];
     textField.text = result[@"text"];
-    
-    [textField sendActionsForControlEvents:UIControlEventValueChanged];
 
     if ( textField.formatter.canAffectLeftViewByFormatter )
         [self updateLeftImageView:textField imagePath:result[@"image"]];
@@ -62,6 +60,7 @@
     [self applyFormat:textField forText:newString];
     [self popCaretPosition:textField range:range caretPosition:caretPosition];
     
+    [textField sendActionsForControlEvents:UIControlEventValueChanged];.
     if (textField.textDidChangeBlock) textField.textDidChangeBlock(textField);
     return NO;
 }

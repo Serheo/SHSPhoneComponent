@@ -21,8 +21,14 @@
     [self doubleFormatExamplePrefixed];
     
     self.phoneField.textDidChangeBlock = ^(UITextField *textField) {
-        NSLog(@"number is %@", textField.text);
+//        NSLog(@"number is %@", textField.text);
     };
+    
+    [self.phoneField addTarget:self action:@selector(didChange:) forControlEvents:UIControlEventValueChanged];
+}
+
+-(void) didChange:(UITextField *)sender {
+    NSLog(@"%@", sender.text);
 }
 
 #pragma mark Examples
