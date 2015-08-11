@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "SHSPhoneNumberFormatter.h"
+#import "SHSFormattedTextField.h"
+
+@class SHSFormattedTextField;
 @class SHSPhoneTextField;
 
 /**
@@ -19,12 +22,7 @@
 /**
   Incapsulate number formatting and caret positioning logics.
 */
-+(BOOL)logicTextField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
-
-/**
- Formate a text and set it to a textfield.
-*/
-+(void) applyFormat:(SHSPhoneTextField *)textField forText:(NSString *)text;
+-(BOOL)logicTextField:(SHSFormattedTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
 
 @property(nonatomic, weak) id<UITextFieldDelegate> delegate;
 @end

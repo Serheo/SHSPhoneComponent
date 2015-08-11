@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F26EAFB1A6EE6B30061C80B /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAF11A6EE6B30061C80B /* SHSFlagAccessoryView.m */; };
-		3F26EAFC1A6EE6B30061C80B /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAF41A6EE6B30061C80B /* SHSPhoneLogic.m */; };
-		3F26EAFD1A6EE6B30061C80B /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAF61A6EE6B30061C80B /* SHSPhoneNumberFormatter.m */; };
-		3F26EAFE1A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAF81A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.m */; };
-		3F26EAFF1A6EE6B30061C80B /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAFA1A6EE6B30061C80B /* SHSPhoneTextField.m */; };
+		BE301F391B5D0FF1004C074E /* TextComponentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE301F381B5D0FF1004C074E /* TextComponentTests.m */; };
+		BE301F3F1B5D523F004C074E /* SHSFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE301F3E1B5D523F004C074E /* SHSFormatter.m */; };
+		BE301F401B5D523F004C074E /* SHSFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BE301F3E1B5D523F004C074E /* SHSFormatter.m */; };
 		BE6AF3381882CE5200228DA9 /* SHSPhoneImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE6AF3371882CE5200228DA9 /* SHSPhoneImage.bundle */; };
 		BE806DB818DF46E000986A0C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE806DB718DF46E000986A0C /* Images.xcassets */; };
-		BEA1E4011883075B00759292 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1E3B21883016C00759292 /* XCTest.framework */; };
 		BEA1E4021883075B00759292 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01CA1720149300252141 /* Foundation.framework */; };
 		BEA1E4031883075B00759292 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA01C81720149300252141 /* UIKit.framework */; };
 		BEA1E4091883075B00759292 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BEA1E4071883075B00759292 /* InfoPlist.strings */; };
@@ -31,7 +28,22 @@
 		BEAA01DD1720149300252141 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEAA01DC1720149300252141 /* Default@2x.png */; };
 		BEAA01DF1720149300252141 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEAA01DE1720149300252141 /* Default-568h@2x.png */; };
 		BEAA01E6172014A100252141 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEAA01E5172014A100252141 /* Storyboard.storyboard */; };
-		BEAA01E9172014E600252141 /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA01E8172014E600252141 /* PhoneViewController.m */; };
+		BEB372841B56BED7003F6B07 /* FormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB372831B56BED7003F6B07 /* FormatterViewController.m */; };
+		BEB3729B1B56CDC0003F6B07 /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB3728B1B56CDC0003F6B07 /* SHSFlagAccessoryView.m */; };
+		BEB3729C1B56CDC0003F6B07 /* SHSFormattedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB3728D1B56CDC0003F6B07 /* SHSFormattedTextField.m */; };
+		BEB3729D1B56CDC0003F6B07 /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB372901B56CDC0003F6B07 /* SHSPhoneLogic.m */; };
+		BEB3729E1B56CDC0003F6B07 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB372931B56CDC0003F6B07 /* SHSPhoneNumberFormatter.m */; };
+		BEB3729F1B56CDC0003F6B07 /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB372951B56CDC0003F6B07 /* SHSPhoneTextField.m */; };
+		BEB372A01B56CDC0003F6B07 /* SHSTextableTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB372981B56CDC0003F6B07 /* SHSTextableTextField.m */; };
+		BEB372A11B56CDC0003F6B07 /* SHSTextFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB3729A1B56CDC0003F6B07 /* SHSTextFormatter.m */; };
+		BEB372A21B56CEA7003F6B07 /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB3728B1B56CDC0003F6B07 /* SHSFlagAccessoryView.m */; };
+		BEB372A31B56CEAB003F6B07 /* SHSFormattedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB3728D1B56CDC0003F6B07 /* SHSFormattedTextField.m */; };
+		BEB372A41B56CEAE003F6B07 /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB372901B56CDC0003F6B07 /* SHSPhoneLogic.m */; };
+		BEB372A51B56CEB0003F6B07 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB372931B56CDC0003F6B07 /* SHSPhoneNumberFormatter.m */; };
+		BEB372A61B56CEB3003F6B07 /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB372951B56CDC0003F6B07 /* SHSPhoneTextField.m */; };
+		BEB372A71B56CEB5003F6B07 /* SHSTextableTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB372981B56CDC0003F6B07 /* SHSTextableTextField.m */; };
+		BEB372A81B56CEB8003F6B07 /* SHSTextFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB3729A1B56CDC0003F6B07 /* SHSTextFormatter.m */; };
+		BEB372AA1B56CEFD003F6B07 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB372A91B56CEFD003F6B07 /* SenTestingKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,24 +57,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F26EAF01A6EE6B30061C80B /* SHSFlagAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHSFlagAccessoryView.h; path = Library/SHSFlagAccessoryView.h; sourceTree = "<group>"; };
-		3F26EAF11A6EE6B30061C80B /* SHSFlagAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SHSFlagAccessoryView.m; path = Library/SHSFlagAccessoryView.m; sourceTree = "<group>"; };
-		3F26EAF21A6EE6B30061C80B /* SHSPhoneLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHSPhoneLibrary.h; path = Library/SHSPhoneLibrary.h; sourceTree = "<group>"; };
-		3F26EAF31A6EE6B30061C80B /* SHSPhoneLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHSPhoneLogic.h; path = Library/SHSPhoneLogic.h; sourceTree = "<group>"; };
-		3F26EAF41A6EE6B30061C80B /* SHSPhoneLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SHSPhoneLogic.m; path = Library/SHSPhoneLogic.m; sourceTree = "<group>"; };
-		3F26EAF51A6EE6B30061C80B /* SHSPhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHSPhoneNumberFormatter.h; path = Library/SHSPhoneNumberFormatter.h; sourceTree = "<group>"; };
-		3F26EAF61A6EE6B30061C80B /* SHSPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SHSPhoneNumberFormatter.m; path = Library/SHSPhoneNumberFormatter.m; sourceTree = "<group>"; };
-		3F26EAF71A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SHSPhoneNumberFormatter+UserConfig.h"; path = "Library/SHSPhoneNumberFormatter+UserConfig.h"; sourceTree = "<group>"; };
-		3F26EAF81A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SHSPhoneNumberFormatter+UserConfig.m"; path = "Library/SHSPhoneNumberFormatter+UserConfig.m"; sourceTree = "<group>"; };
-		3F26EAF91A6EE6B30061C80B /* SHSPhoneTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHSPhoneTextField.h; path = Library/SHSPhoneTextField.h; sourceTree = "<group>"; };
-		3F26EAFA1A6EE6B30061C80B /* SHSPhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SHSPhoneTextField.m; path = Library/SHSPhoneTextField.m; sourceTree = "<group>"; };
+		3F26EAF21A6EE6B30061C80B /* SHSLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SHSLibrary.h; path = Library/SHSLibrary.h; sourceTree = "<group>"; };
+		BE301F381B5D0FF1004C074E /* TextComponentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextComponentTests.m; sourceTree = "<group>"; };
+		BE301F3D1B5D523F004C074E /* SHSFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFormatter.h; sourceTree = "<group>"; };
+		BE301F3E1B5D523F004C074E /* SHSFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFormatter.m; sourceTree = "<group>"; };
 		BE6AF3371882CE5200228DA9 /* SHSPhoneImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SHSPhoneImage.bundle; sourceTree = "<group>"; };
 		BE806DB718DF46E000986A0C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BEA1E3B21883016C00759292 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		BEA1E4001883075B00759292 /* PhoneComponentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhoneComponentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA1E4061883075B00759292 /* PhoneComponentTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhoneComponentTests-Info.plist"; sourceTree = "<group>"; };
 		BEA1E4081883075B00759292 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BEA1E40A1883075B00759292 /* PhoneComponentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneComponentTests.m; sourceTree = "<group>"; };
+		BEA1E40A1883075B00759292 /* PhoneComponentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PhoneComponentTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		BEA1E40C1883075B00759292 /* PhoneComponentTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhoneComponentTests-Prefix.pch"; sourceTree = "<group>"; };
 		BEA7F14A19FA2DAE00D6286E /* LaunchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchView.xib; sourceTree = "<group>"; };
 		BEAA01C51720149300252141 /* PhoneComponentExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneComponentExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,8 +84,23 @@
 		BEAA01DC1720149300252141 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BEAA01DE1720149300252141 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BEAA01E5172014A100252141 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
-		BEAA01E7172014E600252141 /* PhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneViewController.h; sourceTree = "<group>"; };
-		BEAA01E8172014E600252141 /* PhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneViewController.m; sourceTree = "<group>"; };
+		BEB372821B56BED7003F6B07 /* FormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatterViewController.h; sourceTree = "<group>"; };
+		BEB372831B56BED7003F6B07 /* FormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormatterViewController.m; sourceTree = "<group>"; };
+		BEB3728A1B56CDC0003F6B07 /* SHSFlagAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFlagAccessoryView.h; sourceTree = "<group>"; };
+		BEB3728B1B56CDC0003F6B07 /* SHSFlagAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFlagAccessoryView.m; sourceTree = "<group>"; };
+		BEB3728C1B56CDC0003F6B07 /* SHSFormattedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFormattedTextField.h; sourceTree = "<group>"; };
+		BEB3728D1B56CDC0003F6B07 /* SHSFormattedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFormattedTextField.m; sourceTree = "<group>"; };
+		BEB3728F1B56CDC0003F6B07 /* SHSPhoneLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLogic.h; sourceTree = "<group>"; };
+		BEB372901B56CDC0003F6B07 /* SHSPhoneLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneLogic.m; sourceTree = "<group>"; };
+		BEB372921B56CDC0003F6B07 /* SHSPhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneNumberFormatter.h; sourceTree = "<group>"; };
+		BEB372931B56CDC0003F6B07 /* SHSPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneNumberFormatter.m; sourceTree = "<group>"; };
+		BEB372941B56CDC0003F6B07 /* SHSPhoneTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneTextField.h; sourceTree = "<group>"; };
+		BEB372951B56CDC0003F6B07 /* SHSPhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneTextField.m; sourceTree = "<group>"; };
+		BEB372971B56CDC0003F6B07 /* SHSTextableTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSTextableTextField.h; sourceTree = "<group>"; };
+		BEB372981B56CDC0003F6B07 /* SHSTextableTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSTextableTextField.m; sourceTree = "<group>"; };
+		BEB372991B56CDC0003F6B07 /* SHSTextFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSTextFormatter.h; sourceTree = "<group>"; };
+		BEB3729A1B56CDC0003F6B07 /* SHSTextFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSTextFormatter.m; sourceTree = "<group>"; };
+		BEB372A91B56CEFD003F6B07 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEA1E4011883075B00759292 /* XCTest.framework in Frameworks */,
+				BEB372AA1B56CEFD003F6B07 /* SenTestingKit.framework in Frameworks */,
 				BEA1E4031883075B00759292 /* UIKit.framework in Frameworks */,
 				BEA1E4021883075B00759292 /* Foundation.framework in Frameworks */,
 			);
@@ -107,22 +127,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BE6342071727D5F8002EE850 /* SHSPhoneComponents */ = {
+		BE6342071727D5F8002EE850 /* SHSTextFieldComponents */ = {
 			isa = PBXGroup;
 			children = (
-				3F26EAF01A6EE6B30061C80B /* SHSFlagAccessoryView.h */,
-				3F26EAF11A6EE6B30061C80B /* SHSFlagAccessoryView.m */,
-				3F26EAF21A6EE6B30061C80B /* SHSPhoneLibrary.h */,
-				3F26EAF31A6EE6B30061C80B /* SHSPhoneLogic.h */,
-				3F26EAF41A6EE6B30061C80B /* SHSPhoneLogic.m */,
-				3F26EAF51A6EE6B30061C80B /* SHSPhoneNumberFormatter.h */,
-				3F26EAF61A6EE6B30061C80B /* SHSPhoneNumberFormatter.m */,
-				3F26EAF71A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.h */,
-				3F26EAF81A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.m */,
-				3F26EAF91A6EE6B30061C80B /* SHSPhoneTextField.h */,
-				3F26EAFA1A6EE6B30061C80B /* SHSPhoneTextField.m */,
+				3F26EAF21A6EE6B30061C80B /* SHSLibrary.h */,
+				BEB372891B56CDC0003F6B07 /* Logic */,
+				BEB372911B56CDC0003F6B07 /* SHSPhoneTextField */,
+				BEB372961B56CDC0003F6B07 /* SHSTextableTextField */,
 			);
-			name = SHSPhoneComponents;
+			name = SHSTextFieldComponents;
 			path = ../../SHSPhoneComponents;
 			sourceTree = "<group>";
 		};
@@ -130,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				BEA1E40A1883075B00759292 /* PhoneComponentTests.m */,
+				BE301F381B5D0FF1004C074E /* TextComponentTests.m */,
 				BEA1E4051883075B00759292 /* Supporting Files */,
 			);
 			path = PhoneComponentTests;
@@ -167,6 +181,7 @@
 		BEAA01C71720149300252141 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEB372A91B56CEFD003F6B07 /* SenTestingKit.framework */,
 				BEA1E3B21883016C00759292 /* XCTest.framework */,
 				BEAA01C81720149300252141 /* UIKit.framework */,
 				BEAA01CA1720149300252141 /* Foundation.framework */,
@@ -208,8 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				BE6AF3371882CE5200228DA9 /* SHSPhoneImage.bundle */,
-				BEAA01E7172014E600252141 /* PhoneViewController.h */,
-				BEAA01E8172014E600252141 /* PhoneViewController.m */,
+				BEB372821B56BED7003F6B07 /* FormatterViewController.h */,
+				BEB372831B56BED7003F6B07 /* FormatterViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -217,9 +232,49 @@
 		BEAA01EB172014F400252141 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				BE6342071727D5F8002EE850 /* SHSPhoneComponents */,
+				BE6342071727D5F8002EE850 /* SHSTextFieldComponents */,
 			);
 			name = Libs;
+			sourceTree = "<group>";
+		};
+		BEB372891B56CDC0003F6B07 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				BEB3728A1B56CDC0003F6B07 /* SHSFlagAccessoryView.h */,
+				BEB3728B1B56CDC0003F6B07 /* SHSFlagAccessoryView.m */,
+				BEB3728C1B56CDC0003F6B07 /* SHSFormattedTextField.h */,
+				BEB3728D1B56CDC0003F6B07 /* SHSFormattedTextField.m */,
+				BEB3728F1B56CDC0003F6B07 /* SHSPhoneLogic.h */,
+				BEB372901B56CDC0003F6B07 /* SHSPhoneLogic.m */,
+				BE301F3D1B5D523F004C074E /* SHSFormatter.h */,
+				BE301F3E1B5D523F004C074E /* SHSFormatter.m */,
+			);
+			name = Logic;
+			path = Library/Logic;
+			sourceTree = "<group>";
+		};
+		BEB372911B56CDC0003F6B07 /* SHSPhoneTextField */ = {
+			isa = PBXGroup;
+			children = (
+				BEB372921B56CDC0003F6B07 /* SHSPhoneNumberFormatter.h */,
+				BEB372931B56CDC0003F6B07 /* SHSPhoneNumberFormatter.m */,
+				BEB372941B56CDC0003F6B07 /* SHSPhoneTextField.h */,
+				BEB372951B56CDC0003F6B07 /* SHSPhoneTextField.m */,
+			);
+			name = SHSPhoneTextField;
+			path = Library/SHSPhoneTextField;
+			sourceTree = "<group>";
+		};
+		BEB372961B56CDC0003F6B07 /* SHSTextableTextField */ = {
+			isa = PBXGroup;
+			children = (
+				BEB372991B56CDC0003F6B07 /* SHSTextFormatter.h */,
+				BEB3729A1B56CDC0003F6B07 /* SHSTextFormatter.m */,
+				BEB372971B56CDC0003F6B07 /* SHSTextableTextField.h */,
+				BEB372981B56CDC0003F6B07 /* SHSTextableTextField.m */,
+			);
+			name = SHSTextableTextField;
+			path = Library/SHSTextableTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,7 +379,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB372A41B56CEAE003F6B07 /* SHSPhoneLogic.m in Sources */,
+				BE301F401B5D523F004C074E /* SHSFormatter.m in Sources */,
+				BEB372A51B56CEB0003F6B07 /* SHSPhoneNumberFormatter.m in Sources */,
+				BE301F391B5D0FF1004C074E /* TextComponentTests.m in Sources */,
+				BEB372A31B56CEAB003F6B07 /* SHSFormattedTextField.m in Sources */,
+				BEB372A21B56CEA7003F6B07 /* SHSFlagAccessoryView.m in Sources */,
+				BEB372A81B56CEB8003F6B07 /* SHSTextFormatter.m in Sources */,
 				BEA1E40B1883075B00759292 /* PhoneComponentTests.m in Sources */,
+				BEB372A71B56CEB5003F6B07 /* SHSTextableTextField.m in Sources */,
+				BEB372A61B56CEB3003F6B07 /* SHSPhoneTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,14 +396,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F26EAFB1A6EE6B30061C80B /* SHSFlagAccessoryView.m in Sources */,
-				3F26EAFE1A6EE6B30061C80B /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
+				BEB372A11B56CDC0003F6B07 /* SHSTextFormatter.m in Sources */,
+				BEB3729D1B56CDC0003F6B07 /* SHSPhoneLogic.m in Sources */,
+				BEB3729B1B56CDC0003F6B07 /* SHSFlagAccessoryView.m in Sources */,
 				BEAA01D51720149300252141 /* main.m in Sources */,
 				BEAA01D91720149300252141 /* AppDelegate.m in Sources */,
-				BEAA01E9172014E600252141 /* PhoneViewController.m in Sources */,
-				3F26EAFC1A6EE6B30061C80B /* SHSPhoneLogic.m in Sources */,
-				3F26EAFD1A6EE6B30061C80B /* SHSPhoneNumberFormatter.m in Sources */,
-				3F26EAFF1A6EE6B30061C80B /* SHSPhoneTextField.m in Sources */,
+				BEB372A01B56CDC0003F6B07 /* SHSTextableTextField.m in Sources */,
+				BEB3729E1B56CDC0003F6B07 /* SHSPhoneNumberFormatter.m in Sources */,
+				BEB3729C1B56CDC0003F6B07 /* SHSFormattedTextField.m in Sources */,
+				BEB372841B56BED7003F6B07 /* FormatterViewController.m in Sources */,
+				BEB3729F1B56CDC0003F6B07 /* SHSPhoneTextField.m in Sources */,
+				BE301F3F1B5D523F004C074E /* SHSFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +452,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhoneComponentTests/PhoneComponentTests-Prefix.pch";
@@ -416,6 +484,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PhoneComponentTests/PhoneComponentTests-Prefix.pch";

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WlQ-MB-XX5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WlQ-MB-XX5">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Phone-->
         <scene sceneID="6yf-Ze-hOJ">
             <objects>
                 <navigationController id="WlQ-MB-XX5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Phone" id="3tE-mq-6HA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f2H-Ec-M5A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -19,12 +20,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKS-j9-b2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-914" y="-734"/>
+            <point key="canvasLocation" x="-276" y="14"/>
         </scene>
         <!--SHSPhoneComponent-->
         <scene sceneID="E05-OO-tIU">
             <objects>
-                <viewController id="6qn-Mb-L52" customClass="PhoneViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormatterViewController" id="6qn-Mb-L52" customClass="FormatterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xc7-oK-ZgO"/>
                         <viewControllerLayoutGuide type="bottom" id="dS7-KM-qXM"/>
@@ -33,17 +34,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkx-64-kNj">
-                                <string key="text">Try next:
-1 ....
-2 ....
-3 ....</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyb-p6-6RK">
-                                <rect key="frame" x="25" y="132" width="550" height="82"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="Gyb-p6-6RK">
+                                <rect key="frame" x="25" y="185" width="550" height="82"/>
                                 <string key="text">Try:
 1 ....
 2 ....
@@ -52,30 +44,52 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7CK-cf-CPc" customClass="SHSPhoneTextField">
-                                <rect key="frame" x="25" y="89" width="550" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7CK-cf-CPc" customClass="SHSFormattedTextField">
+                                <rect key="frame" x="25" y="142" width="550" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="valueChangedAction:" destination="6qn-Mb-L52" eventType="valueChanged" id="9zv-5Y-fxR"/>
+                                </connections>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f5m-6t-oLc">
+                                <rect key="frame" x="247" y="89" width="107" height="29"/>
+                                <segments>
+                                    <segment title="Phone"/>
+                                    <segment title="Text"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="6qn-Mb-L52" eventType="valueChanged" id="23y-BQ-nwG"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="f5m-6t-oLc" firstAttribute="top" secondItem="xc7-oK-ZgO" secondAttribute="bottom" constant="25" id="Byr-Te-RMH"/>
                             <constraint firstItem="7CK-cf-CPc" firstAttribute="leading" secondItem="uRP-Ik-iP1" secondAttribute="leading" constant="25" id="QB3-xs-xsb"/>
+                            <constraint firstItem="7CK-cf-CPc" firstAttribute="top" secondItem="f5m-6t-oLc" secondAttribute="bottom" constant="25" id="SIs-lz-H32"/>
                             <constraint firstAttribute="trailing" secondItem="7CK-cf-CPc" secondAttribute="trailing" constant="25" id="a1A-Ec-lxe"/>
                             <constraint firstItem="Gyb-p6-6RK" firstAttribute="width" secondItem="7CK-cf-CPc" secondAttribute="width" id="eAo-TM-VzL"/>
                             <constraint firstItem="Gyb-p6-6RK" firstAttribute="top" secondItem="7CK-cf-CPc" secondAttribute="bottom" constant="13" id="fhs-Ah-gGS"/>
+                            <constraint firstAttribute="centerX" secondItem="f5m-6t-oLc" secondAttribute="centerX" id="jZl-ae-R4Z"/>
                             <constraint firstItem="Gyb-p6-6RK" firstAttribute="centerX" secondItem="7CK-cf-CPc" secondAttribute="centerX" id="k9n-dv-5hD"/>
                             <constraint firstItem="7CK-cf-CPc" firstAttribute="top" secondItem="xc7-oK-ZgO" secondAttribute="bottom" constant="25" id="u2O-Sk-cHF"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="u2O-Sk-cHF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="SHSPhoneComponent" id="J4X-F1-Nt2"/>
                     <connections>
-                        <outlet property="phoneField" destination="7CK-cf-CPc" id="sEQ-sF-IbH"/>
+                        <outlet property="textField" destination="7CK-cf-CPc" id="qsQ-2f-MJj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN4-nv-mPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-165" y="-734"/>
+            <point key="canvasLocation" x="495" y="14"/>
         </scene>
     </scenes>
 </document>

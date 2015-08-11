@@ -1,30 +1,30 @@
 //
-//  PhoneComponentTests.m
-//  PhoneComponentTests
+//  TextComponentTests.m
+//  PhoneComponentExample
 //
-//  Created by Willy on 12.01.14.
-//  Copyright (c) 2014 SHS. All rights reserved.
+//  Created by Will on 20/07/15.
+//  Copyright (c) 2015 SHS. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "SHSPhoneNumberFormatter.h"
+#import "SHSTextFormatter.h"
 
-@interface PhoneComponentTests : XCTestCase
+@interface TextComponentTests : XCTestCase
 {
-    SHSPhoneNumberFormatter *formatter;
+    SHSTextFormatter *formatter;
 }
 @end
 
-@implementation PhoneComponentTests
+@implementation TextComponentTests
 
-- (void)setUp
-{
+- (void)setUp {
     [super setUp];
-    formatter = [[SHSPhoneNumberFormatter alloc]init];
+    formatter = [[SHSTextFormatter alloc] init];
 }
 
-- (void)tearDown
-{
+- (void)tearDown {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
@@ -64,26 +64,6 @@
     XCTAssertTrue([result[@"image"] isEqualToString:imagePath], @"image is specified");
 }
 
-- (void)testShouldHandleSpecialSymbols
-{
-    NSString *inputNumber = @"!#dsti*&";
-    
-    [formatter setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
-    
-    NSDictionary *result = [formatter configValuesForString:inputNumber];
-    XCTAssertTrue([result[@"text"] isEqualToString:@""], @"should remove non-number symbols");
-    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
-    
-    inputNumber = @"+12345678901";
-    
-    [formatter setDefaultOutputPattern:@"+# (###) ###-##-##" imagePath:nil];
-    
-    result = [formatter configValuesForString:inputNumber];
-    XCTAssertTrue([result[@"text"] isEqualToString:@"+1 (234) 567-89-01"], @"should format number by default and handle + symbol");
-    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
-    
-}
-
 - (void)testShouldHandleFormatWithDigits
 {
     NSString *inputNumber = @"9201234567";
@@ -115,21 +95,21 @@
     XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
 }
 
-- (void)testShouldCheckPrefix
-{
-    NSString *inputNumber = @"9201234567";
-    formatter.prefix = @"pr3f1x";
-    [formatter setDefaultOutputPattern:@"(###) ###-##-##"];
-    
-    NSDictionary *result = [formatter configValuesForString:inputNumber];
-    NSString *should = [NSString stringWithFormat:@"%@%@", formatter.prefix, @"(920) 123-45-67"];
-    XCTAssertTrue([result[@"text"] isEqualToString:should], @"should format correctly");
-    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
-
-    result = [formatter configValuesForString:should];
-    XCTAssertTrue([result[@"text"] isEqualToString:should], @"should format correctly");
-    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
-}
+//- (void)testShouldCheckPrefix
+//{
+//    NSString *inputNumber = @"9201234567";
+//    formatter.prefix = @"pr3f1x";
+//    [formatter setDefaultOutputPattern:@"(###) ###-##-##"];
+//    
+//    NSDictionary *result = [formatter configValuesForString:inputNumber];
+//    NSString *should = [NSString stringWithFormat:@"%@%@", formatter.prefix, @"(920) 123-45-67"];
+//    XCTAssertTrue([result[@"text"] isEqualToString:should], @"should format correctly");
+//    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+//    
+//    result = [formatter configValuesForString:should];
+//    XCTAssertTrue([result[@"text"] isEqualToString:should], @"should format correctly");
+//    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
+//}
 
 - (void)testShouldCheckPrefixAndDifferentFormats
 {
@@ -146,13 +126,13 @@
     NSString *should = [NSString stringWithFormat:@"%@%@", formatter.prefix, @"+380 (12) 345-67"];
     XCTAssertTrue([result[@"text"] isEqualToString:should], @"should format correctly");
     XCTAssertTrue([result[@"image"]isEqualToString:imagePath], @"image should not be nil");
-
+    
     result = [formatter configValuesForString:inputNumberNonImage];
     should = [NSString stringWithFormat:@"%@%@", formatter.prefix, @"+123 (12) 345-67"];
     XCTAssertTrue([result[@"text"] isEqualToString:should], @"should format correctly");
     XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
 }
-
+//
 //- (void)testShouldHandlePrefixAndNumberFormatStyle
 //{
 //    [formatter setDefaultOutputPattern:@"+78 (###) ###-##-##"];
@@ -193,5 +173,7 @@
 //    XCTAssertTrue([result[@"text"] isEqualToString:@"pr3-f1x +7 (123) 888-88-7"], @"should format correctly");
 //    XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
 //}
+
+
 
 @end

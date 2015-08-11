@@ -7,17 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F26EADA1A6EE64F0061C80B /* SHSFlagAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F26EACF1A6EE64F0061C80B /* SHSFlagAccessoryView.h */; };
-		3F26EADB1A6EE64F0061C80B /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAD01A6EE64F0061C80B /* SHSFlagAccessoryView.m */; };
-		3F26EADC1A6EE64F0061C80B /* SHSPhoneLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F26EAD11A6EE64F0061C80B /* SHSPhoneLibrary.h */; };
-		3F26EADD1A6EE64F0061C80B /* SHSPhoneLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F26EAD21A6EE64F0061C80B /* SHSPhoneLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F26EADE1A6EE64F0061C80B /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAD31A6EE64F0061C80B /* SHSPhoneLogic.m */; };
-		3F26EADF1A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F26EAD41A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F26EAE01A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAD51A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.m */; };
-		3F26EAE11A6EE64F0061C80B /* SHSPhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F26EAD61A6EE64F0061C80B /* SHSPhoneNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F26EAE21A6EE64F0061C80B /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAD71A6EE64F0061C80B /* SHSPhoneNumberFormatter.m */; };
-		3F26EAE31A6EE64F0061C80B /* SHSPhoneTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F26EAD81A6EE64F0061C80B /* SHSPhoneTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F26EAE41A6EE64F0061C80B /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F26EAD91A6EE64F0061C80B /* SHSPhoneTextField.m */; };
+		3F4029591B7933440045C644 /* SHSFlagAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F4029461B7933440045C644 /* SHSFlagAccessoryView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F40295A1B7933440045C644 /* SHSFlagAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4029471B7933440045C644 /* SHSFlagAccessoryView.m */; };
+		3F40295B1B7933440045C644 /* SHSFormattedTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F4029481B7933440045C644 /* SHSFormattedTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F40295C1B7933440045C644 /* SHSFormattedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4029491B7933440045C644 /* SHSFormattedTextField.m */; };
+		3F40295D1B7933440045C644 /* SHSFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F40294A1B7933440045C644 /* SHSFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F40295E1B7933440045C644 /* SHSFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F40294B1B7933440045C644 /* SHSFormatter.m */; };
+		3F40295F1B7933440045C644 /* SHSPhoneLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F40294C1B7933440045C644 /* SHSPhoneLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F4029601B7933440045C644 /* SHSPhoneLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F40294D1B7933440045C644 /* SHSPhoneLogic.m */; };
+		3F4029621B7933440045C644 /* SHSPhoneNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F4029501B7933440045C644 /* SHSPhoneNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F4029631B7933440045C644 /* SHSPhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4029511B7933440045C644 /* SHSPhoneNumberFormatter.m */; };
+		3F4029641B7933440045C644 /* SHSPhoneTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F4029521B7933440045C644 /* SHSPhoneTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F4029651B7933440045C644 /* SHSPhoneTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4029531B7933440045C644 /* SHSPhoneTextField.m */; };
+		3F4029661B7933440045C644 /* SHSTextableTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F4029551B7933440045C644 /* SHSTextableTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F4029671B7933440045C644 /* SHSTextableTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4029561B7933440045C644 /* SHSTextableTextField.m */; };
+		3F4029681B7933440045C644 /* SHSTextFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F4029571B7933440045C644 /* SHSTextFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F4029691B7933440045C644 /* SHSTextFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4029581B7933440045C644 /* SHSTextFormatter.m */; };
 		BEF0E2711A6E6FC400A918D5 /* SHSPhoneComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = BEF0E2701A6E6FC400A918D5 /* SHSPhoneComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BEF0E29F1A6E700800A918D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF0E29E1A6E700800A918D5 /* UIKit.framework */; };
 		BEF0E2A11A6E700D00A918D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF0E2A01A6E700D00A918D5 /* Foundation.framework */; };
@@ -25,17 +30,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F26EACF1A6EE64F0061C80B /* SHSFlagAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFlagAccessoryView.h; sourceTree = "<group>"; };
-		3F26EAD01A6EE64F0061C80B /* SHSFlagAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFlagAccessoryView.m; sourceTree = "<group>"; };
-		3F26EAD11A6EE64F0061C80B /* SHSPhoneLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLibrary.h; sourceTree = "<group>"; };
-		3F26EAD21A6EE64F0061C80B /* SHSPhoneLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLogic.h; sourceTree = "<group>"; };
-		3F26EAD31A6EE64F0061C80B /* SHSPhoneLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneLogic.m; sourceTree = "<group>"; };
-		3F26EAD41A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHSPhoneNumberFormatter+UserConfig.h"; sourceTree = "<group>"; };
-		3F26EAD51A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SHSPhoneNumberFormatter+UserConfig.m"; sourceTree = "<group>"; };
-		3F26EAD61A6EE64F0061C80B /* SHSPhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneNumberFormatter.h; sourceTree = "<group>"; };
-		3F26EAD71A6EE64F0061C80B /* SHSPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneNumberFormatter.m; sourceTree = "<group>"; };
-		3F26EAD81A6EE64F0061C80B /* SHSPhoneTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneTextField.h; sourceTree = "<group>"; };
-		3F26EAD91A6EE64F0061C80B /* SHSPhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneTextField.m; sourceTree = "<group>"; };
+		3F4029461B7933440045C644 /* SHSFlagAccessoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFlagAccessoryView.h; sourceTree = "<group>"; };
+		3F4029471B7933440045C644 /* SHSFlagAccessoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFlagAccessoryView.m; sourceTree = "<group>"; };
+		3F4029481B7933440045C644 /* SHSFormattedTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFormattedTextField.h; sourceTree = "<group>"; };
+		3F4029491B7933440045C644 /* SHSFormattedTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFormattedTextField.m; sourceTree = "<group>"; };
+		3F40294A1B7933440045C644 /* SHSFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSFormatter.h; sourceTree = "<group>"; };
+		3F40294B1B7933440045C644 /* SHSFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSFormatter.m; sourceTree = "<group>"; };
+		3F40294C1B7933440045C644 /* SHSPhoneLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneLogic.h; sourceTree = "<group>"; };
+		3F40294D1B7933440045C644 /* SHSPhoneLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneLogic.m; sourceTree = "<group>"; };
+		3F4029501B7933440045C644 /* SHSPhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneNumberFormatter.h; sourceTree = "<group>"; };
+		3F4029511B7933440045C644 /* SHSPhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneNumberFormatter.m; sourceTree = "<group>"; };
+		3F4029521B7933440045C644 /* SHSPhoneTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSPhoneTextField.h; sourceTree = "<group>"; };
+		3F4029531B7933440045C644 /* SHSPhoneTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSPhoneTextField.m; sourceTree = "<group>"; };
+		3F4029551B7933440045C644 /* SHSTextableTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSTextableTextField.h; sourceTree = "<group>"; };
+		3F4029561B7933440045C644 /* SHSTextableTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSTextableTextField.m; sourceTree = "<group>"; };
+		3F4029571B7933440045C644 /* SHSTextFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSTextFormatter.h; sourceTree = "<group>"; };
+		3F4029581B7933440045C644 /* SHSTextFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSTextFormatter.m; sourceTree = "<group>"; };
 		BEF0E26B1A6E6FC400A918D5 /* SHSPhoneComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SHSPhoneComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF0E26F1A6E6FC400A918D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEF0E2701A6E6FC400A918D5 /* SHSPhoneComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHSPhoneComponent.h; sourceTree = "<group>"; };
@@ -61,20 +71,49 @@
 		3F26EACE1A6EE64F0061C80B /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				3F26EACF1A6EE64F0061C80B /* SHSFlagAccessoryView.h */,
-				3F26EAD01A6EE64F0061C80B /* SHSFlagAccessoryView.m */,
-				3F26EAD11A6EE64F0061C80B /* SHSPhoneLibrary.h */,
-				3F26EAD21A6EE64F0061C80B /* SHSPhoneLogic.h */,
-				3F26EAD31A6EE64F0061C80B /* SHSPhoneLogic.m */,
-				3F26EAD41A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.h */,
-				3F26EAD51A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.m */,
-				3F26EAD61A6EE64F0061C80B /* SHSPhoneNumberFormatter.h */,
-				3F26EAD71A6EE64F0061C80B /* SHSPhoneNumberFormatter.m */,
-				3F26EAD81A6EE64F0061C80B /* SHSPhoneTextField.h */,
-				3F26EAD91A6EE64F0061C80B /* SHSPhoneTextField.m */,
+				3F4029451B7933440045C644 /* Logic */,
+				3F40294F1B7933440045C644 /* SHSPhoneTextField */,
+				3F4029541B7933440045C644 /* SHSTextableTextField */,
 			);
 			path = Library;
 			sourceTree = SOURCE_ROOT;
+		};
+		3F4029451B7933440045C644 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				3F4029461B7933440045C644 /* SHSFlagAccessoryView.h */,
+				3F4029471B7933440045C644 /* SHSFlagAccessoryView.m */,
+				3F4029481B7933440045C644 /* SHSFormattedTextField.h */,
+				3F4029491B7933440045C644 /* SHSFormattedTextField.m */,
+				3F40294A1B7933440045C644 /* SHSFormatter.h */,
+				3F40294B1B7933440045C644 /* SHSFormatter.m */,
+				3F40294C1B7933440045C644 /* SHSPhoneLogic.h */,
+				3F40294D1B7933440045C644 /* SHSPhoneLogic.m */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		3F40294F1B7933440045C644 /* SHSPhoneTextField */ = {
+			isa = PBXGroup;
+			children = (
+				3F4029501B7933440045C644 /* SHSPhoneNumberFormatter.h */,
+				3F4029511B7933440045C644 /* SHSPhoneNumberFormatter.m */,
+				3F4029521B7933440045C644 /* SHSPhoneTextField.h */,
+				3F4029531B7933440045C644 /* SHSPhoneTextField.m */,
+			);
+			path = SHSPhoneTextField;
+			sourceTree = "<group>";
+		};
+		3F4029541B7933440045C644 /* SHSTextableTextField */ = {
+			isa = PBXGroup;
+			children = (
+				3F4029551B7933440045C644 /* SHSTextableTextField.h */,
+				3F4029561B7933440045C644 /* SHSTextableTextField.m */,
+				3F4029571B7933440045C644 /* SHSTextFormatter.h */,
+				3F4029581B7933440045C644 /* SHSTextFormatter.m */,
+			);
+			path = SHSTextableTextField;
+			sourceTree = "<group>";
 		};
 		BEF0E2611A6E6FC400A918D5 = {
 			isa = PBXGroup;
@@ -120,13 +159,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F26EAE31A6EE64F0061C80B /* SHSPhoneTextField.h in Headers */,
+				3F40295B1B7933440045C644 /* SHSFormattedTextField.h in Headers */,
+				3F4029641B7933440045C644 /* SHSPhoneTextField.h in Headers */,
 				BEF0E2711A6E6FC400A918D5 /* SHSPhoneComponent.h in Headers */,
-				3F26EAE11A6EE64F0061C80B /* SHSPhoneNumberFormatter.h in Headers */,
-				3F26EADF1A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.h in Headers */,
-				3F26EADD1A6EE64F0061C80B /* SHSPhoneLogic.h in Headers */,
-				3F26EADA1A6EE64F0061C80B /* SHSFlagAccessoryView.h in Headers */,
-				3F26EADC1A6EE64F0061C80B /* SHSPhoneLibrary.h in Headers */,
+				3F4029621B7933440045C644 /* SHSPhoneNumberFormatter.h in Headers */,
+				3F40295D1B7933440045C644 /* SHSFormatter.h in Headers */,
+				3F4029591B7933440045C644 /* SHSFlagAccessoryView.h in Headers */,
+				3F40295F1B7933440045C644 /* SHSPhoneLogic.h in Headers */,
+				3F4029661B7933440045C644 /* SHSTextableTextField.h in Headers */,
+				3F4029681B7933440045C644 /* SHSTextFormatter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,11 +238,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F26EADE1A6EE64F0061C80B /* SHSPhoneLogic.m in Sources */,
-				3F26EAE21A6EE64F0061C80B /* SHSPhoneNumberFormatter.m in Sources */,
-				3F26EADB1A6EE64F0061C80B /* SHSFlagAccessoryView.m in Sources */,
-				3F26EAE01A6EE64F0061C80B /* SHSPhoneNumberFormatter+UserConfig.m in Sources */,
-				3F26EAE41A6EE64F0061C80B /* SHSPhoneTextField.m in Sources */,
+				3F4029601B7933440045C644 /* SHSPhoneLogic.m in Sources */,
+				3F4029631B7933440045C644 /* SHSPhoneNumberFormatter.m in Sources */,
+				3F40295A1B7933440045C644 /* SHSFlagAccessoryView.m in Sources */,
+				3F40295C1B7933440045C644 /* SHSFormattedTextField.m in Sources */,
+				3F4029691B7933440045C644 /* SHSTextFormatter.m in Sources */,
+				3F40295E1B7933440045C644 /* SHSFormatter.m in Sources */,
+				3F4029671B7933440045C644 /* SHSTextableTextField.m in Sources */,
+				3F4029651B7933440045C644 /* SHSPhoneTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
