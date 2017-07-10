@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode8.3
 xcode_project: PhoneComponentExample.xcodeproj
-xcode_scheme: PhoneComponentTest
+xcode_scheme: PhoneComponentExample
 xcode_sdk: iphonesimulator9.3
 
 branches:
@@ -13,4 +13,4 @@ before_script:
 
 script: 
   - set -o pipefail
-  - xcodebuild clean build test -project PhoneComponentExample.xcodeproj -scheme PhoneComponentTest -destination 'platform=iOS Simulator,name=iPhone 5s,OS=10.3.1'
+  - xcodebuild clean build test -project PhoneComponentExample.xcodeproj -scheme PhoneComponentExample -destination 'platform=iOS Simulator,name=iPhone 5s,OS=10.3.1'
