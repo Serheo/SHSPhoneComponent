@@ -12,7 +12,7 @@ Use any of next methods:
 
 And import "SHSPhoneLibrary.h" on your Controller.
 
-##Example Usage
+## Example Usage
 If you need complete example please see 'Example_iOS7+' or 'Example_iOS8+embedded' folders.
 
 ### Default Format
