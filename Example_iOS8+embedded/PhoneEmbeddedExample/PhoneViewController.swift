@@ -23,7 +23,7 @@ class PhoneViewController: UIViewController {
         doubleFormatExamplePrefixed()
         
         phoneField.textDidChangeBlock = { (textField: UITextField!) -> Void in
-            print("number is \(textField.text)")
+            print("number is \(textField.text ?? "")")
         }
 
     }
