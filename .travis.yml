@@ -1,11 +1,16 @@
 language: objective-c
 osx_image: xcode8.3
+xcode_project: PhoneComponentExample.xcodeproj
+xcode_scheme: PhoneComponentTest
+xcode_sdk: iphonesimulator9.3
 
 branches:
   only:
     master
 
-before_install:
+before_script:
   - cd Example_iOS7+
 
-script: xcodebuild -scheme PhoneComponentTest -sdk iphonesimulator test
+script: 
+  - set -o pipefail
+  - xcodebuild clean build test -project PhoneComponentExample.xcodeproj -scheme PhoneComponentTest -destination 'platform=iOS Simulator,name=iPhone 5s,OS=10.3.1'
