@@ -46,5 +46,7 @@
  */
 typedef void (^SHSTextBlock)(UITextField *textField);
 @property (nonatomic, copy) SHSTextBlock textDidChangeBlock;
+
+@property (assign) BOOL hasPredictiveInput;
 @end
 

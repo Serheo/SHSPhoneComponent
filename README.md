@@ -68,6 +68,9 @@ If you want to format some numbers in specific way just do
 If you need only formatting function you can use SHSPhoneNumberFormatter class. 
 For additional class info see http://serheo.github.io/SHSPhoneComponent/
 
+## Issues and Solutions
+if you are using any predictions/suggestion in the textfield, set hasPredictiveInput flag to YES.
+
 ## Requirements
 ARC Enabled.
 iOS 7+

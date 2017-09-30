@@ -20,6 +20,7 @@
     
     [super setDelegate:logicDelegate];
     self.keyboardType = UIKeyboardTypeNumberPad;
+    self.hasPredictiveInput = NO;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder

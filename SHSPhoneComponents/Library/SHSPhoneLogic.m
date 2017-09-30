@@ -48,7 +48,7 @@
         [self updateLeftImageView:textField imagePath:result[@"image"]];
 }
 
-+(BOOL)logicTextField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
++(BOOL) logicTextField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     if (textField.formatter.prefix.length && range.location < textField.formatter.prefix.length) {
         return NO;
@@ -63,7 +63,12 @@
     
     [textField sendActionsForControlEvents:UIControlEventValueChanged];
     if (textField.textDidChangeBlock) textField.textDidChangeBlock(textField);
-    return NO;
+    
+    if (textField.hasPredictiveInput == YES && (textField.text == nil || textField.text.length == 0) && [string isEqualToString: @" "] ) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 #pragma mark -
@@ -84,7 +89,10 @@
     NSInteger start = [text length];
     for (NSInteger index = [text length] - 1; index >= 0 && lasts > 0; index--) {
         unichar ch = [text characterAtIndex:index];
-        if ([SHSPhoneNumberFormatter isValuableChar:ch]) lasts--;
+        if ([SHSPhoneNumberFormatter isValuableChar:ch]) {
+            lasts--;
+        }
+        
         if (lasts <= 0)
         {
             start = index;
@@ -108,12 +116,13 @@
 
 -(BOOL)textField:(SHSPhoneTextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    [SHSPhoneLogic logicTextField:textField shouldChangeCharactersInRange:range replacementString:string];
+    BOOL result = [SHSPhoneLogic logicTextField:textField shouldChangeCharactersInRange:range replacementString:string];
     
-    if ([_delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)])
+    if ([_delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
         [_delegate textField:textField shouldChangeCharactersInRange:range replacementString:string];
-    
-    return NO;
+    }
+
+    return result;
 }
 
 - (BOOL)textFieldShouldClear:(SHSPhoneTextField *)textField

@@ -17,11 +17,12 @@ class PhoneViewController: UIViewController {
         super.viewDidLoad()
         phoneField.becomeFirstResponder()
 
-//        defaultExample()
+        defaultExample()
 //        prefixExample()
 //        doubleFormatExaple()
-        doubleFormatExamplePrefixed()
+//        prefixExample()
         
+        phoneField.hasPredictiveInput = true;
         phoneField.textDidChangeBlock = { (textField: UITextField!) -> Void in
             print("number is \(textField.text ?? "")")
         }
@@ -35,7 +36,7 @@ class PhoneViewController: UIViewController {
     }
     
     func prefixExample() {
-        phoneField.formatter.setDefaultOutputPattern("(###) ###-##-##")
+        phoneField.formatter.setDefaultOutputPattern("##########")
         phoneField.formatter.prefix = "+7 "
         phoneField.formatter.addOutputPattern("(###) ###-##-##", forRegExp: "^[0-689]\\d*$", imagePath:"SHSPhoneImage.bundle/flag_ru")
     }
