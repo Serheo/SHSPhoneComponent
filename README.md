@@ -4,6 +4,7 @@ SHSPhoneComponent <a href="https://travis-ci.org/Serheo/SHSPhoneComponent"><img 
 UITextField and NSFormatter subclasses for formatting phone numbers. Allow different formats for different countries(patterns).
 Caret positioning works excellent.
 
+Swift version is here - https://github.com/Serheo/PhoneNumberFormatter
 ## How To Install
 Use any of next methods:
 - use embedded framework /SHSPhoneComponents/SHSPhoneComponent.xcodeproj (iOS 8+)
