@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SHSPhoneComponent"
-  s.version      = "2.3"
+  s.version      = "2.31"
   s.summary      = "UITextField and NSFormatter subclasses for formatting phone numbers. Allow different formats for different countries(patterns)."
   s.homepage     = "https://github.com/Serheo/SHSPhoneComponent"
   s.license      = 'MIT'
