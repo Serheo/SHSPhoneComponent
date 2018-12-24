@@ -154,6 +154,15 @@
     XCTAssertTrue(result[@"image"] == [NSNull null], @"image should be nil");
 }
 
+- (void)testShouldRemoveSpaces
+{
+    NSString *inputNumber = @"380 1234 5467";
+    NSString *result = [SHSPhoneNumberFormatter formattedRemove:inputNumber AtIndex:NSMakeRange(3, 1)];
+    NSLog(@"%@", result);
+    
+    XCTAssert([result isEqualToString:@"38 1234 5467"], @"should remove correctly");
+}
+
 - (void)testShouldHandlePrefixAndNumberFormatStyle
 {
     [formatter setDefaultOutputPattern:@"+78 (###) ###-##-##"];

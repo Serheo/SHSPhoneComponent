@@ -54,12 +54,17 @@
         return NO;
     }
     
-    NSInteger caretPosition = [self pushCaretPosition:textField range:range];    
-    NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    NSInteger caretPosition = [self pushCaretPosition:textField range:range];
+    BOOL isDeleting = (string.length == 0);
+    NSString *newString;
+    if (isDeleting) {
+        newString = [SHSPhoneNumberFormatter formattedRemove:textField.text AtIndex:range];
+    } else {
+        newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    }
     
     [self applyFormat:textField forText:newString];
     [self popCaretPosition:textField range:range caretPosition:caretPosition];
-    
     
     [textField sendActionsForControlEvents:UIControlEventValueChanged];
     if (textField.textDidChangeBlock) textField.textDidChangeBlock(textField);
